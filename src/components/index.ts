@@ -15,3 +15,4 @@ export { default as Directory } from "./public/home/directory";
 // public landing
 export { default as Banner } from "./public/landing/banner";
 export { default as Features } from "./public/landing/features";
+export { default as Statistics } from "./public/landing/statistics";
