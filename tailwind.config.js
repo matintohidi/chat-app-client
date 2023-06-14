@@ -14,7 +14,8 @@ module.exports = {
                 primary: "#615EF0",
                 secondary: "#EFEFFD",
                 customGray: "#F1F1F1",
-                primaryText: "#1E2531"
+                primaryText: "#1E2531",
+                customGrayText: "#383A47"
             },
         },
     },

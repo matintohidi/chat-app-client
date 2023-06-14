@@ -20,3 +20,9 @@
 #nav-links a.active {
     @apply bg-indigo-500 text-white
 }
+
+.triangle {
+    border-right: 0.75rem solid transparent;
+    border-left: 0.75rem solid transparent;
+    border-top: 0.75rem solid #fff;
+}
