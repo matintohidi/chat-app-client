@@ -1,6 +1,6 @@
 import React from 'react';
 // components
-import { Banner , Features , Statistics , Comment } from '../../components';
+import { Banner , Features , Statistics , Comment , GrowCommunication } from '../../components';
 
 const Landing : React.FC = () => {
     return (
@@ -9,6 +9,7 @@ const Landing : React.FC = () => {
             <Features />
             <Statistics />
             <Comment />
+            <GrowCommunication />
         </>
     )
 }
