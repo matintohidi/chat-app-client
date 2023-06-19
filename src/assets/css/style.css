@@ -4,21 +4,22 @@
 
 .navbarButton:hover svg path {
     @apply stroke-2 stroke-primary transition
-    /*stroke: #615EF0;*/
-    /*stroke-width: 2;*/
-    /*transition: .1s .025s ease;*/
 }
 
 .contactsScroll::-webkit-scrollbar {
     @apply w-0
 }
 
-#nav-links a:hover {
-    @apply bg-indigo-200 text-white transition-all
+.nav-link-mobile:hover {
+    @apply bg-indigo-300 text-white transition-all
 }
 
-#nav-links a.active {
+.nav-link-mobile.active {
     @apply bg-indigo-500 text-white
+}
+
+.nav-link.active {
+    @apply text-primary font-Inter
 }
 
 .triangle {
