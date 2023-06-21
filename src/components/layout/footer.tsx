@@ -13,13 +13,13 @@ const footerLinks : NavLinkInterface[] = [
 
 const Footer : React.FC = () => {
     return (
-        <footer className="flex flex-col items-center px-4">
-            <div className="flex flex-col space-y-[30px] pb-10 px-4 border-b border-b-[#D4D4D8]">
+        <footer className="flex flex-col items-center px-4 sm:px-14">
+            <div className="flex flex-col pb-10 px-4 border-b border-b-[#D4D4D8] lg:flex-row lg:justify-between lg:w-full lg:items-center">
                 <div className="flex gap-6">
                     {
                         footerLinks.map(link => {
                             return (
-                                <Link key={link.id} to={link.path} className="text-base text-primaryText">
+                                <Link key={link.id} to={link.path} className="text-base text-primaryText hover:text-primary transition">
                                     {link.name}
                                 </Link>
                             )
@@ -27,7 +27,7 @@ const Footer : React.FC = () => {
                     }
                 </div>
 
-                <div className="flex gap-[34px] justify-center">
+                <div className="flex gap-[34px] justify-center mt-[30px] lg:mt-0">
                     <a href="https://www.linkedin.com/in/matin-tohidi-sani" className="text-2xl fill-primary">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>                    </a>
 
@@ -44,10 +44,10 @@ const Footer : React.FC = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col text-[#797B89] text-base font-InterRegular py-[30px] gap-6">
+            <div className="flex flex-col text-[#797B89] text-base font-InterRegular py-[30px] gap-6 lg:gap-0 lg:flex-row lg:justify-between lg:w-full lg:px-4">
                 <h5>&copy; Copyright 2023, All Rights Reserved</h5>
 
-                <div className="flex justify-around">
+                <div className="flex justify-around lg:gap-6">
                     <h2>Privacy Policy</h2>
 
                     <h2>Terms & Conditions</h2>
