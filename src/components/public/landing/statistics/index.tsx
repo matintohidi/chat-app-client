@@ -23,7 +23,7 @@ const Index : React.FC = () => {
                 />
             </div>
 
-            <div className="flex flex-col gap-y-4 mt-16 z-10 xl:w-[500px]">
+            <div className="flex flex-col gap-4 mt-16 z-10 xl:w-[500px] xl:mt-0 xl:justify-center">
                 <h1 className="font-PoppinsBold text-primaryText text-[26px] lg:text-5xl">
                     Get direct message from your friends
                 </h1>
