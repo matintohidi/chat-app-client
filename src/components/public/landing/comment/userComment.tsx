@@ -4,11 +4,11 @@ const userComment : React.FC = () => {
     return (
         <div className="flex flex-col items-center">
             <div>
-                <div className="bg-white rounded-xl flex flex-col items-center px-4 pt-[26px] pb-3.5">
-                    <h2 className="text-primary text-lg">“Incredible Experience”</h2>
+                <div className="bg-white rounded-xl flex flex-col items-center px-4 py-[26px] lg:px-8 xl:px-[50px] xl:py-8">
+                    <h2 className="text-primary text-lg lg:text-xl">“Incredible Experience”</h2>
 
-                    <p className="text-center mt-2.5 text-customGrayText font-InterRegular">
-                        We had an incredible experience working with ChatLife and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly.
+                    <p className="text-center mt-2.5 text-customGrayText font-InterRegular lg:text-lg">
+                        We had an incredible experience working with Mixland and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly.
                     </p>
                 </div>
 
@@ -26,9 +26,9 @@ const userComment : React.FC = () => {
                 />
 
                 <div className="text-white space-y-2">
-                    <h1 className="text-lg">Wade Warren</h1>
+                    <h1 className="text-lg font-InterRegular font-medium">Wade Warren</h1>
 
-                    <h2 className="text-sm font-InterRegular">CEO, ABC Corporation</h2>
+                    <h2 className="text-sm font-InterRegular font-thin">CEO, ABC Corporation</h2>
                 </div>
             </div>
         </div>
