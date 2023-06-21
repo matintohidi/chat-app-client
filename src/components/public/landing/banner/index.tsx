@@ -6,7 +6,7 @@ import MessageCards from './messageCards';
 
 const Banner : React.FC = () => {
     return (
-        <section className="flex flex-col lg:flex-row lg:px-[6.5rem] 2xl:px-[9.5rem] lg:py-12 lg:items-center">
+        <section className="flex flex-col lg:flex-row lg:py-12 lg:items-center sm:px-14 md:px-32 lg:px-[6.5rem] 2xl:px-[9.5rem]">
             <section className="px-8 py-12 flex flex-col items-start lg:p-0">
                 <h1 className="font-PoppinsBold text-3xl text-primaryText lg:w-[509px] xl:text-5xl">
                     Freedom communicate to world with people and especially for iranian people
