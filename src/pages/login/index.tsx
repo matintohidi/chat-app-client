@@ -1,5 +1,6 @@
 import React from 'react';
 // packages dependencies
+import { Back } from 'iconsax-react';
 import { useCookies } from 'react-cookie';
 // react router dom
 import { useNavigate , Link } from 'react-router-dom';
@@ -20,8 +21,20 @@ const Login : React.FC = () => {
     }
 
     return (
-        <section className="flex overflow-y-hidden">
-            <section className="xl:px-[60px] lg:px-[40px] px-[65px] w-full lg:w-2/5 h-screen flex justify-between items-center">
+        <section className="flex flex-col lg:flex-row py-4 lg:py-0">
+            <section className="flex items-center justify-between lg:hidden xl:px-[60px] px-[40px]">
+                <Link to="/">
+                    <Back
+                        size="40"
+                        color="#615EF0"
+                    />
+                </Link>
+
+                <Link to="/register" className="px-8 py-4 z-10 bg-primary text-white rounded-full">
+                    Register
+                </Link>
+            </section>
+            <section className="w-full lg:w-2/5 h-screen flex justify-between items-center xl:px-[60px] px-[40px]">
                 <section className="w-full sm:px-[50px] md:px-[80px] lg:px-0">
                     <div className="space-y-4">
                         <h2 className="xl:text-[40px] text-[34.5px] font-PoppinsBold">Login to your account</h2>
@@ -38,9 +51,18 @@ const Login : React.FC = () => {
                     alt="freedom communicate with world"
                     className="w-full h-screen object-cover rounded-[48px] p-4"
                 />
-                <Link to="/register" className="absolute px-8 py-4 z-10 bg-primary text-white rounded-full right-12 top-12">
-                    Register
-                </Link>
+                <div className="flex items-center justify-between">
+                    <Link to="/" className="absolute top-14 left-12">
+                        <Back
+                            size="40"
+                            color="#615EF0"
+                        />
+                    </Link>
+
+                    <Link to="/register" className="px-8 py-4 z-10 bg-primary text-white rounded-full absolute right-12 top-12">
+                        Register
+                    </Link>
+                </div>
             </section>
         </section>
     )
