@@ -21,8 +21,8 @@ const Login : React.FC = () => {
     }
 
     return (
-        <section className="flex flex-col lg:flex-row py-4 lg:py-0">
-            <section className="flex items-center justify-between lg:hidden xl:px-[60px] px-[40px]">
+        <section className="flex flex-col lg:flex-row pb-4 lg:pb-0">
+            <section className="flex items-center justify-between p-8 sticky top-0 bg-white z-10 shadow lg:hidden">
                 <Link to="/">
                     <Back
                         size="40"
@@ -34,11 +34,11 @@ const Login : React.FC = () => {
                     Register
                 </Link>
             </section>
-            <section className="w-full lg:w-2/5 h-screen flex justify-between items-center xl:px-[60px] px-[40px]">
-                <section className="w-full sm:px-[50px] md:px-[80px] lg:px-0">
+            <section className="w-full lg:w-2/5 h-screen flex justify-between items-center xl:p-14 p-8">
+                <section className="w-full">
                     <div className="space-y-4">
-                        <h2 className="xl:text-[40px] text-[34.5px] font-PoppinsBold">Login to your account</h2>
-                        <h3 className="text-[#545454]">To have the freedom to connect with the world, please log in to your account</h3>
+                        <h2 className="2xl:text-[40px] text-[34.5px] font-PoppinsBold">Login to your account</h2>
+                        <h3 className="text-[#545454] font-InterRegular">To have the freedom to connect with the world, please log in to your account</h3>
                     </div>
                     <div className="mt-[60px]">
                         <LoginForm navigate={navigate} setCookie={setCookie} />
@@ -47,9 +47,9 @@ const Login : React.FC = () => {
             </section>
             <section className="hidden w-3/5 lg:flex relative">
                 <img
-                    src="/static/images/register.jpg"
+                    src="/static/images/login.jpg"
                     alt="freedom communicate with world"
-                    className="w-full h-screen object-cover rounded-[48px] p-4"
+                    className="w-full h-screen object-cover rounded-[48px] p-8"
                 />
                 <div className="flex items-center justify-between">
                     <Link to="/" className="absolute top-14 left-12">
