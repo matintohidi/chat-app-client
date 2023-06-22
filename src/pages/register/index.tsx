@@ -59,7 +59,7 @@ const Register : React.FC = () => {
                         />
                     </Link>
 
-                    <Link to="/login" className="px-8 py-4 z-10 bg-primary text-white rounded-full absolute right-12 top-12">
+                    <Link to="/login" className="px-8 py-4 z-10 border border-primary bg-primary text-white rounded-full absolute right-12 top-12 hover:bg-transparent hover:border-white transition">
                         Login
                     </Link>
                 </div>
