@@ -3,7 +3,7 @@ import React from 'react';
 const GrowCommunication : React.FC = () => {
     return (
         <section className="px-6 py-10 flex flex-col items-center sm:px-14 md:px-32 lg:px-[6.5rem] 2xl:px-[9.5rem] lg:py-24">
-            <h1 className="text-[2rem] font-PoppinsBold text-center w-[740px] lg:flex lg:flex-col">
+            <h1 className="text-2xl font-PoppinsBold text-center lg:text-[2rem] lg:w-[740px] lg:flex lg:flex-col">
                 <span>Ready to grow your communication?</span>
                 <span> Start with ChatLife, become faster every second</span>
             </h1>

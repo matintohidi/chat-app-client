@@ -14,7 +14,7 @@ const navLinks : NavLinkInterface[] = [
 
 const Navbar : React.FC = () => {
     return (
-        <nav className="flex items-center justify-between px-[17.25px] lg:px-[6.5rem] 2xl:px-[9.5rem] py-11 lg:py-3 sticky top-0 z-50 bg-white rounded-b-md">
+        <nav className="flex items-center justify-between px-[17.25px] lg:px-[6.5rem] 2xl:px-[9.5rem] py-6 lg:py-3 sticky top-0 z-50 bg-white rounded-b-md shadow-md">
             <h1 className="text-sm tracking-wider select-none">
                 <span className="text-xl text-primary font-Asap">C</span>hat Life
             </h1>
@@ -22,6 +22,7 @@ const Navbar : React.FC = () => {
             {/* mobile menu dropdown */}
             <MenuDropDown />
 
+            {/* desktop menu */}
             <div className="hidden lg:flex gap-6">
                 {
                     navLinks.map(link => {
