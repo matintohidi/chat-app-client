@@ -12,10 +12,11 @@ import callApi from "../../helpers/callApi";
 import { userRoute } from "../../utils/APIRoutes";
 
 interface Props {
-    children: ReactElement;
+    children: ReactElement
+    userLogin?: boolean
 }
 
-const ProtectedRoute = ({ children }: Props) => {
+const ProtectedRoute = ({ children , userLogin=false }: Props) => {
     const [ cookies , , removeCookies ] = useCookies();
     const dispatch = useAppDispatch();
     const navigate = useNavigate();

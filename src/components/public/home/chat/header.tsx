@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 // packages dependencies
-import { Call , ArrowLeft } from 'iconsax-react';
+import { Call , ArrowLeft } from "iconsax-react";
 // redux
 import { useAppDispatch } from "../../../../hooks";
 import { setChatDisplay } from "../../../../store/slices/mobileUISlice";

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // packages dependencies
 import { ArrowDown2 , Add } from "iconsax-react";
 // components

@@ -12,19 +12,19 @@ const AppRoutes : RouteObject[] = [
     },
     {
         path: "/login",
-        element: <ProtectedRoute>
+        element: <ProtectedRoute userLogin={true}>
             <Login />
         </ProtectedRoute>
     },
     {
         path: "/register",
-        element: <ProtectedRoute>
+        element: <ProtectedRoute userLogin={true}>
             <Register />
         </ProtectedRoute>
     },
     {
         path: "/setprofile",
-        element: <ProtectedRoute>
+        element: <ProtectedRoute userLogin={true}>
             <SetProfile />
         </ProtectedRoute>
     },

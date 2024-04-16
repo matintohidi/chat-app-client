@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Contact : React.FC = () => {
     return (
         <div className="flex p-3 gap-4 w-full cursor-pointer">
