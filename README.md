@@ -5,7 +5,7 @@ Chat Life is a chatting app that allows you to communicate with people around th
 [This is the main repository](https://github.com/matintohidi/chat-app)
 
 > We strive to use the latest and best technologies in our project.
----
+
 ## Technology
 - React
 - TypeScript
@@ -16,7 +16,7 @@ Chat Life is a chatting app that allows you to communicate with people around th
 - Axios
 - Formik
 - Yup
----
+
 ## How to Install?
 
 #### ⚠️ Note: This is just the front-end app. To see the full app, please visit this [repository](https://github.com/matintohidi/chat-app).
@@ -29,7 +29,7 @@ Run the following scripts at the root of the project:
 npm i
 npm start
 ```
----
+
 ## How to Develop?
 Interested in contributing? Great!
 
@@ -94,7 +94,5 @@ Then, you can push the changes:
 ```sh
 git push origin develop
 ```
-
----
 
 ## Matin Tohidi Sani
