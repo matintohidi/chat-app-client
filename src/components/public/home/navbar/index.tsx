@@ -19,7 +19,7 @@ const Navbar : React.FC = () => {
                 }
 
                 <div className="flex flex-col items-center gap-7 mt-14">
-                    <button className="navbarButton">
+                    <button className="navbarButton" >
                         <Home2 />
                     </button>
 
