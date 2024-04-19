@@ -6,6 +6,7 @@ import { HambergerMenu } from 'iconsax-react';
 import { NavLink , Link } from 'react-router-dom';
 // contracts
 import { NavLinkInterface } from '../../../contracts/landing';
+import {UserValuesInterface} from "../../../contracts/auth";
 // navbar links
 const navLinks : NavLinkInterface[] = [
     { name: "Home", path: "/" , id: 0 },
@@ -13,7 +14,11 @@ const navLinks : NavLinkInterface[] = [
     { name: "Contact", path: "/contact" , id: 2 },
 ];
 
-const MenuDropDown : React.FC = () => {
+interface Props {
+    user: UserValuesInterface | undefined
+}
+
+const MenuDropDown : React.FC<Props> = ({ user }) => {
     return (
         <nav className="lg:hidden">
             <Menu as="div" className="relative inline-block text-left">
@@ -42,7 +47,7 @@ const MenuDropDown : React.FC = () => {
                                             <Menu.Item key={link.id}>
                                                 <NavLink
                                                     to={link.path}
-                                                    className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm nav-link-mobile"
+                                                    className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
                                                 >
                                                     {link.name}
                                                 </NavLink>
@@ -52,16 +57,53 @@ const MenuDropDown : React.FC = () => {
                                 }
                             </div>
 
-                            <div>
-                                <Menu.Item>
-                                    <Link
-                                        to="/login"
-                                        className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm nav-link-mobile"
-                                    >
-                                        Login
-                                    </Link>
-                                </Menu.Item>
-                            </div>
+                            {
+                                user
+                                    ? <div>
+                                        <Menu.Item>
+                                            <Link
+                                                to="/chat"
+                                                className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                                            >
+                                                Chat
+                                            </Link>
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            <Link
+                                                to="/chat/setting"
+                                                className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                                            >
+                                                Setting
+                                            </Link>
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            <Link
+                                                to="/"
+                                                className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                                            >
+                                                Logout
+                                            </Link>
+                                        </Menu.Item>
+                                    </div>
+                                    : <div>
+                                        <Menu.Item>
+                                            <Link
+                                                to="/login"
+                                                className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                                            >
+                                                Login
+                                            </Link>
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            <Link
+                                                to="/register"
+                                                className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                                            >
+                                                Register
+                                            </Link>
+                                        </Menu.Item>
+                                    </div>
+                            }
                         </div>
 
                     </Menu.Items>
