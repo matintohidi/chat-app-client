@@ -4,12 +4,12 @@ import { Navbar , Contacts , Chat , Directory } from '../../components';
 
 const Home : React.FC = () => {
     return (
-        <div className="flex h-screen overflow-hidden">
+        <section className="flex h-screen overflow-hidden">
             <Navbar />
             <Contacts />
             <Chat />
             <Directory />
-        </div>
+        </section>
     )
 }
 

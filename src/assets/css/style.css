@@ -10,18 +10,6 @@
     @apply w-0
 }
 
-.nav-link-mobile:hover {
-    @apply bg-indigo-300 text-white transition-all
-}
-
-.nav-link-mobile.active {
-    @apply bg-indigo-500 text-white
-}
-
-.nav-link.active {
-    @apply text-primary font-Inter
-}
-
 .triangle {
     border-right: 0.75rem solid transparent;
     border-left: 0.75rem solid transparent;

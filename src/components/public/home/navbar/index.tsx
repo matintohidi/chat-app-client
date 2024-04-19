@@ -1,4 +1,6 @@
 import React from 'react';
+// react router dom
+import { Link } from 'react-router-dom';
 //  components
 import { ProfileImage , ProfileDefault } from './profile';
 // packages dependencies
@@ -19,9 +21,9 @@ const Navbar : React.FC = () => {
                 }
 
                 <div className="flex flex-col items-center gap-7 mt-14">
-                    <button className="navbarButton" >
+                    <Link className="navbarButton" to="/">
                         <Home2 />
-                    </button>
+                    </Link>
 
                     <button className="navbarButton">
                         <Message />

@@ -8,7 +8,9 @@ import { ProtectedRoute } from "../components";
 const AppRoutes : RouteObject[] = [
     {
         path: "/",
-        element: <Landing />
+        element: <ProtectedRoute>
+            <Landing />
+        </ProtectedRoute>
     },
     {
         path: "/login",
@@ -33,6 +35,12 @@ const AppRoutes : RouteObject[] = [
         element: <ProtectedRoute>
             <Home />
         </ProtectedRoute>
+    },
+    {
+        path: "/chat/setting",
+        element: <ProtectedRoute>
+            <Home />
+        </ProtectedRoute>
     }
 ]
 
@@ -40,7 +48,8 @@ export const hiddenLayout = [
     "/login",
     "/register",
     "/chat",
-    "/setprofile"
+    "/setprofile",
+    "/chat/setting"
 ]
 
 export default AppRoutes;

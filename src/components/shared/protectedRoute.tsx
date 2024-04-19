@@ -2,7 +2,7 @@ import { useEffect , ReactElement } from "react";
 // packages dependencies
 import { useCookies } from "react-cookie";
 // react router
-import { useNavigate } from "react-router-dom";
+import { useNavigate , useLocation } from "react-router-dom";
 // // redux
 import { useAppDispatch } from "../../hooks";
 import { setUser } from "../../store/slices/userSlice";
@@ -20,6 +20,7 @@ const ProtectedRoute = ({ children , userLogin=false }: Props) => {
     const [ cookies , , removeCookies ] = useCookies();
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
+    const path : string = useLocation().pathname.toLowerCase();
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -31,10 +32,10 @@ const ProtectedRoute = ({ children , userLogin=false }: Props) => {
                 });
 
                 dispatch(setUser(res?.data.user));
-                navigate("/chat")
+                userLogin && navigate("/chat");
             } catch {
                 removeCookies("chat-user");
-                navigate("/login");
+                if(userLogin === false && path === "/chat") navigate("/login");
             }
         }
 
