@@ -2,7 +2,7 @@ import React from 'react';
 
 const userComment : React.FC = () => {
     return (
-        <div className="flex flex-col items-center">
+        <section className="flex flex-col items-center">
             <div>
                 <div className="bg-white rounded-xl flex flex-col items-center px-4 py-[26px] lg:px-8 xl:px-[50px] xl:py-8">
                     <h2 className="text-primary text-lg lg:text-xl">“Incredible Experience”</h2>
@@ -22,7 +22,7 @@ const userComment : React.FC = () => {
                 <img
                     src="https://images.unsplash.com/photo-1685538856162-fd6d87a1f3ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=327&q=80"
                     alt="profile"
-                    className="w-16 h-16 rounded-full object-cover"
+                    className="w-16 h-16 rounded-full object-cover ring-2 ring-offset-2 ring-offset-primary ring-white"
                 />
 
                 <div className="text-white space-y-2">
@@ -31,7 +31,7 @@ const userComment : React.FC = () => {
                     <h2 className="text-sm font-InterRegular font-thin">CEO, ABC Corporation</h2>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

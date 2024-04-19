@@ -10,15 +10,15 @@ const Index : React.FC = () => {
 
                 {/*3 circle image*/}
                 <img src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                     className="w-11 h-11 rounded-full ring ring-white absolute left-0 top-1/3 z-10 lg:w-[60px] lg:h-[60px] xl:-left-10"
+                     className="w-11 h-11 rounded-full ring-2 ring-offset-2 ring-primary absolute left-0 top-1/3 z-10 lg:w-[60px] lg:h-[60px] xl:-left-10"
                      alt=""
                 />
                 <img src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                     className="w-11 h-11 rounded-full ring ring-white absolute -bottom-6 left-1/4 z-10 lg:w-[60px] lg:h-[60px] xl:-bottom-8"
+                     className="w-11 h-11 rounded-full ring-2 ring-offset-2 ring-primary absolute -bottom-6 left-1/4 z-10 lg:w-[60px] lg:h-[60px] xl:-bottom-8"
                      alt=""
                 />
                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                     className="w-11 h-11 rounded-full ring ring-white absolute right-0 bottom-1/4 z-10 lg:w-[60px] lg:h-[60px] xl:-right-10"
+                     className="w-11 h-11 rounded-full ring-2 ring-offset-2 ring-primary absolute right-0 bottom-1/4 z-10 lg:w-[60px] lg:h-[60px] xl:-right-10"
                      alt=""
                 />
             </div>

@@ -4,13 +4,13 @@ import { Banner , Features , Statistics , Comment , GrowCommunication } from '..
 
 const Landing : React.FC = () => {
     return (
-        <>
+        <section>
             <Banner />
             <Features />
             <Statistics />
             <Comment />
             <GrowCommunication />
-        </>
+        </section>
     )
 }
 
