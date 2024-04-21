@@ -1,11 +1,22 @@
 // react router
 import type { RouteObject } from "react-router-dom";
 // pages
-import { Landing , Login , Register , Home , SetProfile } from "../pages";
+import { Landing , Login , Register , SetProfile , Chat , Setting , Home } from "../pages";
 // components
 import { ProtectedRoute } from "../components";
 
-const AppRoutes : RouteObject[] = [
+const ChatRoutes : RouteObject[] = [
+    {
+        index: true,
+        element : <Chat />
+    },
+    {
+        path: "/chat/setting",
+        element: <Setting />
+    }
+]
+
+export const AppRoutes : RouteObject[] = [
     {
         path: "/",
         element: <ProtectedRoute>
@@ -27,22 +38,19 @@ const AppRoutes : RouteObject[] = [
     {
         path: "/setprofile",
         element: <ProtectedRoute userLogin={true}>
-            <SetProfile />
+            <SetProfile/>
         </ProtectedRoute>
     },
     {
         path: "/chat",
         element: <ProtectedRoute>
             <Home />
-        </ProtectedRoute>
-    },
-    {
-        path: "/chat/setting",
-        element: <ProtectedRoute>
-            <Home />
-        </ProtectedRoute>
+        </ProtectedRoute>,
+        children: ChatRoutes
     }
 ]
+
+
 
 export const hiddenLayout = [
     "/login",
@@ -51,5 +59,3 @@ export const hiddenLayout = [
     "/setprofile",
     "/chat/setting"
 ]
-
-export default AppRoutes;

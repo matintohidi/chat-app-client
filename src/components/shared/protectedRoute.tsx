@@ -35,7 +35,7 @@ const ProtectedRoute = ({ children , userLogin=false }: Props) => {
                 userLogin && navigate("/chat");
             } catch {
                 removeCookies("chat-user");
-                if(userLogin === false && path === "/chat") navigate("/login");
+                if(userLogin === false && path !== "/") navigate("/login");
             }
         }
 

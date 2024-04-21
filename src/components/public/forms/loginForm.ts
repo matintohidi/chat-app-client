@@ -39,7 +39,7 @@ const LoginForm = withFormik<LoginFormProps, LoginFormValuesInterface>({
             const res = await callApi().post(loginRoute , values);
 
             if(res.status === 200) {
-                setCookie("chat-user" , res.data.token);
+                setCookie("message-user" , res.data.token);
                 navigate("/chat");
             }
         } catch (err) {

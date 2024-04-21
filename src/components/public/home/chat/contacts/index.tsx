@@ -4,7 +4,7 @@ import { ArrowDown2 , Add } from "iconsax-react";
 // components
 import Contact from "./contact";
 // redux
-import { useAppSelector } from "../../../../hooks";
+import { useAppSelector } from "../../../../../hooks";
 
 const Home : React.FC = () => {
     const chatShow = useAppSelector(state => state.mobileUI.chatShow);

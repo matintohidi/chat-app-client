@@ -25,9 +25,9 @@ const Navbar : React.FC = () => {
                         <Home2 />
                     </Link>
 
-                    <button className="navbarButton">
+                    <Link className="navbarButton" to="/chat">
                         <Message />
-                    </button>
+                    </Link>
 
                     <button className="navbarButton">
                         <Chart21 />
@@ -43,9 +43,9 @@ const Navbar : React.FC = () => {
                 </div>
             </div>
 
-            <button className="mb-2 navbarButton">
+            <Link className="mb-2 navbarButton" to="/chat/setting">
                 <Setting2 />
-            </button>
+            </Link>
         </div>
     )
 }

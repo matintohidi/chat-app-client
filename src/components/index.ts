@@ -9,9 +9,9 @@ export { default as RegisterForm } from "./public/forms/registerForm";
 export { default as LoginForm } from "./public/forms/loginForm";
 // public home
 export { default as Navbar } from "./public/home/navbar";
-export { default as Chat } from "./public/home/chat";
-export { default as Contacts } from "./public/home/contacts";
-export { default as Directory } from "./public/home/directory";
+export { default as Chat } from "./public/home/chat/message";
+export { default as Contacts } from "./public/home/chat/contacts";
+export { default as Directory } from "./public/home/chat/directory";
 // public landing
 export { default as Banner } from "./public/landing/banner";
 export { default as Features } from "./public/landing/features";

@@ -2,8 +2,8 @@ import React from "react";
 // packages dependencies
 import { Call , ArrowLeft } from "iconsax-react";
 // redux
-import { useAppDispatch } from "../../../../hooks";
-import { setChatDisplay } from "../../../../store/slices/mobileUISlice";
+import { useAppDispatch } from "../../../../../hooks";
+import { setChatDisplay } from "../../../../../store/slices/mobileUISlice";
 
 const Header : React.FC = () => {
     const dispatch = useAppDispatch();
