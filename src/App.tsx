@@ -14,9 +14,9 @@ const App : React.FC = () => {
 
     return (
         <div>
-            { match ? null : <NavbarLanding /> }
+            { match && <NavbarLanding /> }
             { element }
-            { match ? null : <Footer /> }
+            { match && <Footer /> }
         </div>
     )
 }

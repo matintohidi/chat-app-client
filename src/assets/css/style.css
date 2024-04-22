@@ -6,8 +6,20 @@
     @apply stroke-2 stroke-primary transition
 }
 
+.nav-link-mobile:hover {
+    @apply bg-indigo-300 text-white transition-all
+}
+
+.nav-link-mobile.active {
+    @apply bg-indigo-500 text-white
+}
+
+.nav-link.active {
+    @apply text-primary font-Inter
+}
+
 .contactsScroll::-webkit-scrollbar {
-    @apply w-0
+    @apply hidden
 }
 
 .triangle {

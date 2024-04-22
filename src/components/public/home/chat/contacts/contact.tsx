@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact : React.FC = () => {
     return (
-        <div className="flex p-3 gap-4 w-full cursor-pointer">
+        <div className="flex p-3 gap-4 w-full cursor-pointer bg-primary bg-opacity-[6%] rounded-xl">
             <img src="/static/images/Frame 10.png" alt="profile" className="w-12 h-12 rounded-xl object-cover" />
 
             <div className="flex justify-between w-full gap-5">
