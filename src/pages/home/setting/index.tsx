@@ -6,7 +6,7 @@ import { HeaderSetting as Header } from "../../../components";
 
 const Setting : React.FC = () => {
     return (
-        <section className="w-full bg-primary bg-opacity-5 px-5 py-8 sm:py-16 sm:px-10">
+        <section className="w-full bg-primary bg-opacity-5 px-3.5 py-6 sm:py-16 sm:px-10">
             <Header />
             <Outlet />
         </section>

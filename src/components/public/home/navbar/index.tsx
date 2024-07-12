@@ -10,14 +10,13 @@ import { useAppSelector } from '../../../../hooks';
 
 const Navbar : React.FC = () => {
     const { user , mobileUI } = useAppSelector(state => state);
-
     return (
         <div className={`${mobileUI.chatShow ? "hidden" : "flex"} lg:flex flex-col justify-between items-center shadow-xl px-2 py-4 md:p-4`}>
             <div className="flex flex-col items-center">
                 {
-                    user.user?.profile !== "default.png"
-                        ? <ProfileDefault />
-                        : <ProfileImage profile={user.user?.profile} />
+                    user.user?.profile === null
+                        ? <ProfileDefault name={user.user?.name} />
+                        : <ProfileImage profile={user.user?.profile} name={user.user?.name} />
                 }
 
                 <div className="flex flex-col items-center gap-7 mt-14">

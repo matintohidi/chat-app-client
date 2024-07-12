@@ -5,7 +5,8 @@ export { default as SetProfile } from "./setProfile";
 // Home
 export { default as Home } from "./home";
 export { default as Setting } from "./home/setting";
-// Home/Setting
+// Home/Chat
 export { default as Chat } from "./home/chat/inedx";
+// Home/Setting
 export { default as PersonalInfo } from "./home/setting/personal-info";
 export { default as Security } from "./home/setting/security";

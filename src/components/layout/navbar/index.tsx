@@ -50,7 +50,7 @@ const Navbar : React.FC = () => {
                     ?
                         <ProfileDropDown user={user} />
                     :
-                        <div className="lg:flex gap-8 items-center">
+                        <div className="hidden lg:flex gap-8 items-center">
                             <Link
                                 to="/login"
                                 className="text-primaryText font-InterRegular focus:text-primary"
