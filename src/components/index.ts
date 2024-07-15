@@ -20,3 +20,4 @@ export { default as Comment } from "./public/landing/comment";
 export { default as GrowCommunication } from "./public/landing/growCommunication";
 // public/home/setting
 export { default as HeaderSetting } from "./public/home/setting/header";
+export { default as NavbarSetting } from "./public/home/setting/navbar";

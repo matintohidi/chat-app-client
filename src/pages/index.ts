@@ -10,3 +10,5 @@ export { default as Chat } from "./home/chat/inedx";
 // Home/Setting
 export { default as PersonalInfo } from "./home/setting/personal-info";
 export { default as Security } from "./home/setting/security";
+export { default as Bill } from "./home/setting/bill";
+export { default as Plans } from "./home/setting/plans";

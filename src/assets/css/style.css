@@ -6,6 +6,10 @@
     @apply stroke-2 stroke-primary transition
 }
 
+.navbarButton.active svg path {
+    @apply stroke-2 stroke-primary
+}
+
 .nav-link-mobile:hover {
     @apply bg-indigo-300 text-white transition-all
 }
@@ -16,6 +20,14 @@
 
 .nav-link.active {
     @apply text-primary font-Inter
+}
+
+.nav-link-setting.active {
+    @apply text-primary
+}
+
+.nav-link-setting.active {
+    @apply text-primary
 }
 
 .contactsScroll::-webkit-scrollbar {

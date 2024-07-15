@@ -8,7 +8,7 @@ export const ProfileImage : React.FC<PropsImage> = ({ profile , name }) => {
     return (
         <img src={`http://localhost:5000/images/${profile}`}
              alt={`${name} Profile`}
-             className="w-14 h-14 rounded-[14px] shadow-2xl object-cover"
+             className="w-12 h-12 sm:w-14 sm:h-14 rounded-[14px] shadow-2xl object-cover"
         />
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 // react router dom
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 //  components
 import { ProfileImage , ProfileDefault } from './profile';
 // packages dependencies
@@ -20,13 +20,13 @@ const Navbar : React.FC = () => {
                 }
 
                 <div className="flex flex-col items-center gap-7 mt-14">
-                    <Link className="navbarButton" to="/">
+                    <NavLink className="navbarButton" to="/">
                         <Home2 />
-                    </Link>
+                    </NavLink>
 
-                    <Link className="navbarButton" to="/chat">
+                    <NavLink className="navbarButton" to="/chat/">
                         <Message />
-                    </Link>
+                    </NavLink>
 
                     <button className="navbarButton">
                         <Chart21 />
@@ -42,9 +42,9 @@ const Navbar : React.FC = () => {
                 </div>
             </div>
 
-            <Link className="mb-2 navbarButton" to="/chat/setting">
+            <NavLink className="mb-2 navbarButton" to="/chat/setting">
                 <Setting2 />
-            </Link>
+            </NavLink>
         </div>
     )
 }

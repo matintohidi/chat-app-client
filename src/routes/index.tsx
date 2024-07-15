@@ -1,7 +1,7 @@
 // react router
 import type { RouteObject } from "react-router-dom";
 // pages
-import { Landing , Login , Register , SetProfile , Chat , Setting , Home , PersonalInfo , Security } from "../pages";
+import { Landing , Login , Register , SetProfile , Chat , Setting , Home , PersonalInfo , Security , Plans , Bill} from "../pages";
 // components
 import { ProtectedRoute } from "../components";
 
@@ -15,14 +15,21 @@ const ChatRoutes : RouteObject[] = [
         element: <Setting />,
         children: [
             {
-                index: true,
-                path: "/chat/setting",
+                path: "/chat/setting/personal-info",
                 element: <PersonalInfo />
             },
             {
                 path: "/chat/setting/security",
                 element: <Security />
             },
+            {
+                path: "/chat/setting/bill",
+                element: <Bill />
+            },
+            {
+                path: "/chat/setting/plans",
+                element: <Plans />
+            }
         ]
     }
 ]
