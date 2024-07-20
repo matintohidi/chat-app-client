@@ -1,8 +1,11 @@
 import React from "react";
 
+
 const Bill : React.FC = () => {
     return (
-        <p>Bill</p>
+        <section className="text-primaryText w-full h-fit sm:pl-4">
+
+        </section>
     )
 }
 

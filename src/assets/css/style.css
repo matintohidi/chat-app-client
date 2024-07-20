@@ -27,7 +27,7 @@
 }
 
 .nav-link-setting.active {
-    @apply text-primary
+    @apply text-primary bg-primary/10
 }
 
 .contactsScroll::-webkit-scrollbar {

@@ -14,4 +14,14 @@ export interface UserValuesInterface {
     name: string
     email: string
     profile: string
+    phone: string
+    city: string
+}
+
+export interface PersonalInfoFormValuesInterface {
+    name: string
+    email: string
+    phone: string
+    city: string
+    profile: string
 }

@@ -6,15 +6,14 @@ import { HeaderSetting as Header , NavbarSetting as Navbar } from "../../../comp
 
 const Setting : React.FC = () => {
     return (
-        <section className="w-full bg-primary bg-opacity-5 px-2.5 py-4 sm:py-12 sm:px-10">
+        <section className="w-full h-full bg-primary bg-opacity-5 px-2.5 py-4 sm:py-12 sm:px-10 overflow-y-auto">
             <Header />
 
-            <section className="mt-4 sm:mt-0 bg-white rounded flex p-3.5">
+            <section className="mt-4 bg-white rounded flex p-4">
                 <Navbar />
 
                 <Outlet />
             </section>
-
         </section>
     )
 }

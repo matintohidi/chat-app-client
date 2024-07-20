@@ -4,20 +4,23 @@ import { useRoutes } from "react-router-dom";
 // routes
 import { AppRoutes } from "./routes";
 // hooks
-import { useMatch } from "./hooks";
+import { useAppSelector , useMatch } from "./hooks";
 // components
-import { NavbarLanding , Footer } from "./components";
+import { NavbarLanding , Footer , Loading } from "./components";
 
 const App : React.FC = () => {
+    const { loading } = useAppSelector(state => state);
     let element = useRoutes(AppRoutes);
     const match = useMatch();
 
     return (
-        <div>
-            { match && <NavbarLanding /> }
-            { element }
-            { match && <Footer /> }
-        </div>
+        loading.loading
+            ? <Loading/>
+            : <div>
+                { match && <NavbarLanding/> }
+                { element }
+                { match && <Footer/> }
+             </div>
     )
 }
 

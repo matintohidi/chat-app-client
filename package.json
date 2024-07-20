@@ -13,7 +13,7 @@
         "@types/react-dom": "^18.0.8",
         "@types/uuid": "^9.0.0",
         "axios": "^1.1.3",
-        "formik": "^2.2.9",
+        "formik": "^2.4.6",
         "iconsax-react": "^0.0.8",
         "react": "^18.2.0",
         "react-cookie": "^4.1.1",
