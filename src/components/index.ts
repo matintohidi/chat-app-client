@@ -4,7 +4,6 @@ export { default as Footer } from "./layout/footer";
 // shared
 export { default as ProtectedRoute } from "./shared/protectedRoute";
 export { default as InputAuth } from "./shared/inputAuth";
-export { default as Loading } from "./shared/loading";
 // public/auth
 export { default as RegisterForm } from "./public/forms/registerForm";
 export { default as LoginForm } from "./public/forms/loginForm";

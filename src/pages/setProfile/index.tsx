@@ -49,6 +49,7 @@ const SetProfile : React.FC = () => {
 
         const formData = new FormData(e.target);
 		formData.append("id" , user._id);
+
 		const profile = formData.get("profile");
 
 		const profileValidation = yup.object().shape({

@@ -13,14 +13,13 @@ export interface UserValuesInterface {
     _id: string
     name: string
     email: string
-    profile: string
+    profile: string | null
     phone: string
     city: string
 }
 
 export interface PersonalInfoFormValuesInterface {
     name: string
-    email: string
     phone: string
     city: string
     profile: string

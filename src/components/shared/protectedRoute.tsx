@@ -23,11 +23,9 @@ const ProtectedRoute = ({ children , userLogin=false }: Props) => {
     const navigate = useNavigate();
     const path : string = useLocation().pathname.toLowerCase();
 
-        // dispatch(setLoading(true));
     useEffect(() => {
 
         const fetchUser = async () => {
-            dispatch(setLoading(true));
             try {
                 const res = await callApi().post(userRoute , {} ,{
                     headers: {
@@ -44,10 +42,10 @@ const ProtectedRoute = ({ children , userLogin=false }: Props) => {
         }
 
         fetchUser();
-        dispatch(setLoading(false));
+        setTimeout(() => {
+            dispatch(setLoading(false));
+        } , 1500)
     },[]);
-    
-    
 
     return (
         children

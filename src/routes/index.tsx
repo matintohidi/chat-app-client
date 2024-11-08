@@ -1,7 +1,7 @@
 // react router
 import type { RouteObject } from "react-router-dom";
 // pages
-import { Landing , Login , Register , SetProfile , Chat , Setting , Home , PersonalInfo , Security , Plans , Bill} from "../pages";
+import { Landing , Login , Register , SetProfile , Chat , Setting , Home , PersonalInfo , Security , Plans , Bill } from "../pages";
 // components
 import { ProtectedRoute } from "../components";
 

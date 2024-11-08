@@ -9,19 +9,21 @@ import { Home2 , Chart21 , Message , SearchNormal , Calendar2 , Setting2 } from 
 import { useAppSelector } from '../../../../hooks';
 
 const Navbar : React.FC = () => {
-    const { user , mobileUI } = useAppSelector(state => state);
+    const { user , mobileUI , loading } = useAppSelector(state => state);
     return (
         <div className={`${mobileUI.chatShow ? "hidden" : "flex"} lg:flex flex-col justify-between items-center shadow-xl px-2 py-4 md:p-4`}>
             <div className="flex flex-col items-center">
                 {
-                    user.user?.profile === null
-                        ? <ProfileDefault name={user.user?.name} />
-                        : <ProfileImage profile={user.user?.profile} name={user.user?.name} />
+                    loading.loading
+                        ? <div className="w-14 h-14 bg-slate-200 rounded-[14px]"></div>
+                        : user.user?.profile === null
+                            ? <ProfileDefault name={user.user?.name}/>
+                            : <ProfileImage profile={user.user?.profile} name={user.user?.name}/>
                 }
 
                 <div className="flex flex-col items-center gap-7 mt-14">
                     <NavLink className="navbarButton" to="/">
-                        <Home2 />
+                        <Home2/>
                     </NavLink>
 
                     <NavLink className="navbarButton" to="/chat/">
