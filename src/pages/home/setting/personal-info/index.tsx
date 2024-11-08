@@ -15,7 +15,7 @@ const PersonalInfo : React.FC = () => {
     const dispatch = useAppDispatch();
 
     return (
-        <section className="flex flex-col text-primaryText w-full sm:pl-4">
+        <section className="flex flex-col text-primaryText w-full sm:pl-4 overflow-y-auto">
             <div className="flex items-center gap-2 pb-4">
                 <Link to="/chat/setting" className="sm:hidden text-primary">
                     <Back size={28}/>

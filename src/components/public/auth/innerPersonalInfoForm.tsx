@@ -17,7 +17,7 @@ const InnerPersonalInfoForm = (props: FormikProps<PersonalInfoFormValuesInterfac
 
             <div className="mt-6 sm:mt-11 flex flex-col gap-2 sm:grid sm:grid-cols-2 sm:gap-x-10 sm:gap-y-6">
                 <InputSetting name="name" label="Name" placeHolder="Matin" />
-                <InputSetting name="email" label="Email" placeHolder="example@gmail.com" disable={true} />
+                <InputSetting name="email" label="Email" placeHolder={user.user?.email} disable={true} />
                 <InputSetting name="phone" label="Phone" placeHolder="09123456789" />
                 <InputSetting name="city" label="City" placeHolder="Tehran" />
             </div>
