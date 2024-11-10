@@ -6,7 +6,7 @@ import { HambergerMenu } from 'iconsax-react';
 import { NavLink , Link } from 'react-router-dom';
 // contracts
 import { NavLinkInterface } from '../../../contracts/landing';
-import {UserValuesInterface} from "../../../contracts/auth";
+import { UserValuesInterface } from "../../../contracts/auth";
 // navbar links
 const navLinks : NavLinkInterface[] = [
     { name: "Home", path: "/" , id: 0 },

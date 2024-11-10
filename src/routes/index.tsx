@@ -1,11 +1,40 @@
 // react router
 import type { RouteObject } from "react-router-dom";
 // pages
-import { Landing , Login , Register , Home , SetProfile } from "../pages";
+import { Landing , Login , Register , SetProfile , Chat , Setting , Home , PersonalInfo , Security , Plans , Bill } from "../pages";
 // components
 import { ProtectedRoute } from "../components";
 
-const AppRoutes : RouteObject[] = [
+const ChatRoutes : RouteObject[] = [
+    {
+        index: true,
+        element : <Chat />
+    },
+    {
+        path: "/chat/setting",
+        element: <Setting />,
+        children: [
+            {
+                path: "/chat/setting/personal-info",
+                element: <PersonalInfo />
+            },
+            {
+                path: "/chat/setting/security",
+                element: <Security />
+            },
+            {
+                path: "/chat/setting/bill",
+                element: <Bill />
+            },
+            {
+                path: "/chat/setting/plans",
+                element: <Plans />
+            }
+        ]
+    }
+]
+
+export const AppRoutes : RouteObject[] = [
     {
         path: "/",
         element: <ProtectedRoute>
@@ -27,29 +56,20 @@ const AppRoutes : RouteObject[] = [
     {
         path: "/setprofile",
         element: <ProtectedRoute userLogin={true}>
-            <SetProfile />
+            <SetProfile/>
         </ProtectedRoute>
     },
     {
         path: "/chat",
         element: <ProtectedRoute>
             <Home />
-        </ProtectedRoute>
-    },
-    {
-        path: "/chat/setting",
-        element: <ProtectedRoute>
-            <Home />
-        </ProtectedRoute>
+        </ProtectedRoute>,
+        children: ChatRoutes
     }
 ]
 
-export const hiddenLayout = [
-    "/login",
-    "/register",
-    "/chat",
-    "/setprofile",
-    "/chat/setting"
-]
 
-export default AppRoutes;
+
+export const ShowLayout = [
+    "/"
+]

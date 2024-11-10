@@ -2,8 +2,8 @@ import React from "react";
 // packages dependencies
 import { Call , ArrowLeft } from "iconsax-react";
 // redux
-import { useAppDispatch } from "../../../../hooks";
-import { setChatDisplay } from "../../../../store/slices/mobileUISlice";
+import { useAppDispatch } from "../../../../../hooks";
+import { setChatDisplay } from "../../../../../store/slices/mobileUISlice";
 
 const Header : React.FC = () => {
     const dispatch = useAppDispatch();
@@ -11,7 +11,7 @@ const Header : React.FC = () => {
     const setDisplay = () => dispatch(setChatDisplay(false));
 
     return (
-        <header className="flex justify-between px-3 sm:px-6 py-4 shadow">
+        <header className="flex justify-between px-3 sm:px-6 py-4 border-b">
             <div className="flex gap-2 items-center">
                 <ArrowLeft className="text-gray-400 hover:text-gray-800 transition lg:hidden" onClick={setDisplay} />
 

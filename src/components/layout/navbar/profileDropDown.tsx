@@ -3,7 +3,7 @@ import React , { Fragment } from 'react';
 import { Menu , Transition } from '@headlessui/react';
 import { HambergerMenu } from 'iconsax-react';
 // react router dom
-import { NavLink , useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // contracts
 import { NavLinkInterface } from '../../../contracts/landing';
 import { UserValuesInterface } from "../../../contracts/auth";
@@ -17,9 +17,7 @@ interface Props {
     user: UserValuesInterface | undefined
 }
 
-const ProfileDropDown : React.FC<Props> = ({user}) => {
-    const navigate = useNavigate();
-
+const ProfileDropDown : React.FC<Props> = ({ user }) => {
     return (
         <nav className="hidden lg:flex">
             <Menu as="div" className="relative inline-block text-left">

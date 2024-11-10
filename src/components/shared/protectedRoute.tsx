@@ -6,6 +6,7 @@ import { useNavigate , useLocation } from "react-router-dom";
 // // redux
 import { useAppDispatch } from "../../hooks";
 import { setUser } from "../../store/slices/userSlice";
+import { setLoading } from "../../store/slices/loadingSlice";
 // helpers
 import callApi from "../../helpers/callApi";
 // utils
@@ -23,6 +24,7 @@ const ProtectedRoute = ({ children , userLogin=false }: Props) => {
     const path : string = useLocation().pathname.toLowerCase();
 
     useEffect(() => {
+
         const fetchUser = async () => {
             try {
                 const res = await callApi().post(userRoute , {} ,{
@@ -35,14 +37,15 @@ const ProtectedRoute = ({ children , userLogin=false }: Props) => {
                 userLogin && navigate("/chat");
             } catch {
                 removeCookies("chat-user");
-                if(userLogin === false && path === "/chat") navigate("/login");
+                if(userLogin === false && path !== "/") navigate("/login");
             }
         }
 
         fetchUser();
+        setTimeout(() => {
+            dispatch(setLoading(false));
+        } , 1500)
     },[]);
-    
-    
 
     return (
         children

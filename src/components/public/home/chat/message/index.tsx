@@ -3,7 +3,7 @@ import React from 'react';
 import Header from "./header";
 import SendMessage from "./sendMessage";
 // redux
-import { useAppSelector } from "../../../../hooks";
+import { useAppSelector } from "../../../../../hooks";
 
 const Chat : React.FC = () => {
     const chatShow = useAppSelector(state => state.mobileUI.chatShow);

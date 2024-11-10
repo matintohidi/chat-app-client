@@ -1,12 +1,13 @@
 // redux dependencies
 import { configureStore } from "@reduxjs/toolkit";
 // reducers
-import { userSlice , mobileUISlice } from "./slices";
+import { userSlice , mobileUISlice , loadingSlice } from "./slices";
 
 export const store = configureStore({
     reducer: {
         user: userSlice,
-        mobileUI: mobileUISlice
+        mobileUI: mobileUISlice,
+        loading: loadingSlice
     }
 })
 
