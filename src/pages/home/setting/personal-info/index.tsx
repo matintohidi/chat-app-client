@@ -7,7 +7,7 @@ import { useAppSelector , useAppDispatch } from "../../../../hooks";
 import { useCookies } from "react-cookie";
 import { Back } from "iconsax-react";
 // components
-import PersonalInfoForm from "../../../../components/public/forms/personalInfoForm";
+import { PersonalInfoForm } from "../../../../components";
 
 const PersonalInfo : React.FC = () => {
     const [ cookies ] = useCookies();

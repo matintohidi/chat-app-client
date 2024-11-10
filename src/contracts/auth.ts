@@ -24,3 +24,9 @@ export interface PersonalInfoFormValuesInterface {
     city: string
     profile: string
 }
+
+export interface SecurityFormValuesInterface {
+    oldPassword: string
+    newPassword: string
+    repeatNewPassword: string
+}

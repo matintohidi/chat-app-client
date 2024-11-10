@@ -7,6 +7,8 @@ export { default as InputAuth } from "./shared/inputAuth";
 // public/auth
 export { default as RegisterForm } from "./public/forms/registerForm";
 export { default as LoginForm } from "./public/forms/loginForm";
+export { default as SecurityForm } from "./public/forms/securityForm";
+export { default as PersonalInfoForm } from "./public/forms/personalInfoForm";
 // public/home
 export { default as Navbar } from "./public/home/navbar";
 export { default as Chat } from "./public/home/chat/message";

@@ -1,5 +1,5 @@
 // packages dependencies
-import { Form , FormikProps } from 'formik'
+import { Form , FormikProps } from "formik";
 // components
 import ChangeProfile from "../home/setting/personal-info/changeProfile";
 import InputSetting from "../../shared/inputSetting";
