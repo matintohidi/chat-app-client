@@ -16,5 +16,4 @@ COPY . .
 EXPOSE 3000
 
 # Command to run the application
-CMD ["git" , "checkout" , "develop"]
 CMD ["npm", "start"]

@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+# Chat Life Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chat Life is a chatting app that allows you to communicate with people around the world 🌐!
 
-## Available Scripts
+[This is the main repository](https://github.com/matintohidi/chat-app)
 
-In the project directory, you can run:
+> We strive to use the latest and best technologies in our project.
 
-### `npm start`
+## Technology
+- React
+- TypeScript
+- React Router Dom
+- Redux Toolkit
+- Tailwind CSS
+- Docker
+- Axios
+- Formik
+- Yup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to Install?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### ⚠️ Note: This is just the front-end app. To see the full app, please visit this [repository](https://github.com/matintohidi/chat-app).
 
-### `npm test`
+Ensure you are installing the latest version of Node.js. If not installed, you can download it from this [link](https://nodejs.org/en/download).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Run the following scripts at the root of the project:
 
-### `npm run build`
+```sh
+npm i
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Develop?
+Interested in contributing? Great!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+⚠️ We use the [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) strategy to develop a better app!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open your favorite terminal and execute these commands:
 
-### `npm run eject`
+```sh
+git clone https://github.com/matintohidi/chat-app-client.git
+cd chat-app-client
+npm i
+npm start
+git flow init
+git checkout develop
+```
+Then make your changes using the strategy below:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Features:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start a new feature:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+git flow feature start <feature-name> 
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Develop your feature with your creative ideas.
 
-## Learn More
+The next step is to stage the files, commit them, and finish the feature:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+git add .
+git commit -m "your commit message"
+git flow feature finish <feature-name>
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Then, you can push the changes:
+
+```sh
+git push origin develop
+```
+
+### Hotfixes:
+
+Start a new hotfix:
+
+```sh
+git flow hotfix start <hotfix-name> 
+```
+
+Develop and resolve bugs.
+
+The next step is to stage the files, commit them, and finish the hotfix:
+
+```sh
+git add .
+git commit -m "your commit message"
+git flow hotfix finish <hotfix-name>
+```
+
+Then, you can push the changes:
+
+```sh
+git push origin develop
+```
+
+## Matin Tohidi Sani
