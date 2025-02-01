@@ -6,13 +6,15 @@ import Files from './files';
 
 const Directory : React.FC = () => {
     return (
-        <div className="hidden lg:w-1/4 lg:block">
+        <section className="hidden lg:w-1/4 lg:flex lg:flex-col">
             <Header />
 
-            <Members />
+            <div className="overflow-auto">
+                <Members />
 
-            <Files />
-        </div>
+                <Files />
+            </div>
+        </section>
     )
 }
 

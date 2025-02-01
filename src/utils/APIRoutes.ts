@@ -1,4 +1,9 @@
-export const registerRoute = "/api/auth/register";
-export const loginRoute = "/api/auth/login";
-export const userRoute = "/api/auth";
-export const setProfileRoute = "/api/auth/setprofile";
+export const registerRoute = "/auth/register";
+export const loginRoute = "/auth/login";
+export const userRoute = "/auth";
+export const setProfileRoute = "/auth/setprofile";
+
+export const changeUserInfo = "/auth/change-user-info";
+export const changeProfile = "/auth/change-profile";
+
+export const changePassword = "/auth/change-password";

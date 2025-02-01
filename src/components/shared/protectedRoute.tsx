@@ -2,25 +2,29 @@ import { useEffect , ReactElement } from "react";
 // packages dependencies
 import { useCookies } from "react-cookie";
 // react router
-import { useNavigate } from "react-router-dom";
+import { useNavigate , useLocation } from "react-router-dom";
 // // redux
 import { useAppDispatch } from "../../hooks";
 import { setUser } from "../../store/slices/userSlice";
+import { setLoading } from "../../store/slices/loadingSlice";
 // helpers
 import callApi from "../../helpers/callApi";
 // utils
 import { userRoute } from "../../utils/APIRoutes";
 
 interface Props {
-    children: ReactElement;
+    children: ReactElement
+    userLogin?: boolean
 }
 
-const ProtectedRoute = ({ children }: Props) => {
+const ProtectedRoute = ({ children , userLogin=false }: Props) => {
     const [ cookies , , removeCookies ] = useCookies();
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
+    const path : string = useLocation().pathname.toLowerCase();
 
     useEffect(() => {
+
         const fetchUser = async () => {
             try {
                 const res = await callApi().post(userRoute , {} ,{
@@ -30,17 +34,18 @@ const ProtectedRoute = ({ children }: Props) => {
                 });
 
                 dispatch(setUser(res?.data.user));
-                navigate("/chat")
+                userLogin && navigate("/chat");
             } catch {
                 removeCookies("chat-user");
-                navigate("/login");
+                if(userLogin === false && path !== "/") navigate("/login");
             }
         }
 
         fetchUser();
+        setTimeout(() => {
+            dispatch(setLoading(false));
+        } , 1500)
     },[]);
-    
-    
 
     return (
         children

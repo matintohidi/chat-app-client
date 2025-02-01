@@ -8,7 +8,7 @@ import { InputAuth } from '../..';
 const InnerRegisterForm = (props: FormikProps<RegisterFormValuesInterface>) => {
     return (
         <Form>
-            <div className="space-y-10">
+            <div className="space-y-10 lg:space-y-6">
                 <InputAuth name="name" label="Name" />
 
                 <InputAuth name="email" label="Email" type="email" />
@@ -18,7 +18,7 @@ const InnerRegisterForm = (props: FormikProps<RegisterFormValuesInterface>) => {
 
             <button
                 type="submit"
-                className="w-full xl:py-[12px] py-[8px] bg-primary text-white rounded-[36px] mt-14"
+                className="w-full xl:py-[12px] py-[8px] bg-primary text-white rounded-[36px] mt-14 lg:mt-12"
             >
                 Next
             </button>

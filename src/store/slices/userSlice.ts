@@ -1,6 +1,6 @@
 // redux dependencies
 import { createSlice , PayloadAction } from "@reduxjs/toolkit";
-// constracts
+// contracts
 import { UserValuesInterface } from "../../contracts/auth";
 // initial state interface
 interface UserInitialState {

@@ -9,6 +9,7 @@ import * as yup from 'yup';
 import callApi from '../../helpers/callApi';
 // utils
 import { setProfileRoute, userRoute } from '../../utils/APIRoutes';
+import { SUPPORTED_FORMATS } from "../../utils/supported_formats";
 
 const SetProfile : React.FC = () => {
 	const [ errors , setErrors ]: any[] = useState([]);
@@ -48,9 +49,8 @@ const SetProfile : React.FC = () => {
 
         const formData = new FormData(e.target);
 		formData.append("id" , user._id);
-		const profile = formData.get("profile");
 
-		const SUPPORTED_FORMATS = ["image/jpg", "image/jpeg", "image/png"];
+		const profile = formData.get("profile");
 
 		const profileValidation = yup.object().shape({
 			profile: yup.mixed()

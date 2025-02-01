@@ -1,12 +1,12 @@
 // react router dom
 import { useLocation } from "react-router-dom";
 // routes
-import { hiddenLayout } from "../routes";
+import { ShowLayout } from "../routes";
 
 const useMatch = () : boolean => {
     const path = useLocation().pathname.toLowerCase();
 
-    return hiddenLayout.includes(path);
+    return ShowLayout.includes(path);
 }
 
 export default useMatch;

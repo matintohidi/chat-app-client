@@ -21,7 +21,6 @@ const InputAuth: FC<InputProps> = ({
     errorClassName,
     labelClassName
 }) => {
-
     return (
         <div>
             <div className="relative">

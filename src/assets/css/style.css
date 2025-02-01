@@ -4,19 +4,38 @@
 
 .navbarButton:hover svg path {
     @apply stroke-2 stroke-primary transition
-    /*stroke: #615EF0;*/
-    /*stroke-width: 2;*/
-    /*transition: .1s .025s ease;*/
+}
+
+.navbarButton.active svg path {
+    @apply stroke-2 stroke-primary
+}
+
+.nav-link-mobile:hover {
+    @apply bg-indigo-300 text-white transition-all
+}
+
+.nav-link-mobile.active {
+    @apply bg-indigo-500 text-white
+}
+
+.nav-link.active {
+    @apply text-primary font-Inter
+}
+
+.nav-link-setting.active {
+    @apply text-primary
+}
+
+.nav-link-setting.active {
+    @apply text-primary bg-primary/10
 }
 
 .contactsScroll::-webkit-scrollbar {
-    @apply w-0
+    @apply hidden
 }
 
-#nav-links a:hover {
-    @apply bg-indigo-200 text-white transition-all
-}
-
-#nav-links a.active {
-    @apply bg-indigo-500 text-white
+.triangle {
+    border-right: 0.75rem solid transparent;
+    border-left: 0.75rem solid transparent;
+    border-top: 0.75rem solid #fff;
 }
