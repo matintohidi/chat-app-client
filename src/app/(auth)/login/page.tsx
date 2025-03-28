@@ -1,6 +1,6 @@
 import type { FunctionComponent } from "react";
 
-import LoginView from "@/views/(auth)/login";
+import LoginView from "@/app/(auth)/login/_components";
 
 interface LoginPageProps {}
 
