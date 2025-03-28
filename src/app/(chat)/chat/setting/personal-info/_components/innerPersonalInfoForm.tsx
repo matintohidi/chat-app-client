@@ -2,9 +2,9 @@
 import { Form, FormikProps } from "formik";
 // components
 import ChangeProfile from "./changeProfile";
-import InputSetting from "../../../../../_components/inputs/inputSetting";
+import InputSetting from "@/app/_components/inputs/inputSetting";
 // contracts
-import { PersonalInfoFormValuesInterface } from "../../../../../../contracts/auth";
+import { PersonalInfoFormValuesInterface } from "@/contracts/auth";
 // redux
 import { useAppSelector } from "@/store/hooks";
 

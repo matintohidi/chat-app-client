@@ -3,7 +3,7 @@ import { Form, FormikProps } from "formik";
 // contracts
 import { RegisterFormValuesInterface } from "@/contracts/auth";
 // components
-import InputAuth from "../../../_components/inputs/inputAuth";
+import InputAuth from "@/app/_components/inputs/inputAuth";
 
 const InnerRegisterForm = (props: FormikProps<RegisterFormValuesInterface>) => {
   return (

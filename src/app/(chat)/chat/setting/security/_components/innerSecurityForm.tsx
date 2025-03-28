@@ -1,7 +1,7 @@
 // packages dependencies
 import { Form, FormikProps } from "formik";
 // components
-import InputSetting from "../../../../../_components/inputs/inputSetting";
+import InputSetting from "@/app/_components/inputs/inputSetting";
 // contracts
 import { SecurityFormValuesInterface } from "@/contracts/auth";
 // redux
