@@ -1,8 +1,8 @@
-// packages dependencies
+"use client";
+
+import React from "react";
 import { Form, FormikProps } from "formik";
-// contracts
 import { LoginFormValuesInterface } from "@/contracts/auth";
-// components
 import InputAuth from "@/app/_components/inputs/inputAuth";
 
 const InnerLoginForm = (props: FormikProps<LoginFormValuesInterface>) => {

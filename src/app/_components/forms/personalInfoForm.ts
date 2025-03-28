@@ -1,20 +1,15 @@
-// packages dependencies
+"use client";
+
 import { withFormik } from "formik";
 import * as yup from "yup";
-// components
 import InnerPersonalInfoForm from "@/app/(chat)/chat/setting/personal-info/_components/innerPersonalInfoForm";
-// contracts
 import {
   PersonalInfoFormValuesInterface,
   UserValuesInterface,
 } from "@/contracts/auth";
-// //helpers
 // import callApi from "../../../helpers/callApi";
-// // exceptions
 // import ValidationError from "../../../exceptions/validationError";
-// // utils
 // import { changeUserInfo , changeProfile } from "../../../utils/APIRoutes";
-// redux
 import { setUser } from "../../../store/slices/userSlice";
 
 const PersonalInfoValidationSchema = yup.object().shape({

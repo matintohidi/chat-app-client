@@ -1,15 +1,11 @@
-// packages dependencies
+"use client";
+
 import { withFormik } from "formik";
 import * as yup from "yup";
-// contracts
 import { LoginFormValuesInterface } from "@/contracts/auth";
-// components
 import InnerLoginForm from "@/app/(auth)/login/_components/innerLoginForm";
-// // helpers
 // import callApi from "../../../helpers/callApi";
-// // exceptions
 // import ValidationError from "../../../exceptions/validationError";
-// // utils
 // import { loginRoute } from "../../../utils/APIRoutes";
 
 const LoginFormValidationSchema = yup.object().shape({

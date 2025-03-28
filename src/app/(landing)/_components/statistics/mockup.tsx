@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React from "react";
 // packages dependencies
 import {
   DirectInbox,
@@ -7,7 +7,7 @@ import {
   Messenger,
 } from "iconsax-react";
 
-const Mockup: FunctionComponent = () => {
+const Mockup: React.FC = () => {
   return (
     <div className="flex flex-col bg-white rounded-[8.5px] shadow-lg mx-5 py-[25px] px-[18px] select-none lg:px-6 lg:py-[35px] xl:mx-0">
       <div className="flex items-center justify-between">

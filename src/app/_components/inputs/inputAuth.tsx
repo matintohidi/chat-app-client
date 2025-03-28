@@ -1,6 +1,4 @@
-// react
-import { FunctionComponent } from "react";
-// packages dependencies
+import React from "react";
 import { ErrorMessage, Field } from "formik";
 
 // props
@@ -13,7 +11,7 @@ interface InputProps {
   labelClassName?: string;
 }
 
-const InputAuth: FunctionComponent<InputProps> = ({
+const InputAuth: React.FC<InputProps> = ({
   name,
   type = "text",
   label,

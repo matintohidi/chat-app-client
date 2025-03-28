@@ -1,8 +1,8 @@
-import { FunctionComponent } from "react";
+import React from "react";
 // components
 import UserComment from "./userComment";
 
-const Comment: FunctionComponent = () => {
+const Comment: React.FC = () => {
   return (
     <section className="bg-primary py-10 px-4 relative sm:px-14 md:px-32 lg:px-[6.5rem] lg:py-20 2xl:px-[9.5rem] -z-20">
       {/* three bows */}

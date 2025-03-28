@@ -1,10 +1,9 @@
-import type { FunctionComponent } from "react";
-
+import React from "react";
 import LoginView from "@/app/(auth)/login/_components";
 
 interface LoginPageProps {}
 
-const LoginPage: FunctionComponent<LoginPageProps> = () => {
+const LoginPage: React.FC<LoginPageProps> = () => {
   return (
     <>
       <LoginView />

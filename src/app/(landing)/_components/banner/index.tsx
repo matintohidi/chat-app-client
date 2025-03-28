@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React from "react";
 // components
 import MessageCards from "./messageCards";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Image from "next/image";
 import BannerImage from "@/../public/images/banner.png";
 import BannerMobileImage from "@/../public/images/banner-mobile.png";
 
-const Banner: FunctionComponent = () => {
+const Banner: React.FC = () => {
   return (
     <section className="flex flex-col lg:flex-row lg:py-12 lg:items-center sm:px-14 md:px-32 lg:px-[6.5rem] 2xl:px-[9.5rem]">
       <section className="px-8 py-12 flex flex-col items-start lg:p-0">

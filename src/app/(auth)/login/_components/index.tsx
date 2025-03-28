@@ -1,14 +1,14 @@
 "use client";
 
+import React from "react";
 import { LoginForm } from "@/app/_components";
 import { Back } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FunctionComponent } from "react";
 
 interface LoginViewProps {}
 
-const LoginView: FunctionComponent<LoginViewProps> = () => {
+const LoginView: React.FC<LoginViewProps> = () => {
   return (
     <section className="flex flex-col lg:flex-row pb-4 lg:pb-0">
       <section className="flex items-center justify-between p-8 sticky top-0 bg-white z-10 shadow lg:hidden">

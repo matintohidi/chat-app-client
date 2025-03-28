@@ -1,10 +1,9 @@
-// packages dependencies
+"use client";
+
+import React from "react";
 import { Form, FormikProps } from "formik";
-// components
 import InputSetting from "@/app/_components/inputs/inputSetting";
-// contracts
 import { SecurityFormValuesInterface } from "@/contracts/auth";
-// redux
 import { useAppSelector } from "@/store/hooks";
 
 const InnerSecurityForm = (props: FormikProps<SecurityFormValuesInterface>) => {

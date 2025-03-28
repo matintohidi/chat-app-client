@@ -1,5 +1,5 @@
 // components
-import { FunctionComponent } from "react";
+import React from "react";
 import {
   Banner,
   Features,
@@ -7,18 +7,23 @@ import {
   Comment,
   GrowCommunication,
 } from "./_components/";
+import { Footer, Header } from "@/app/_components";
 
 interface LandingPageProps {}
 
-const LandingPage: FunctionComponent<LandingPageProps> = () => {
+const LandingPage: React.FC<LandingPageProps> = () => {
   return (
-    <section>
-      <Banner />
-      <Features />
-      <Statistics />
-      <Comment />
-      <GrowCommunication />
-    </section>
+    <>
+      <Header />
+      <section>
+        <Banner />
+        <Features />
+        <Statistics />
+        <Comment />
+        <GrowCommunication />
+      </section>
+      <Footer />
+    </>
   );
 };
 

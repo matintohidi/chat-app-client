@@ -1,14 +1,12 @@
+"use client";
+
 import React, { useState } from "react";
-// packages dependencies
 import { ErrorMessage, useFormikContext } from "formik";
 import * as yup from "yup";
-// utils
 import { SUPPORTED_FORMATS } from "@/utils/supported_formats";
-// exceptions
-// import ValidationError from "../../../../../exceptions/validationError";
-// redux
 import { useAppSelector } from "@/store/hooks";
 import Image from "next/image";
+// import ValidationError from "../../../../../exceptions/validationError";
 
 // props interface
 interface PropsImage {

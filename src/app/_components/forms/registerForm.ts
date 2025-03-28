@@ -1,15 +1,11 @@
-// packages dependencies
+"use client";
+
 import { withFormik } from "formik";
 import * as yup from "yup";
-// contracts
 import { RegisterFormValuesInterface } from "@/contracts/auth";
-// components
-import InnerRegisterForm from "@/app/(auth)/register/_components/innerRegistserForm";
-// helpers
+import InnerRegisterForm from "@/app/(auth)/register/_components/innerRegisterForm";
 // import callApi from "../../../helpers/callApi";
-// // exceptions
 // import ValidationError from "../../../exceptions/validationError";
-// // utils
 // import { registerRoute } from "../../../utils/APIRoutes";
 
 const RegisterFormValidationSchema = yup.object().shape({

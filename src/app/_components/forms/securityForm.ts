@@ -1,15 +1,11 @@
-// packages dependencies
+"use client";
+
 import { withFormik } from "formik";
 import * as yup from "yup";
-// components
 import InnerSecurityForm from "../../(chat)/chat/setting/security/_components/innerSecurityForm";
-// contracts
 import { SecurityFormValuesInterface } from "@/contracts/auth";
-//helpers
 // import callApi from "../../../helpers/callApi";
-// exceptions
 // import ValidationError from "../../../exceptions/validationError";
-// utils
 
 const SecurityValidationSchema = yup.object().shape({
   oldPassword: yup.string().min(8).required(),

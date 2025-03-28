@@ -1,9 +1,9 @@
-import { FunctionComponent } from "react";
+import React from "react";
 // components
 import Mockup from "./mockup";
 import Image from "next/image";
 
-const Index: FunctionComponent = () => {
+const Index: React.FC = () => {
   return (
     <section className="flex flex-col py-10 px-4 bg-[#F8F8FA] sm:px-14 md:px-32 lg:px-[6.5rem] 2xl:px-[9.5rem] xl:flex-row lg:py-28 lg:justify-between">
       <div className="relative">

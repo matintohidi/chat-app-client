@@ -1,7 +1,7 @@
+import React from "react";
 import Image from "next/image";
-import { FunctionComponent } from "react";
 
-const MessageCards: FunctionComponent = () => {
+const MessageCards: React.FC = () => {
   return (
     <>
       <div className="px-3 py-1.5 absolute bg-white z-30 rounded-[4.5px] w-40 h-17 top-[55%] left-0 select-none shadow xl:w-[274px] xl:h-[106px] xl:px-[13px] xl:py-[14px] xl:rounded-xl">

@@ -15,7 +15,6 @@ const Providers = async (props: Props) => {
 
   return (
     <>
-      {console.log("deviceType", deviceType)}
       <ReactQueryProvider>
         <StoreProvider>{children}</StoreProvider>
       </ReactQueryProvider>

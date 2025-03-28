@@ -1,7 +1,7 @@
+import React from "react";
 import Image from "next/image";
-import { FunctionComponent } from "react";
 
-const userComment: FunctionComponent = () => {
+const userComment: React.FC = () => {
   return (
     <section className="flex flex-col items-center">
       <div>

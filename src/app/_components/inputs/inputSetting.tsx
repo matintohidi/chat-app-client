@@ -1,7 +1,7 @@
-import { FunctionComponent } from "react";
-// packages dependencies
+"use client";
+
+import React from "react";
 import { ErrorMessage, Field } from "formik";
-// redux
 import { useAppSelector } from "@/store/hooks";
 
 // props
@@ -16,7 +16,7 @@ interface InputProps {
   placeHolder?: string;
 }
 
-const InputSetting: FunctionComponent<InputProps> = ({
+const InputSetting: React.FC<InputProps> = ({
   name,
   label,
   disable = false,

@@ -1,8 +1,8 @@
-import { FunctionComponent } from "react";
+import React from "react";
 // packages dependencies
 import { WalletMoney, Wifi, Timer1 } from "iconsax-react";
 
-const Features: FunctionComponent = () => {
+const Features: React.FC = () => {
   return (
     <section className="px-12 py-11 lg:py-16 sm:px-14 md:px-32 lg:px-[6.5rem] 2xl:px-[9.5rem]">
       <h1 className="font-PoppinsBold text-primaryText text-3xl text-center lg:text-4xl">
