@@ -20,7 +20,9 @@
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"react-redux": "^9.2.0",
+		"react-toastify": "^11.0.5",
 		"swagger-typescript-api": "^13.0.28",
+		"ua-parser-js": "^2.0.3",
 		"yup": "^1.6.1"
 	},
 	"devDependencies": {
