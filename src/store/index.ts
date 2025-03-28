@@ -1,12 +1,13 @@
 // redux dependencies
 import { configureStore } from "@reduxjs/toolkit";
 // reducers
-import { userSlice } from "./slices";
+import { loadingSlice, userSlice } from "./slices";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       user: userSlice,
+      loading: loadingSlice,
     },
   });
 };

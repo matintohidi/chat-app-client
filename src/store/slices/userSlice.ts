@@ -1,14 +1,7 @@
 // redux dependencies
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // contracts
-export interface UserValuesInterface {
-  _id: string;
-  name: string;
-  email: string;
-  profile: string | null;
-  phone: string;
-  city: string;
-}
+import { UserValuesInterface } from "@/contracts/auth";
 // initial state interface
 interface UserInitialState {
   user: UserValuesInterface | undefined;

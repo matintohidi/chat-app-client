@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #615ef0;
+  --color-secondary: #efeffd;
+  --color-customGray: #f1f1f1;
+  --color-primaryText: #1e2531;
+  --color-customGrayText: #383a47;
+
+  --font-Asap: Asap;
+  --font-Inter: Inter;
+  --font-InterExtraBold: InterExtraBold;
+  --font-InterRegular: InterRegular;
+  --font-PoppinsBold: PoppinsBold;
+}
+
 @font-face {
   font-family: Asap;
   font-style: normal;
