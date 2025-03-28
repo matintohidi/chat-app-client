@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chat Life Client
 
-## Getting Started
+Chat Life is a chatting app that allows you to communicate with people around the world 🌐!
 
-First, run the development server:
+[This is the main repository](https://github.com/matintohidi/chat-app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+> We strive to use the latest and best technologies in our project.
+
+## Technology
+
+- React
+- TypeScript
+- React Router Dom
+- Redux Toolkit
+- Tailwind CSS
+- Docker
+- Axios
+- Formik
+- Yup
+
+## How to Install?
+
+#### ⚠️ Note: This is just the front-end app. To see the full app, please visit this [repository](https://github.com/matintohidi/chat-app).
+
+Ensure you are installing the latest version of Node.js. If not installed, you can download it from this [link](https://nodejs.org/en/download).
+
+Run the following scripts at the root of the project:
+
+```sh
+yarn
+yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to Develop?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Interested in contributing? Great!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+⚠️ We use the [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) strategy to develop a better app!
 
-## Learn More
+Open your favorite terminal and execute these commands:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+git clone https://github.com/matintohidi/chat-app-client.git
+cd chat-app-client
+yarn
+yarn start
+git flow init
+git checkout develop
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Then make your changes using the strategy below:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Features:
 
-## Deploy on Vercel
+Start a new feature:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+git flow feature start <feature-name>
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Develop your feature with your creative ideas.
+
+The next step is to stage the files, commit them, and finish the feature:
+
+```sh
+git add .
+git commit -m "your commit message"
+git flow feature finish <feature-name>
+```
+
+Then, you can push the changes:
+
+```sh
+git push origin develop
+```
+
+### Hotfixes:
+
+Start a new hotfix:
+
+```sh
+git flow hotfix start <hotfix-name>
+```
+
+Develop and resolve bugs.
+
+The next step is to stage the files, commit them, and finish the hotfix:
+
+```sh
+git add .
+git commit -m "your commit message"
+git flow hotfix finish <hotfix-name>
+```
+
+Then, you can push the changes:
+
+```sh
+git push origin develop
+```
+
+## Matin Tohidi Sani
