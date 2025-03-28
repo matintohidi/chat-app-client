@@ -1,5 +1,6 @@
 import { ChildrenType } from "@/@core/type";
 import ReactQueryProvider from "@/providers/reactQuery";
+import StoreProvider from "@/providers/storeProvider";
 import { headers } from "next/headers";
 import { UAParser } from "ua-parser-js";
 
@@ -15,7 +16,9 @@ const Providers = async (props: Props) => {
   return (
     <>
       {console.log("deviceType", deviceType)}
-      <ReactQueryProvider>{children}</ReactQueryProvider>
+      <ReactQueryProvider>
+        <StoreProvider>{children}</StoreProvider>
+      </ReactQueryProvider>
     </>
   );
 };
