@@ -16,9 +16,7 @@ const navLinks: NavLinkInterface[] = [
 ];
 
 const Header: React.FC = () => {
-  const user: UserValuesInterface | undefined = useAppSelector(
-    (state) => state.user.user
-  );
+  const { user } = useAppSelector((state) => state.user);
 
   return (
     <nav className="flex items-center justify-between px-[17.25px] lg:px-[6.5rem] 2xl:px-[9.5rem] py-6 lg:py-3 sticky top-0 z-50 bg-white shadow-md">
