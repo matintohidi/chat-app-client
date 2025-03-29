@@ -7,7 +7,9 @@ export const metadata: Metadata = {
   title: "Chat Life",
   description:
     "Chat Life for freedom communicate to world with people and especially for persian people",
-  icons: "",
+  icons: {
+    icon: "/images/Logo.png",
+  },
   applicationName: "Chat Life",
   // formatDetection: {
   //   telephone: false,
