@@ -18,8 +18,6 @@ interface RegisterFormProps {
   name?: string;
   email?: string;
   password?: string;
-  navigate: unknown;
-  setCookie: (cookie: unknown, value: string) => void;
 }
 
 const RegisterForm = withFormik<RegisterFormProps, RegisterFormValuesInterface>(
