@@ -1,5 +1,4 @@
 import React from "react";
-// components
 import Mockup from "./mockup";
 import Image from "next/image";
 

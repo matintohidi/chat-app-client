@@ -1,5 +1,4 @@
 import React from "react";
-// packages dependencies
 import { WalletMoney, Wifi, Timer1 } from "iconsax-react";
 
 const Features: React.FC = () => {

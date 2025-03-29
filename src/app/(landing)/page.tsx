@@ -1,4 +1,3 @@
-// components
 import React from "react";
 import {
   Banner,

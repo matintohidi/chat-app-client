@@ -1,5 +1,4 @@
 import React from "react";
-// components
 import UserComment from "./userComment";
 
 const Comment: React.FC = () => {

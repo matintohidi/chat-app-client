@@ -1,9 +1,7 @@
 import React from "react";
-// components
 import MessageCards from "./messageCards";
 import Link from "next/link";
 import Image from "next/image";
-// images
 import BannerImage from "@/../public/images/banner.png";
 import BannerMobileImage from "@/../public/images/banner-mobile.png";
 

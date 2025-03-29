@@ -1,8 +1,8 @@
+import React from "react";
 import { RegisterForm } from "@/app/_components";
 import { Back } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
-import RegisterBanner from "@/../public/images/register.jpg";
 
 const RegisterPage: React.FC = () => {
   return (
