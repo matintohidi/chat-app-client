@@ -2,7 +2,7 @@
 
 import { withFormik } from "formik";
 import * as yup from "yup";
-import InnerSecurityForm from "../../(chat)/chat/setting/security/_components/innerSecurityForm";
+import InnerSecurityForm from "../../(chat)/chat/setting/_components/security/innerSecurityForm";
 import { SecurityFormValuesInterface } from "@/contracts/auth";
 // import callApi from "../../../helpers/callApi";
 // import ValidationError from "../../../exceptions/validationError";

@@ -2,7 +2,7 @@
 
 import { withFormik } from "formik";
 import * as yup from "yup";
-import InnerPersonalInfoForm from "@/app/(chat)/chat/setting/personal-info/_components/innerPersonalInfoForm";
+import InnerPersonalInfoForm from "@/app/(chat)/chat/setting/_components/personal-info/innerPersonalInfoForm";
 import {
   PersonalInfoFormValuesInterface,
   UserValuesInterface,

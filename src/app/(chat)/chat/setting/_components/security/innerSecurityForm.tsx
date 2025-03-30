@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Form, FormikProps } from "formik";
 import InputSetting from "@/app/_components/inputs/inputSetting";

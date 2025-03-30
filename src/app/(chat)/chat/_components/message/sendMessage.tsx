@@ -1,5 +1,4 @@
 import React from "react";
-// packages dependencies
 import { Paperclip, Send2 } from "iconsax-react";
 
 const SendMessage: React.FC = () => {

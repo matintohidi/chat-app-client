@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import { ErrorMessage, useFormikContext } from "formik";
 import * as yup from "yup";
