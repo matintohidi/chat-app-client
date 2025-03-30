@@ -39,7 +39,7 @@ const InputAuth: React.FC<InputProps> = ({
       </div>
       <ErrorMessage
         name={name}
-        className={`text-sm lg:text-base mt-2 text-red-500 ${errorClassName ?? ""}`}
+        className={`text-sm lg:text-base mt-2 text-red-500 ${errorClassName ?? ""} font-light`}
         component="div"
       />
     </div>

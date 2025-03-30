@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Contact: React.FC = () => {
   return (
-    <div className="flex p-3 gap-4 w-full cursor-pointer bg-primary bg-opacity-[6%] rounded-xl">
+    <div className="flex p-3 gap-4 w-full cursor-pointer bg-primary/6 rounded-xl">
       <Image
         src="/images/Frame 10.png"
         alt="profile"

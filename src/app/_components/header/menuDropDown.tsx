@@ -42,7 +42,7 @@ const MenuDropDown: React.FC<Props> = ({ user }) => {
                     <Menu.Item key={link.id}>
                       <Link
                         href={link.path}
-                        className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                        className="  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
                       >
                         {link.name}
                       </Link>
@@ -56,7 +56,7 @@ const MenuDropDown: React.FC<Props> = ({ user }) => {
                   <Menu.Item>
                     <Link
                       href="/chat"
-                      className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                      className="  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
                     >
                       Chat
                     </Link>
@@ -64,7 +64,7 @@ const MenuDropDown: React.FC<Props> = ({ user }) => {
                   <Menu.Item>
                     <Link
                       href="/chat/setting"
-                      className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                      className="  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
                     >
                       Setting
                     </Link>
@@ -72,7 +72,7 @@ const MenuDropDown: React.FC<Props> = ({ user }) => {
                   <Menu.Item>
                     <Link
                       href="/"
-                      className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                      className="  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
                     >
                       Logout
                     </Link>
@@ -83,7 +83,7 @@ const MenuDropDown: React.FC<Props> = ({ user }) => {
                   <Menu.Item>
                     <Link
                       href="/login"
-                      className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                      className="  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
                     >
                       Login
                     </Link>
@@ -91,7 +91,7 @@ const MenuDropDown: React.FC<Props> = ({ user }) => {
                   <Menu.Item>
                     <Link
                       href="/register"
-                      className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                      className="  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
                     >
                       Register
                     </Link>

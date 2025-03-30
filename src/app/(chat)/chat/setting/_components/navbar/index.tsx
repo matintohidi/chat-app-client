@@ -38,7 +38,7 @@ const NavbarSetting: React.FC = () => {
           <Link
             key={link.id}
             href={link.path}
-            className="flex items-center w-52 sm:w-36 h-12 lg:w-60 font-InterRegular sm:font-Inter sm:rounded-md sm:px-7 sm:py-3 gap-2 text-lg sm:text-sm text-primaryText nav-link-setting hover:text-primary/80 transition"
+            className="flex items-center w-52 sm:w-36 h-12 lg:w-60 sm:font-semibold sm:rounded-md sm:px-7 sm:py-3 gap-2 text-lg sm:text-sm text-primaryText nav-link-setting hover:text-primary/80 transition"
           >
             {link.icon}
             {link.name}

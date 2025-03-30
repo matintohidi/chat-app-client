@@ -37,29 +37,29 @@ const Index: React.FC = () => {
           Get direct message from your friends
         </h1>
 
-        <p className="font-inter  text-primaryText text-xs lg:text-base">
+        <p className="  text-primaryText text-xs lg:text-base">
           Great software that allows you to chat from any place at any time
           without any interruption.
         </p>
 
         <div className="flex gap-x-5">
           <div className="flex items-center gap-x-2">
-            <span className="font-inter font-extrabold text-[32px] text-primaryText">
+            <span className=" font-extrabold text-[32px] text-primaryText">
               4.3K+
             </span>
 
-            <h2 className="flex flex-col font-inter  text-primaryText text-sm">
+            <h2 className="flex flex-col   text-primaryText text-sm">
               <span>Registered</span>
               <span>user</span>
             </h2>
           </div>
 
           <div className="flex items-center gap-x-2">
-            <span className="font-inter font-extrabold text-[32px] text-primaryText">
+            <span className=" font-extrabold text-[32px] text-primaryText">
               7M+
             </span>
 
-            <h2 className="flex flex-col font-inter  text-primaryText text-sm">
+            <h2 className="flex flex-col   text-primaryText text-sm">
               <span>Chats in</span>
               <span>last 2023</span>
             </h2>

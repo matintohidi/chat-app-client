@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-col text-[#797B89] text-base font-inter  py-[30px] gap-6 lg:gap-0 lg:flex-row lg:justify-between lg:w-full lg:px-4">
+      <div className="flex flex-col text-[#797B89] text-base   py-[30px] gap-6 lg:gap-0 lg:flex-row lg:justify-between lg:w-full lg:px-4">
         <h5>&copy; Copyright 2023, All Rights Reserved</h5>
 
         <div className="flex justify-around lg:gap-6">

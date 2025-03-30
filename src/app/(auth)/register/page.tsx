@@ -25,7 +25,7 @@ const RegisterPage: React.FC = () => {
             <h2 className="2xl:text-[40px] text-[34.5px] font-poppins font-bold">
               Create an account
             </h2>
-            <h3 className="text-[#545454] font-inter ">
+            <h3 className="text-[#545454] font-light">
               Please register your account to freedom communicate with world
             </h3>
           </div>

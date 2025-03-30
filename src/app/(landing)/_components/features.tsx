@@ -16,11 +16,11 @@ const Features: React.FC = () => {
           </span>
 
           <div className="flex flex-col items-center mt-[15px] lg:items-start lg:mt-0">
-            <h1 className="text-[22px] text-primaryText font-inter font-extrabold lg:text-base xl:text-[22px]">
+            <h1 className="text-[22px] text-primaryText  font-extrabold lg:text-base xl:text-[22px]">
               Free communicate
             </h1>
 
-            <p className="font-inter  text-base text-primaryText leading-6 mt-[10px] text-center lg:text-left lg:text-xs xl:text-base">
+            <p className="  text-base text-primaryText leading-6 mt-[10px] text-center lg:text-left lg:text-xs xl:text-base">
               Stay connected with friends and family for free with our
               easy-to-use communicate chat app. Download now!
             </p>
@@ -33,11 +33,11 @@ const Features: React.FC = () => {
           </span>
 
           <div className="flex flex-col items-center mt-[15px] lg:items-start lg:mt-0">
-            <h1 className="text-[22px] text-primaryText font-inter font-extrabold lg:text-base xl:text-[22px]">
+            <h1 className="text-[22px] text-primaryText  font-extrabold lg:text-base xl:text-[22px]">
               Keep safe & private
             </h1>
 
-            <p className="font-inter  text-base text-primaryText leading-6 mt-[10px] text-center lg:text-left lg:text-xs xl:text-base">
+            <p className="  text-base text-primaryText leading-6 mt-[10px] text-center lg:text-left lg:text-xs xl:text-base">
               Keep your chats safe and private with our encrypted chat app.
               Download now for secure messaging!
             </p>
@@ -50,11 +50,11 @@ const Features: React.FC = () => {
           </span>
 
           <div className="flex flex-col items-center mt-[15px] lg:items-start lg:mt-0">
-            <h1 className="text-[22px] text-primaryText font-inter font-extrabold lg:text-base xl:text-[22px]">
+            <h1 className="text-[22px] text-primaryText  font-extrabold lg:text-base xl:text-[22px]">
               Save your time
             </h1>
 
-            <p className="font-inter  text-base text-primaryText leading-6 mt-[10px] text-center lg:text-left lg:text-xs xl:text-base">
+            <p className="  text-base text-primaryText leading-6 mt-[10px] text-center lg:text-left lg:text-xs xl:text-base">
               Chat efficiently and save time with our app's pre-written messages
               and templates. Download now!
             </p>

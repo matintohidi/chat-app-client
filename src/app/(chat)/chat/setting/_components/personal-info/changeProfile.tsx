@@ -91,12 +91,8 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
             ) : (
               <>
                 <h2 className="text-sm">{name}</h2>
-                <h3 className="font-inter  text-gray-600 text-xs">
-                  Front-end Developer
-                </h3>
-                {city && (
-                  <h3 className="font-inter  text-gray-600 text-xs">{city}</h3>
-                )}
+                <h3 className="text-gray-600 text-xs">Front-end Developer</h3>
+                {city && <h3 className="  text-gray-600 text-xs">{city}</h3>}
               </>
             )}
           </div>
@@ -110,7 +106,7 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
             </>
           ) : (
             <>
-              <label className="py-2 px-4 bg-primary text-white rounded-lg font-inter  text-xs lg:px-7 lg:py-2.5">
+              <label className="py-2 px-4 bg-primary text-white rounded-lg   text-xs lg:px-7 lg:py-2.5">
                 Change
                 <input
                   name="profile"
@@ -122,7 +118,7 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
               </label>
               <button
                 type="button"
-                className="border border-primary px-4 py-2 rounded-lg text-primary font-inter  text-xs lg:px-7 lg:py-2.5 hover:bg-primary hover:text-white transition duration-75"
+                className="border border-primary px-4 py-2 rounded-lg text-primary   text-xs lg:px-7 lg:py-2.5 hover:bg-primary hover:text-white transition duration-75"
                 onClick={deleteProfile}
               >
                 Delete
@@ -131,10 +127,7 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
           )}
         </div>
         {errors.map((err: string) => (
-          <span
-            key={err}
-            className="text-red-600 text-sm font-inter  w-40 text-start"
-          >
+          <span key={err} className="text-red-600 text-sm   w-40 text-start">
             {err}
           </span>
         ))}

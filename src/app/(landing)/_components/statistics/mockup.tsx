@@ -34,11 +34,11 @@ const Mockup: React.FC = () => {
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
-            <h3 className="text-primaryText text-[8.5px] font-inter font-extrabold lg:text-xs">
+            <h3 className="text-primaryText text-[8.5px]  font-extrabold lg:text-xs">
               New Message
             </h3>
 
-            <p className="text-gray-500 text-[8.5px] lg:text-xs">
+            <p className="text-gray-500 text-[8.5px] lg:text-xs font-light">
               Hey Alex, Are you free now?
             </p>
           </div>
@@ -49,11 +49,11 @@ const Mockup: React.FC = () => {
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
-            <h3 className="text-primaryText text-[8.5px] font-inter font-extrabold lg:text-xs">
+            <h3 className="text-primaryText text-[8.5px]  font-extrabold lg:text-xs">
               New Email
             </h3>
 
-            <p className="text-gray-500 text-[8.5px] lg:text-xs">
+            <p className="text-gray-500 text-[8.5px] lg:text-xs font-light">
               Alex, your order replaced ID #45231
             </p>
           </div>
@@ -64,11 +64,11 @@ const Mockup: React.FC = () => {
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
-            <h3 className="text-primaryText text-[8.5px] font-inter font-extrabold lg:text-xs">
-              Facebook Messagner
+            <h3 className="text-primaryText text-[8.5px] font-extrabold lg:text-xs">
+              Facebook Messenger
             </h3>
 
-            <p className="text-gray-500 text-[8.5px] lg:text-xs">
+            <p className="text-gray-500 text-[8.5px] lg:text-xs font-light">
               How can i see the tracking number?
             </p>
           </div>
@@ -79,11 +79,11 @@ const Mockup: React.FC = () => {
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
-            <h3 className="text-primaryText text-[8.5px] font-inter font-extrabold lg:text-xs">
+            <h3 className="text-primaryText text-[8.5px]  font-extrabold lg:text-xs">
               New Message
             </h3>
 
-            <p className="text-gray-500 text-[8.5px] lg:text-xs">
+            <p className="text-gray-500 text-[8.5px] lg:text-xs font-light">
               How can I renew my subscription?
             </p>
           </div>

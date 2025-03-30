@@ -54,7 +54,7 @@ const ProfileDropDown: React.FC<Props> = ({ user }) => {
                     <Menu.Item key={link.id}>
                       <Link
                         href={link.path}
-                        className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                        className="  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
                       >
                         {link.name}
                       </Link>
@@ -65,7 +65,7 @@ const ProfileDropDown: React.FC<Props> = ({ user }) => {
 
               <div>
                 <Menu.Item>
-                  <button className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white">
+                  <button className="  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white">
                     Logout
                   </button>
                 </Menu.Item>

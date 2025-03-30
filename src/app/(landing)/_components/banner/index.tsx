@@ -14,14 +14,14 @@ const Banner: React.FC = () => {
           people
         </h1>
 
-        <h2 className="text-sm mt-4 xl:text-lg">
+        <h2 className="text-sm mt-4 xl:text-lg text-customGrayText">
           Great software that allows you to chat from any place at any time
           without any interruption.
         </h2>
 
         <Link
           href="/register"
-          className="mt-[22px] mb-4 px-3 py-2 rounded-lg bg-primary text-xs text-white font-inter  border border-primary hover:bg-white hover:text-primary transition lg:text-base lg:px-6 lg:py-3"
+          className="mt-[22px] mb-4 px-3 py-2 rounded-lg bg-primary text-xs text-white   border border-primary hover:bg-white hover:text-primary transition lg:text-base lg:px-6 lg:py-3"
         >
           Start chatting now
         </Link>
@@ -52,19 +52,15 @@ const Banner: React.FC = () => {
           </div>
 
           <div>
-            <span className="font-inter font-extrabold text-sm xl:text-xl">
-              2,291
-            </span>
-            <h3 className="font-inter  text-customGrayText text-xs xl:text-base">
+            <span className=" font-extrabold text-sm xl:text-xl">2,291</span>
+            <h3 className="  text-customGrayText text-xs xl:text-base">
               Happy members
             </h3>
           </div>
 
           <div>
-            <span className="font-inter font-extrabold text-sm xl:text-xl">
-              4.8/5
-            </span>
-            <h3 className="font-inter  text-customGrayText text-xs xl:text-base">
+            <span className=" font-extrabold text-sm xl:text-xl">4.8/5</span>
+            <h3 className="  text-customGrayText text-xs xl:text-base">
               Rating
             </h3>
           </div>

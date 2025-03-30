@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             <Link
               key={link.id}
               href={link.path}
-              className="text-primaryText font-inter  nav-link"
+              className="text-primaryText   nav-link"
             >
               {link.name}
             </Link>
@@ -47,16 +47,13 @@ const Header: React.FC = () => {
         <ProfileDropDown user={user} />
       ) : (
         <div className="hidden lg:flex gap-8 items-center">
-          <Link
-            href="/login"
-            className="text-primaryText font-inter  focus:text-primary"
-          >
+          <Link href="/login" className="text-primaryText   focus:text-primary">
             Login
           </Link>
 
           <Link
             href="/register"
-            className="px-5 py-3.5 font-inter  bg-primary text-white rounded-lg border border-primary hover:bg-white hover:text-primary transition"
+            className="px-5 py-3.5   bg-primary text-white rounded-lg border border-primary hover:bg-white hover:text-primary transition"
           >
             Get Started Free
           </Link>

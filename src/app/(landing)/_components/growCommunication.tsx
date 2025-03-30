@@ -8,7 +8,7 @@ const GrowCommunication: React.FC = () => {
         <span> Start with ChatLife, become faster every second</span>
       </h1>
 
-      <button className="px-5 py-3.5 border border-primary text-white bg-primary rounded-[10px] font-inter  mt-[30px] transition hover:bg-white hover:text-primary">
+      <button className="px-5 py-3.5 border border-primary text-white bg-primary rounded-[10px]   mt-[30px] transition hover:bg-white hover:text-primary">
         Start Chatting Now
       </button>
     </section>

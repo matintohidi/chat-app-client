@@ -9,7 +9,9 @@ const Home: React.FC = () => {
     >
       <div className="flex justify-between items-center border-b p-5 xl:p-6 w-full">
         <div className="flex items-center gap-3">
-          <h2 className="text-lg md:text-xl select-none">Messages</h2>
+          <h2 className="text-lg md:text-xl select-none font-semibold">
+            Messages
+          </h2>
           <ArrowDown2 size="18" />
           <span className="text-xs px-2 py-0.5 bg-gray-200 font-medium rounded-3xl select-none">
             13
@@ -24,7 +26,7 @@ const Home: React.FC = () => {
       <div className="w-full h-screen flex flex-col">
         <div className="px-6 mt-4">
           <input
-            className="w-full py-2.5 md:py-3.5 px-5 outline-primary rounded-xl bg-[#F3F3F3] font-inter  text-sm"
+            className="w-full py-2.5 md:py-3.5 px-5 outline-primary rounded-xl bg-[#F3F3F3] text-sm"
             placeholder="Search Messages"
           />
         </div>

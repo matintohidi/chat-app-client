@@ -17,7 +17,7 @@ html {
 }
 
 .profileBox {
-  box-shadow: 0 18px 50px -12px #615ef0;
+  box-shadow: 0 18px 50px -12px var(--color-primary);
 }
 
 .navbarButton:hover svg path {
