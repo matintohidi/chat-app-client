@@ -118,7 +118,7 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
               </label>
               <button
                 type="button"
-                className="border border-primary px-4 py-2 rounded-lg text-primary   text-xs lg:px-7 lg:py-2.5 hover:bg-primary hover:text-white transition duration-75"
+                className="border border-primary px-4 py-2 rounded-lg text-primary text-xs lg:px-7 lg:py-2.5 hover:bg-primary hover:text-white transition duration-75"
                 onClick={deleteProfile}
               >
                 Delete

@@ -21,7 +21,7 @@ const ProfileDropDown: React.FC<Props> = ({ user }) => {
     <nav className="hidden lg:flex">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="hidden lg:flex lg:w-14 lg:h-14 rounded-full transition hover:ring-2 ring-opacity-70 ring-primary ring-offset-2">
+          <Menu.Button className="hidden lg:flex lg:w-14 lg:h-14 rounded-full transition hover:ring-2 ring-primary/70 ring-offset-2">
             {user?.profile ? (
               <Image
                 src={`http://localhost:5000/images/${user?.profile}`}

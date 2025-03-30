@@ -10,17 +10,19 @@ const Header: React.FC = () => {
 
         <div className="flex gap-2 sm:gap-4">
           <Image
-            src="/images/Frame 10.png"
+            src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
             alt="profile"
-            className="w-12 h-12 rounded-xl object-cover"
+            className="w-12 h-12 rounded-lg object-cover"
             width={48}
             height={48}
           />
 
           <div className="flex flex-col justify-between">
-            <h1 className="text-md lg:text-xl capitalize">lavern laboy</h1>
+            <h1 className="text-md lg:text-xl capitalize font-semibold text-primaryText">
+              lavern laboy
+            </h1>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 bg-green-400 rounded-full"> </span>
               <span className="text-xs text-gray-500">Online</span>
             </div>
@@ -29,7 +31,7 @@ const Header: React.FC = () => {
       </div>
 
       <button className="flex gap-2 justify-center items-center rounded-lg bg-secondary px-3 py-1.5 lg:px-4 lg:py-2.5">
-        <Call variant="Bold" className="text-primary" />
+        <Call variant="Bold" color="#615ef0" size={24} />
 
         <span className="text-primary">Call</span>
       </button>

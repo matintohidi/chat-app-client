@@ -9,11 +9,11 @@ const Home: React.FC = () => {
     >
       <div className="flex justify-between items-center border-b p-5 xl:p-6 w-full">
         <div className="flex items-center gap-3">
-          <h2 className="text-lg md:text-xl select-none font-semibold">
+          <h2 className="text-lg md:text-xl select-none font-semibold text-primaryText">
             Messages
           </h2>
           <ArrowDown2 size="18" />
-          <span className="text-xs px-2 py-0.5 bg-gray-200 font-medium rounded-3xl select-none">
+          <span className="text-xs px-2 py-0.5 bg-gray-200 rounded-3xl select-none">
             13
           </span>
         </div>

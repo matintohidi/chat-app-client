@@ -5,7 +5,7 @@ const SendMessage: React.FC = () => {
   return (
     <div className="flex p-6 gap-6">
       <button>
-        <Paperclip />
+        <Paperclip size={24} color="#000000" />
       </button>
 
       <div className="relative w-full">
@@ -14,7 +14,7 @@ const SendMessage: React.FC = () => {
           placeholder="Type a message"
         ></textarea>
         <button className="absolute right-5 top-3">
-          <Send2 variant="Bold" color="#615EF0" />
+          <Send2 variant="Bold" color="#615EF0" size={24} />
         </button>
       </div>
     </div>

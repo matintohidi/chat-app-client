@@ -16,6 +16,10 @@ html {
   font-family: var(--font-inter);
 }
 
+button {
+  @apply cursor-pointer;
+}
+
 .profileBox {
   box-shadow: 0 18px 50px -12px var(--color-primary);
 }
