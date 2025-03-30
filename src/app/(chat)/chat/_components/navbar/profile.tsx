@@ -24,7 +24,7 @@ interface PropsDefault {
 
 export const ProfileDefault: React.FC<PropsDefault> = ({ name }) => {
   return (
-    <div className="w-14 h-14 profileBox bg-primary font-Asap text-white rounded-[14px] text-[22px] flex justify-center items-center select-none capitalize">
+    <div className="w-14 h-14 profileBox bg-primary font-asap font-semibold text-white rounded-[14px] text-[22px] flex justify-center items-center select-none capitalize">
       <span>{name[0]}</span>
     </div>
   );

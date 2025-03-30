@@ -26,10 +26,10 @@ const LoginView: React.FC<LoginViewProps> = () => {
       <section className="w-full lg:w-2/5 h-screen flex justify-between items-center xl:p-14 p-8">
         <section className="w-full">
           <div className="space-y-4">
-            <h2 className="2xl:text-[40px] text-[34.5px] font-PoppinsBold">
+            <h2 className="2xl:text-[40px] text-[34.5px] font-poppins font-bold">
               Login to your account
             </h2>
-            <h3 className="text-[#545454] font-InterRegular">
+            <h3 className="text-[#545454] font-inter">
               To have the freedom to connect with the world, please log in to
               your account
             </h3>

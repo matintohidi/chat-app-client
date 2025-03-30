@@ -10,7 +10,7 @@ const userComment: React.FC = () => {
             “Incredible Experience”
           </h2>
 
-          <p className="text-center mt-2.5 text-customGrayText font-InterRegular lg:text-lg">
+          <p className="text-center mt-2.5 text-customGrayText font-inter  lg:text-lg">
             We had an incredible experience working with Mixland and were
             impressed they made such a big difference in only three weeks. Our
             team is so grateful for the wonderful improvements they made and
@@ -34,9 +34,9 @@ const userComment: React.FC = () => {
         />
 
         <div className="text-white space-y-2">
-          <h1 className="text-lg font-InterRegular font-medium">Wade Warren</h1>
+          <h1 className="text-lg font-inter  font-medium">Wade Warren</h1>
 
-          <h2 className="text-sm font-InterRegular font-thin">
+          <h2 className="text-sm font-inter  font-thin">
             CEO, ABC Corporation
           </h2>
         </div>

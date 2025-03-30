@@ -37,7 +37,7 @@ const InnerPersonalInfoForm = (
       ) : (
         <button
           type="submit"
-          className="mt-4 px-7 py-2.5 bg-primary text-white font-InterRegular rounded-lg text-xs"
+          className="mt-4 px-7 py-2.5 bg-primary text-white font-inter  rounded-lg text-xs"
         >
           Save Changes
         </button>

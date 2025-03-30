@@ -24,7 +24,7 @@ const Home: React.FC = () => {
       <div className="w-full h-screen flex flex-col">
         <div className="px-6 mt-4">
           <input
-            className="w-full py-2.5 md:py-3.5 px-5 outline-primary rounded-xl bg-[#F3F3F3] font-InterRegular text-sm"
+            className="w-full py-2.5 md:py-3.5 px-5 outline-primary rounded-xl bg-[#F3F3F3] font-inter  text-sm"
             placeholder="Search Messages"
           />
         </div>

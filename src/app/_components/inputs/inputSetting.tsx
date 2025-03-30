@@ -29,7 +29,7 @@ const InputSetting: React.FC<InputProps> = ({
   const { loading } = useAppSelector((state) => state.loading);
 
   return (
-    <div className="font-InterRegular">
+    <div className="font-inter ">
       <div className="flex flex-col items-start gap-1">
         {loading ? (
           <div className="w-full flex flex-col items-start gap-1">

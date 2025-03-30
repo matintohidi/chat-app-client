@@ -15,11 +15,11 @@ const MessageCards: React.FC = () => {
           />
 
           <div className="flex flex-col gap-1">
-            <h2 className="font-InterExtraBold text-[8px] text-primaryText xl:text-xs">
+            <h2 className="font-inter font-extrabold text-[8px] text-primaryText xl:text-xs">
               Eli json
             </h2>
 
-            <p className="font-InterRegular text-[8px] text-left text-primaryText xl:text-xs">
+            <p className="font-inter  text-[8px] text-left text-primaryText xl:text-xs">
               I commented on Figma, I want to add some fancy icons. Do you have
               any icon set?
             </p>
@@ -38,11 +38,11 @@ const MessageCards: React.FC = () => {
           />
 
           <div className="flex flex-col gap-1">
-            <h2 className="font-InterExtraBold text-[5.3px] text-primaryText xl:text-xs">
+            <h2 className="font-inter font-extrabold text-[5.3px] text-primaryText xl:text-xs">
               Eli json
             </h2>
 
-            <p className="font-InterRegular text-[5.3px] text-left text-primaryText xl:text-xs">
+            <p className="font-inter  text-[5.3px] text-left text-primaryText xl:text-xs">
               One of the best chatting app I have ever used.
             </p>
           </div>

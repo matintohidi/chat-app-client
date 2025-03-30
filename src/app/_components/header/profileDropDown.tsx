@@ -31,7 +31,7 @@ const ProfileDropDown: React.FC<Props> = ({ user }) => {
                 height={56}
               />
             ) : (
-              <div className="lg:w-14 lg:h-14 rounded-full bg-primary font-Asap text-white text-[22px] flex justify-center items-center">
+              <div className="lg:w-14 lg:h-14 rounded-full bg-primary font-asap font-semibold text-white text-[22px] flex justify-center items-center">
                 <span>{user?.name[0]}</span>
               </div>
             )}
@@ -54,7 +54,7 @@ const ProfileDropDown: React.FC<Props> = ({ user }) => {
                     <Menu.Item key={link.id}>
                       <Link
                         href={link.path}
-                        className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
+                        className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white"
                       >
                         {link.name}
                       </Link>
@@ -65,7 +65,7 @@ const ProfileDropDown: React.FC<Props> = ({ user }) => {
 
               <div>
                 <Menu.Item>
-                  <button className="font-InterRegular text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white">
+                  <button className="font-inter  text-gray-900 group flex w-full items-center rounded-md p-2 my-1 text-sm hover:bg-primary hover:text-white">
                     Logout
                   </button>
                 </Menu.Item>

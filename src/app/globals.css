@@ -7,49 +7,11 @@
   --color-primaryText: #1e2531;
   --color-customGrayText: #383a47;
 
-  --font-Asap: Asap;
-  --font-Inter: Inter;
-  --font-InterExtraBold: InterExtraBold;
-  --font-InterRegular: InterRegular;
-  --font-PoppinsBold: PoppinsBold;
+  --font-inter: var(--font-inter);
+  --font-poppins: var(--font-poppins);
+  --font-asap: var(--font-asap);
 }
 
-@font-face {
-  font-family: Asap;
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url("../../public/fonts/Asap-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Inter;
-  font-style: normal;
-  font-display: swap;
-  font-weight: 600;
-  src: url("../../public/fonts/Inter-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: InterExtraBold;
-  font-style: normal;
-  font-display: swap;
-  font-weight: 800;
-  src: url("../../public/fonts/Inter-ExtraBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: InterRegular;
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url("../../public/fonts/Inter-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: PoppinsBold;
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url("../../public/fonts/Poppins-Bold.ttf") format("truetype");
+html {
+  font-family: var(--font-inter);
 }

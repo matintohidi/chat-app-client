@@ -9,19 +9,19 @@ const Banner: React.FC = () => {
   return (
     <section className="flex flex-col lg:flex-row lg:py-12 lg:items-center sm:px-14 md:px-32 lg:px-[6.5rem] 2xl:px-[9.5rem]">
       <section className="px-8 py-12 flex flex-col items-start lg:p-0">
-        <h1 className="font-PoppinsBold text-3xl text-primaryText lg:w-[509px] xl:text-5xl">
+        <h1 className="font-poppins font-bold text-3xl text-primaryText lg:w-[509px] xl:text-5xl">
           Freedom communicate to world with people and especially for iranian
           people
         </h1>
 
-        <h2 className="font-InterRegular text-sm mt-4 xl:text-lg">
+        <h2 className="text-sm mt-4 xl:text-lg">
           Great software that allows you to chat from any place at any time
           without any interruption.
         </h2>
 
         <Link
           href="/register"
-          className="mt-[22px] mb-4 px-3 py-2 rounded-lg bg-primary text-xs text-white font-InterRegular border border-primary hover:bg-white hover:text-primary transition lg:text-base lg:px-6 lg:py-3"
+          className="mt-[22px] mb-4 px-3 py-2 rounded-lg bg-primary text-xs text-white font-inter  border border-primary hover:bg-white hover:text-primary transition lg:text-base lg:px-6 lg:py-3"
         >
           Start chatting now
         </Link>
@@ -52,19 +52,19 @@ const Banner: React.FC = () => {
           </div>
 
           <div>
-            <span className="font-InterExtraBold text-sm xl:text-xl">
+            <span className="font-inter font-extrabold text-sm xl:text-xl">
               2,291
             </span>
-            <h3 className="font-InterRegular text-customGrayText text-xs xl:text-base">
+            <h3 className="font-inter  text-customGrayText text-xs xl:text-base">
               Happy members
             </h3>
           </div>
 
           <div>
-            <span className="font-InterExtraBold text-sm xl:text-xl">
+            <span className="font-inter font-extrabold text-sm xl:text-xl">
               4.8/5
             </span>
-            <h3 className="font-InterRegular text-customGrayText text-xs xl:text-base">
+            <h3 className="font-inter  text-customGrayText text-xs xl:text-base">
               Rating
             </h3>
           </div>

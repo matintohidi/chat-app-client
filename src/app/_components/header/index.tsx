@@ -21,7 +21,8 @@ const Header: React.FC = () => {
   return (
     <nav className="flex items-center justify-between px-[17.25px] lg:px-[6.5rem] 2xl:px-[9.5rem] py-6 lg:py-3 sticky top-0 z-50 bg-white shadow-md">
       <h1 className="text-sm tracking-wider select-none">
-        <span className="text-xl text-primary font-Asap">C</span>hat Life
+        <span className="text-xl text-primary font-asap font-semibold">C</span>
+        hat Life
       </h1>
 
       {/* mobile menu dropdown */}
@@ -34,7 +35,7 @@ const Header: React.FC = () => {
             <Link
               key={link.id}
               href={link.path}
-              className="text-primaryText font-InterRegular nav-link"
+              className="text-primaryText font-inter  nav-link"
             >
               {link.name}
             </Link>
@@ -48,14 +49,14 @@ const Header: React.FC = () => {
         <div className="hidden lg:flex gap-8 items-center">
           <Link
             href="/login"
-            className="text-primaryText font-InterRegular focus:text-primary"
+            className="text-primaryText font-inter  focus:text-primary"
           >
             Login
           </Link>
 
           <Link
             href="/register"
-            className="px-5 py-3.5 font-InterRegular bg-primary text-white rounded-lg border border-primary hover:bg-white hover:text-primary transition"
+            className="px-5 py-3.5 font-inter  bg-primary text-white rounded-lg border border-primary hover:bg-white hover:text-primary transition"
           >
             Get Started Free
           </Link>

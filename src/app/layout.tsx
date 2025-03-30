@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter, Poppins, Asap } from "next/font/google";
 import "./globals.css";
 import Providers from "@/providers";
 import ToasterProvider from "@/providers/toaster";
@@ -33,6 +34,27 @@ export const metadata: Metadata = {
   // },
 };
 
+const inter = Inter({
+  display: "swap",
+  weight: ["200", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const poppins = Poppins({
+  display: "swap",
+  weight: ["700"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
+
+const asap = Asap({
+  display: "swap",
+  weight: ["600"],
+  subsets: ["latin"],
+  variable: "--font-asap",
+});
+
 const RootLayout = ({
   children,
 }: Readonly<{
@@ -41,6 +63,7 @@ const RootLayout = ({
   return (
     <html
       lang="en"
+      className={`${inter.variable} ${poppins.variable} ${asap.variable}`}
       suppressHydrationWarning={false}
       suppressContentEditableWarning={false}
     >
@@ -48,7 +71,7 @@ const RootLayout = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
 
-      <body className="font-InterRegular">
+      <body className="font-regular">
         <Providers>
           <ToasterProvider />
 

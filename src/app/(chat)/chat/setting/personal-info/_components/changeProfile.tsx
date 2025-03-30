@@ -78,7 +78,7 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
               className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-primary p-0.5"
             />
           ) : (
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary flex justify-center items-center capitalize profileBox text-white font-Asap text-2xl">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary flex justify-center items-center capitalize profileBox text-white font-asap font-semibold text-2xl">
               <span>{name !== undefined && name[0]}</span>
             </div>
           )}
@@ -93,13 +93,11 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
             ) : (
               <>
                 <h2 className="text-sm">{name}</h2>
-                <h3 className="font-InterRegular text-gray-600 text-xs">
+                <h3 className="font-inter  text-gray-600 text-xs">
                   Front-end Developer
                 </h3>
                 {city && (
-                  <h3 className="font-InterRegular text-gray-600 text-xs">
-                    {city}
-                  </h3>
+                  <h3 className="font-inter  text-gray-600 text-xs">{city}</h3>
                 )}
               </>
             )}
@@ -114,7 +112,7 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
             </>
           ) : (
             <>
-              <label className="py-2 px-4 bg-primary text-white rounded-lg font-InterRegular text-xs lg:px-7 lg:py-2.5">
+              <label className="py-2 px-4 bg-primary text-white rounded-lg font-inter  text-xs lg:px-7 lg:py-2.5">
                 Change
                 <input
                   name="profile"
@@ -126,7 +124,7 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
               </label>
               <button
                 type="button"
-                className="border border-primary px-4 py-2 rounded-lg text-primary font-InterRegular text-xs lg:px-7 lg:py-2.5 hover:bg-primary hover:text-white transition duration-75"
+                className="border border-primary px-4 py-2 rounded-lg text-primary font-inter  text-xs lg:px-7 lg:py-2.5 hover:bg-primary hover:text-white transition duration-75"
                 onClick={deleteProfile}
               >
                 Delete
@@ -137,7 +135,7 @@ const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
         {errors.map((err: string) => (
           <span
             key={err}
-            className="text-red-600 text-sm font-InterRegular w-40 text-start"
+            className="text-red-600 text-sm font-inter  w-40 text-start"
           >
             {err}
           </span>
