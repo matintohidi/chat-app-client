@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex justify-between px-3 sm:px-6 py-4 border-b">
+    <header className="flex justify-between px-3 sm:px-6 py-4 border-b border-gray-300">
       <div className="flex gap-2 items-center">
         <ArrowLeft className="text-gray-400 hover:text-gray-800 transition lg:hidden" />
 

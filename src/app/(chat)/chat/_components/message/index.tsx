@@ -5,7 +5,7 @@ import SendMessage from "./sendMessage";
 const Chat: React.FC = () => {
   return (
     <div
-      className={` w-full lg:w-1/2 lg:flex lg:border-r flex-col justify-between`}
+      className={` w-full lg:w-1/2 lg:flex lg:border-r lg:border-gray-300 flex-col justify-between`}
     >
       <Header />
 

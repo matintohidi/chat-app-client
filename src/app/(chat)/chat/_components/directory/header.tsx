@@ -2,7 +2,7 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <div className="flex items-center justify-between p-[22px] border-b">
+    <div className="flex items-center justify-between p-[22px] border-b border-gray-300">
       <h2 className="text-xl font-semibold text-primaryText">Directory</h2>
 
       <button className="w-9 h-9 rounded-full bg-secondary flex flex-col gap-[3px] items-center justify-center">

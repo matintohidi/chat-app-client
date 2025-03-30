@@ -3,7 +3,7 @@ import Member from "./member";
 
 const Members: React.FC = () => {
   return (
-    <div className="px-4 py-6 border-b">
+    <div className="px-4 py-6 border-b border-gray-300">
       <div className="flex gap-x-2 items-center">
         <h2 className="text-sm font-medium">Team Members</h2>
         <span className="flex items-center justify-center bg-gray-200 text-xs rounded-full px-2 py-1">

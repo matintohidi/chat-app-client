@@ -2,17 +2,17 @@ import React from "react";
 import { ArrowDown2, Add } from "iconsax-react";
 import Contact from "./contact";
 
-const Home: React.FC = () => {
+const Contacts: React.FC = () => {
   return (
     <section
-      className={`w-full lg:border-r lg:flex flex-col items-center lg:w-1/4`}
+      className={`w-full lg:border-r lg:border-gray-300 lg:flex flex-col items-center lg:w-1/4`}
     >
-      <div className="flex justify-between items-center border-b p-5 xl:p-6 w-full">
+      <div className="flex justify-between items-center border-b border-gray-300 p-5 xl:p-6 w-full">
         <div className="flex items-center gap-3">
           <h2 className="text-lg md:text-xl select-none font-semibold text-primaryText">
             Messages
           </h2>
-          <ArrowDown2 size="18" />
+          <ArrowDown2 size="18" color="#383a47" />
           <span className="text-xs px-2 py-0.5 bg-gray-200 rounded-3xl select-none">
             13
           </span>
@@ -50,4 +50,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Contacts;
