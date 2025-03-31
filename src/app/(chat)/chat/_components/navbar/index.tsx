@@ -30,29 +30,29 @@ const Navbar: React.FC = () => {
 
         <div className="flex flex-col items-center gap-7 mt-14">
           <Link className="navbarButton" href="/">
-            <Home2 />
+            <Home2 size={24} color="#000" />
           </Link>
 
           <Link className="navbarButton" href="/chat/">
-            <Message />
+            <Message size={24} color="#000" />
           </Link>
 
           <button className="navbarButton">
-            <Chart21 />
+            <Chart21 size={24} color="#000" />
           </button>
 
           <button className="navbarButton">
-            <SearchNormal />
+            <SearchNormal size={24} color="#000" />
           </button>
 
           <button className="navbarButton">
-            <Calendar2 />
+            <Calendar2 size={24} color="#000" />
           </button>
         </div>
       </div>
 
       <Link className="mb-2 navbarButton" href="/chat/setting">
-        <Setting2 />
+        <Setting2 size={24} color="#000" />
       </Link>
     </div>
   );
