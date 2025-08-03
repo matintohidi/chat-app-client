@@ -1,2 +1,3 @@
-export { default as userSlice } from "./userSlice";
-export { default as loadingSlice } from "./loadingSlice";
+export { default as userSlice } from "./user.slice";
+export { default as loadingSlice } from "./loading.slice";
+export { default as notificationSlice } from "./notification.slice";

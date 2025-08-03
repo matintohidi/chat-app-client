@@ -1,26 +1,22 @@
-export interface RegisterFormValuesInterface {
+export interface UserModel {
+  accessLevel?: "admin" | "user" | "all";
+  city?: string;
+  createdAt?: string;
+  createdById?: string;
+  deletedAt?: string;
+  deletedById?: string;
+  email: string;
+  id?: string;
   name: string;
-  email: string;
-  password: string;
-}
-
-export interface LoginFormValuesInterface {
-  email: string;
-  password: string;
-}
-
-export interface UserValuesInterface {
-  _id: string;
-  name: string;
-  email: string;
-  profile: string | null;
-  phone: string;
-  city: string;
+  phoneNumber: string;
+  profile?: string;
+  updatedAt?: string;
+  updatedById?: string;
 }
 
 export interface PersonalInfoFormValuesInterface {
   name: string;
-  phone: string;
+  phoneNumber: string;
   city: string;
   profile: string;
 }

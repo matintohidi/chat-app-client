@@ -2,15 +2,11 @@
 
 import { withFormik } from "formik";
 import * as yup from "yup";
-import InnerPersonalInfoForm from "@/app/(chat)/chat/setting/_components/personal-info/innerPersonalInfoForm";
-import {
-  PersonalInfoFormValuesInterface,
-  UserValuesInterface,
-} from "@/contracts/auth";
+import InnerPersonalInfoForm from "@/app/(chat)/chat/setting/components/personal-info/innerPersonalInfoForm";
+import { PersonalInfoFormValuesInterface, UserModel } from "@/contracts/auth";
 // import callApi from "../../../helpers/callApi";
 // import ValidationError from "../../../exceptions/validationError";
 // import { changeUserInfo , changeProfile } from "../../../utils/APIRoutes";
-import { setUser } from "../../../store/slices/userSlice";
 
 const PersonalInfoValidationSchema = yup.object().shape({
   name: yup.string().min(3).max(20).required(),
@@ -19,9 +15,10 @@ const PersonalInfoValidationSchema = yup.object().shape({
 });
 
 import { AppDispatch } from "@/store";
+import { setUser } from "@/store/slices/user.slice";
 
 interface PersonalInfoProps {
-  user: UserValuesInterface;
+  user: UserModel;
   cookies: { [p: string]: unknown };
   dispatch: AppDispatch;
 }
@@ -33,7 +30,7 @@ const PersonalInfoForm = withFormik<
   mapPropsToValues: ({ user }) => {
     return {
       name: user.name ?? "",
-      phone: user.phone ?? "",
+      phoneNumber: user.phoneNumber ?? "",
       city: user.city ?? "",
       profile: user.profile ?? "",
     };
@@ -41,9 +38,9 @@ const PersonalInfoForm = withFormik<
   validationSchema: PersonalInfoValidationSchema,
   handleSubmit: async (values, { props, setFieldError }) => {
     const { cookies, user, dispatch } = props;
-    const { name, phone, city, profile } = values;
+    const { name, phoneNumber, city, profile } = values;
 
-    let updatedUser = { ...user, name, phone, city };
+    let updatedUser = { ...user, name, phoneNumber, city };
 
     try {
       // await callApi().put(
@@ -67,7 +64,7 @@ const PersonalInfoForm = withFormik<
       if (profile) {
         const changeProfileForm = new FormData();
         changeProfileForm.append("profile", profile);
-        changeProfileForm.append("id", user._id);
+        changeProfileForm.append("id", user.id ?? "");
 
         try {
           // await callApi().put(changeProfile, changeProfileForm, {
@@ -96,7 +93,7 @@ const PersonalInfoForm = withFormik<
           //   }
           // );
 
-          updatedUser = { ...updatedUser, profile: null };
+          updatedUser = { ...updatedUser, profile: undefined };
         } catch (err: unknown) {
           // if (err instanceof ValidationError) {
           //   Object.entries(err.messages).forEach(([key, value]) =>

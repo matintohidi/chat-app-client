@@ -2,7 +2,7 @@ import { resolve } from "path";
 
 import { generateApi } from "swagger-typescript-api";
 
-const output = resolve(process.cwd(), "./src/lib");
+const output = resolve(process.cwd(), "./src/libs");
 
 generateApi({
   output,

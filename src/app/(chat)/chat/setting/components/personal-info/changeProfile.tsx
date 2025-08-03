@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ErrorMessage, useFormikContext } from "formik";
 import * as yup from "yup";
-import { SUPPORTED_FORMATS } from "@/utils/supported_formats";
+import { SUPPORTED_FORMATS } from "@/utils/supported-formats";
 import { useAppSelector } from "@/store/hooks";
 import Image from "next/image";
 // import ValidationError from "../../../../../exceptions/validationError";

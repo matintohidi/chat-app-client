@@ -1,9 +1,8 @@
-// redux dependencies
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-// initial state interface
-interface LoadingInitialState {
+
+type LoadingInitialState = {
   loading: boolean;
-}
+};
 
 const initialState: LoadingInitialState = {
   loading: true,

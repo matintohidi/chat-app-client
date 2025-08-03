@@ -1,5 +1,5 @@
+import File from "@/app/(chat)/chat/components/directory/files/file";
 import React from "react";
-import File from "@/app/(chat)/chat/_components/directory/files/file";
 
 const Files: React.FC = () => {
   return (

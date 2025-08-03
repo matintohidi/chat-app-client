@@ -5,7 +5,7 @@ import { Microphone, Paperclip, Send2 } from "iconsax-react";
 import dynamic from "next/dynamic";
 
 const VoiceRecorder = dynamic(
-  () => import("@/app/(chat)/chat/_components/message/voiceRecorder"),
+  () => import("@/app/(chat)/chat/components/message/voiceRecorder"),
   {
     ssr: false,
     loading: () => (

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Poppins, Asap } from "next/font/google";
 import "./globals.css";
 import Providers from "@/providers";
-import ToasterProvider from "@/providers/toaster";
 
 export const metadata: Metadata = {
   title: "Chat Life",
@@ -12,26 +11,6 @@ export const metadata: Metadata = {
     icon: "/images/Logo.png",
   },
   applicationName: "Chat Life",
-  // formatDetection: {
-  //   telephone: false,
-  // },
-  // openGraph: {
-  //   type: "website",
-  //   siteName: "",
-  //   title: {
-  //     default: "",
-  //     template: "",
-  //   },
-  //   description: "",
-  // },
-  // twitter: {
-  //   card: "summary",
-  //   title: {
-  //     default: "",
-  //     template: "",
-  //   },
-  //   description: "",
-  // },
 };
 
 const inter = Inter({
@@ -72,11 +51,7 @@ const RootLayout = ({
       </head>
 
       <body className="font-regular">
-        <Providers>
-          <ToasterProvider />
-
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

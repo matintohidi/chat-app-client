@@ -1,7 +1,7 @@
 "use client";
 
+import { Chat, Contacts, Directory } from "@/app/(chat)/chat/components";
 import React from "react";
-import { Contacts, Directory, Chat } from "./_components";
 
 const ChatPage: React.FC = () => {
   return (

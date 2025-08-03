@@ -1,11 +1,9 @@
-// redux dependencies
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-// contracts
-import { UserValuesInterface } from "@/contracts/auth";
-// initial state interface
-interface UserInitialState {
-  user: UserValuesInterface | undefined;
-}
+import { UserModel } from "@/contracts/auth";
+
+type UserInitialState = {
+  user: UserModel | undefined;
+};
 
 const initialState: UserInitialState = {
   user: undefined,
@@ -15,10 +13,7 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setUser: (
-      state,
-      action: PayloadAction<UserValuesInterface | undefined>
-    ) => {
+    setUser: (state, action: PayloadAction<UserModel | undefined>) => {
       state.user = action.payload;
     },
   },

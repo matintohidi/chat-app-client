@@ -6,7 +6,8 @@ import {
   Comment,
   GrowCommunication,
 } from "./_components/";
-import { Footer, Header } from "@/app/_components";
+import Header from "@/app/_components/header";
+import Footer from "@/app/_components/footer";
 
 interface LandingPageProps {}
 

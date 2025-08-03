@@ -1,17 +1,13 @@
 "use client";
 
 import { withFormik } from "formik";
-import * as yup from "yup";
 import { LoginFormValuesInterface } from "@/contracts/auth";
-import InnerLoginForm from "@/app/(auth)/login/_components/innerLoginForm";
+import InnerLoginForm from "@/app/(auth)/login/components/innerLoginForm";
+import { LoginFormValidationSchema } from "@/app/(auth)/login/types/login.schema";
+import { Login } from "@/app/(auth)/login/types/login.type";
 // import callApi from "../../../helpers/callApi";
 // import ValidationError from "../../../exceptions/validationError";
 // import { loginRoute } from "../../../utils/APIRoutes";
-
-const LoginFormValidationSchema = yup.object().shape({
-  email: yup.string().email().required(),
-  password: yup.string().min(8).required(),
-});
 
 interface LoginFormProps {
   email?: string;
@@ -20,7 +16,7 @@ interface LoginFormProps {
   // setCookie?: (coockie: unknown, value: string) => void;
 }
 
-const LoginForm = withFormik<LoginFormProps, LoginFormValuesInterface>({
+const LoginForm = withFormik<LoginFormProps, Login>({
   mapPropsToValues: ({ email, password }) => {
     return {
       email: email ?? "",

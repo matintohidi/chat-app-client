@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import * as yup from "yup";
-import { SUPPORTED_FORMATS } from "@/utils/supported_formats";
+import { SetProfileValidationSchema } from "@/app/(auth)/set-profile/types/set-profile.schema";
 
 const SetProfilePage: React.FC = () => {
   const [errors, setErrors]: any[] = useState([]);
@@ -47,30 +46,8 @@ const SetProfilePage: React.FC = () => {
 
     const profile = formData.get("profile");
 
-    const profileValidation = yup.object().shape({
-      profile: yup
-        .mixed()
-        .test(
-          "exist",
-          "No image",
-          (value) =>
-            (value as File).type !== "application/octet-stream" &&
-            (value as File).size !== 0
-        )
-        .test(
-          "format",
-          "The image format should be .jpeg .png .jpg.",
-          (value) => value && SUPPORTED_FORMATS.includes((value as File).type)
-        )
-        .test(
-          "size",
-          "The desired image size should be less than 5MB.",
-          (value) => value && (value as File).size <= 5000000
-        ),
-    });
-
     try {
-      profileValidation.validateSync({ profile });
+      SetProfileValidationSchema.validateSync({ profile });
 
       // try {
       //   const res = await callApi().put(setProfileRoute, formData, {

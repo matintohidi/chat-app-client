@@ -1,23 +1,18 @@
-import { ChildrenType } from "@/@core/type";
-import ReactQueryProvider from "@/providers/reactQuery";
+import QueryProvider from "@/providers/react-query-provider";
 import StoreProvider from "@/providers/storeProvider";
-import { headers } from "next/headers";
-import { UAParser } from "ua-parser-js";
 
-type Props = ChildrenType;
+type Props = {
+  children: React.ReactNode;
+};
 
 const Providers = async (props: Props) => {
   const { children } = props;
 
-  const reqHeaders = await headers();
-  const userAgent = reqHeaders.get("user-agent") || undefined;
-  const deviceType = UAParser(userAgent).device.type || "desktop";
-
   return (
     <>
-      <ReactQueryProvider>
+      <QueryProvider>
         <StoreProvider>{children}</StoreProvider>
-      </ReactQueryProvider>
+      </QueryProvider>
     </>
   );
 };
