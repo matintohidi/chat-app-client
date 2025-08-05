@@ -1,4 +1,4 @@
-import { Microphone, MicrophoneSlash1, Trash } from "iconsax-react";
+import { Mic, MicOff, Trash2 } from "lucide-react";
 import React from "react";
 import { useReactMediaRecorder } from "react-media-recorder";
 
@@ -18,11 +18,11 @@ const VoiceRecorder: React.FC = () => {
       }
     >
       {status === "recording" ? (
-        <MicrophoneSlash1 size={24} color="#615ef0" />
+        <MicOff size={24} color="#615ef0" />
       ) : status === "stopped" ? (
-        <Trash size={24} color="#615ef0" />
+        <Trash2 size={24} color="#615ef0" />
       ) : (
-        <Microphone size={24} color="#615ef0" />
+        <Mic size={24} color="#615ef0" />
       )}
     </button>
   );

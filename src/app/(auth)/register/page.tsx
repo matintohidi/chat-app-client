@@ -1,15 +1,15 @@
 import React from "react";
-import { Back } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
 import RegisterForm from "@/app/_components/forms/registerForm";
+import { ChevronLeft } from "lucide-react";
 
 const RegisterPage: React.FC = () => {
   return (
     <section className="flex flex-col lg:flex-row pb-4 lg:pb-0">
       <section className="flex items-center justify-between lg:hidden p-8 sticky top-0 z-10 bg-white shadow">
         <Link href="/">
-          <Back size="40" color="#615EF0" />
+          <ChevronLeft color="#615EF0" size="40" />
         </Link>
 
         <Link
@@ -44,7 +44,7 @@ const RegisterPage: React.FC = () => {
         />
         <div className="flex items-center justify-between">
           <Link href="/" className="absolute top-14 left-12">
-            <Back size="40" color="#615EF0" />
+            <ChevronLeft color="#615EF0" size="40" />
           </Link>
 
           <Link

@@ -1,11 +1,11 @@
-import { ClipboardText, ReceiveSquare } from "iconsax-react";
+import { Clipboard, Download } from "lucide-react";
 
 const File: React.FC = () => {
   return (
     <div className="flex justify-between items-center gap-x-4 p-3">
       <div className="flex gap-x-4">
         <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-red-100">
-          <ClipboardText color="#F56565" size={24} />
+          <Clipboard color="#F56565" size={24} />
         </div>
 
         <div className="flex flex-col items-start">
@@ -19,7 +19,7 @@ const File: React.FC = () => {
       </div>
 
       <button>
-        <ReceiveSquare color="#615EF0" size={24} />
+        <Download color="#615EF0" size={24} />
       </button>
     </div>
   );

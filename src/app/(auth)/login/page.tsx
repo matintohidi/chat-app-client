@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { Back } from "iconsax-react";
 import Image from "next/image";
 import LoginForm from "@/app/_components/forms/loginForm";
+import { ChevronLeft } from "lucide-react";
 
 interface LoginPageProps {}
 
@@ -11,7 +11,7 @@ const LoginPage: React.FC<LoginPageProps> = () => {
     <section className="flex flex-col lg:flex-row pb-4 lg:pb-0">
       <section className="flex items-center justify-between p-8 sticky top-0 bg-white z-10 shadow lg:hidden">
         <Link href="/">
-          <Back size="40" color="#615EF0" />
+          <ChevronLeft color="#615EF0" size="40" />
         </Link>
 
         <Link
@@ -47,7 +47,7 @@ const LoginPage: React.FC<LoginPageProps> = () => {
         />
         <div className="flex items-center justify-between">
           <Link href="/" className="absolute top-14 left-12">
-            <Back size="40" color="#615EF0" />
+            <ChevronLeft color="#615EF0" size="40" />
           </Link>
 
           <Link

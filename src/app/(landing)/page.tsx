@@ -6,24 +6,16 @@ import {
   Comment,
   GrowCommunication,
 } from "./_components/";
-import Header from "@/app/_components/header";
-import Footer from "@/app/_components/footer";
 
-interface LandingPageProps {}
-
-const LandingPage: React.FC<LandingPageProps> = () => {
+const LandingPage: React.FC = () => {
   return (
-    <>
-      <Header />
-      <section>
-        <Banner />
-        <Features />
-        <Statistics />
-        <Comment />
-        <GrowCommunication />
-      </section>
-      <Footer />
-    </>
+    <main>
+      <Banner />
+      <Features />
+      <Statistics />
+      <Comment />
+      <GrowCommunication />
+    </main>
   );
 };
 

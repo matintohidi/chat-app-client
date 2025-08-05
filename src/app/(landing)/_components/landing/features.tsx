@@ -1,5 +1,5 @@
+import { Clock, Wallet, Wifi } from "lucide-react";
 import React from "react";
-import { WalletMoney, Wifi, Timer1 } from "iconsax-react";
 
 const Features: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Features: React.FC = () => {
       <div className="flex flex-col gap-8 mt-11 lg:mt-19 lg:flex-row xl:gap-[52px]">
         <div className="flex flex-col items-center lg:flex-row lg:gap-[22px] lg:items-start">
           <span className="p-3.5 rounded-full bg-[rgba(186,65,65,0.09);]">
-            <WalletMoney color="#BA4141" variant="Bold" size="32" />
+            <Wallet color="#BA4141" size="32" />
           </span>
 
           <div className="flex flex-col items-center mt-[15px] lg:items-start lg:mt-0">
@@ -29,7 +29,7 @@ const Features: React.FC = () => {
 
         <div className="flex flex-col items-center lg:flex-row lg:gap-[22px] lg:items-start">
           <span className="p-3.5 rounded-full bg-[rgba(0,117,255,0.09);]">
-            <Wifi color="#0075FF" variant="Bold" size="32" />
+            <Wifi color="#0075FF" size="32" />
           </span>
 
           <div className="flex flex-col items-center mt-[15px] lg:items-start lg:mt-0">
@@ -46,7 +46,7 @@ const Features: React.FC = () => {
 
         <div className="flex flex-col items-center lg:flex-row lg:gap-[22px] lg:items-start">
           <span className="p-3.5 rounded-full bg-[rgba(234,204,45,0.09);]">
-            <Timer1 color="#EACC2D" variant="Bold" size="32" />
+            <Clock color="#EACC2D" size="32" />
           </span>
 
           <div className="flex flex-col items-center mt-[15px] lg:items-start lg:mt-0">

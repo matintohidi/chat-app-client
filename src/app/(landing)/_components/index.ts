@@ -1,5 +1,5 @@
-export { default as Banner } from "./banner";
-export { default as Comment } from "./comment";
-export { default as Statistics } from "./statistics";
-export { default as GrowCommunication } from "./growCommunication";
-export { default as Features } from "./features";
+export { default as Banner } from "./landing/banner";
+export { default as Comment } from "./landing/comment";
+export { default as Statistics } from "./landing/statistics";
+export { default as GrowCommunication } from "./landing/growCommunication";
+export { default as Features } from "./landing/features";

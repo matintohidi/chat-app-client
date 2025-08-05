@@ -1,11 +1,11 @@
-import React from "react";
-// packages dependencies
 import {
-  DirectInbox,
-  MessageText1,
-  SmsNotification,
-  Messenger,
-} from "iconsax-react";
+  Bell,
+  BellDot,
+  Inbox,
+  MessageCircleDashed,
+  MessageSquareText,
+} from "lucide-react";
+import React from "react";
 
 const Mockup: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Mockup: React.FC = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <span className="p-1.5 rounded-full bg-[#FFAF63]">
-            <DirectInbox color="#fff" size="20" />
+            <Inbox color="#fff" size="20" />
           </span>
 
           <h3 className="text-primaryText text-xs ml-1.5">Inbox</h3>
@@ -30,7 +30,7 @@ const Mockup: React.FC = () => {
         {/* message card */}
         <div className="flex bg-[#FAFAFA] rounded p-[8.5px] lg:p-3">
           <span className="rounded-full p-1.5 bg-[#77F393]">
-            <MessageText1 size="24" color="#fff" variant="Bold" />
+            <MessageSquareText size="24" color="#fff" />
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
@@ -45,7 +45,7 @@ const Mockup: React.FC = () => {
         </div>
         <div className="flex bg-[#FAFAFA] rounded p-[8.5px] lg:p-3">
           <span className="rounded-full p-1.5 bg-[#ED4546]">
-            <SmsNotification size="24" color="#fff" variant="Bold" />
+            <BellDot size="24" color="#fff" />
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
@@ -60,7 +60,7 @@ const Mockup: React.FC = () => {
         </div>
         <div className="flex bg-[#FAFAFA] rounded p-[8.5px] lg:p-3">
           <span className="rounded-full p-1.5 bg-[#008EFF]">
-            <Messenger size="24" color="#fff" variant="Bold" />
+            <MessageCircleDashed size="24" color="#fff" />
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
@@ -75,7 +75,7 @@ const Mockup: React.FC = () => {
         </div>
         <div className="flex bg-[#FAFAFA] rounded p-[8.5px] lg:p-3">
           <span className="rounded-full p-1.5 bg-[#77F393]">
-            <MessageText1 size="24" color="#fff" variant="Bold" />
+            <MessageSquareText size="24" color="#fff" />
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">

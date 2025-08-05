@@ -1,6 +1,6 @@
 import React from "react";
-import { ArrowDown2, Add } from "iconsax-react";
 import Contact from "./contact";
+import { ChevronDown, Plus } from "lucide-react";
 
 const Contacts: React.FC = () => {
   return (
@@ -12,14 +12,14 @@ const Contacts: React.FC = () => {
           <h2 className="text-lg md:text-xl select-none font-semibold text-primaryText">
             Messages
           </h2>
-          <ArrowDown2 size="18" color="#383a47" />
+          <ChevronDown size="18" color="#383a47" />
           <span className="text-xs px-2 py-0.5 bg-gray-200 rounded-3xl select-none">
             13
           </span>
         </div>
 
         <button className="w-7 h-7 xl:w-8 xl:h-8 bg-primary rounded-full flex items-center justify-center">
-          <Add color="#fff" size="30" />
+          <Plus color="#fff" size="30" />
         </button>
       </div>
 

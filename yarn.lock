@@ -2052,13 +2052,6 @@ http2-client@^1.2.5:
   resolved "https://registry.yarnpkg.com/http2-client/-/http2-client-1.3.5.tgz#20c9dc909e3cc98284dd20af2432c524086df181"
   integrity sha512-EC2utToWl4RKfs5zd36Mxq7nzHHBuomZboI0yYL6Y0RmBgT7Sgkq4rQ0ezFTYoIsSs7Tm9SJe+o2FcAg6GBhGA==
 
-iconsax-react@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/iconsax-react/-/iconsax-react-0.0.8.tgz#5e992e9bd4bb298da019b2c13f76de5e4bb8e4b4"
-  integrity sha512-l3dVk4zGtkkJHgvNYqAf0wDKqnKxXykee5/DoESGo2JvSYwaxajJUHSX2YrPRXSov8Hd8ClGFwJxCEaEjrFD1Q==
-  dependencies:
-    prop-types "^15.7.2"
-
 ignore@^5.2.0, ignore@^5.3.1:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.2.tgz#3cd40e729f3643fd87cb04e50bf0eb722bc596f5"
@@ -2500,6 +2493,11 @@ loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lucide-react@^0.536.0:
+  version "0.536.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.536.0.tgz#0c15c0ec67b6b0b3f0d6eb65df559bb72ed9c81d"
+  integrity sha512-2PgvNa9v+qz4Jt/ni8vPLt4jwoFybXHuubQT8fv4iCW5TjDxkbZjNZZHa485ad73NSEn/jdsEtU57eE1g+ma8A==
+
 math-intrinsics@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz#a0dd74be81e2aa5c2f27e65ce283605ee4e2b7f9"
@@ -2879,7 +2877,7 @@ prettier@~3.5.3:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.5.3.tgz#4fc2ce0d657e7a02e602549f053b239cb7dfe1b5"
   integrity sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==
 
-prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==

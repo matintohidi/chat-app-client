@@ -1,32 +1,38 @@
 import React from "react";
 import Link from "next/link";
 import { NavLinkSettingInterface } from "@/contracts/chat";
-import { Bill, Notepad2, Personalcard, SecuritySafe } from "iconsax-react";
+import {
+  NotepadText,
+  ReceiptCent,
+  ReceiptText,
+  Shield,
+  UserPen,
+} from "lucide-react";
 
 const navLinks: NavLinkSettingInterface[] = [
   {
     name: "Personal Information",
     path: "/chat/setting/personal-info",
     id: 0,
-    icon: <Personalcard size={20} />,
+    icon: <UserPen size={20} />,
   },
   {
     name: "Security",
     path: "/chat/setting/security",
     id: 1,
-    icon: <SecuritySafe size={20} />,
+    icon: <Shield size={20} />,
   },
   {
     name: "Billing",
     path: "/chat/setting/bill",
     id: 2,
-    icon: <Bill size={20} />,
+    icon: <ReceiptText size={20} />,
   },
   {
     name: "Plans",
     path: "/chat/setting/plan",
     id: 3,
-    icon: <Notepad2 size={20} />,
+    icon: <NotepadText size={20} />,
   },
 ];
 

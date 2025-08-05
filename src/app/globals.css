@@ -77,3 +77,399 @@ button {
     transform: translateX(0);
   }
 }
+
+.header {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #615ef0;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-btn:hover {
+  color: #615ef0;
+}
+
+.cta-btn {
+  background: #615ef0;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #5048e6;
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.about-hero {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.about-hero h1::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #615ef0;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.intro-section {
+  background: white;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  background: #f8f9ff;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.mv-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(97, 94, 240, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-5px);
+}
+
+.mv-card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #615ef0;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mv-card p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Values Section */
+.values-section {
+  background: white;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  background: #f8f9ff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.value-card:hover {
+  border-color: #615ef0;
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  background: #615ef0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.value-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+  background: #f8f9ff;
+}
+
+.team-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #615ef0;
+  display: block;
+}
+
+.stat-label {
+  color: #666;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #615ef0 0%, #5048e6 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background: white;
+  color: #615ef0;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .mv-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .content-section {
+    padding: 3rem 0;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  animation: fadeInUp 0.6s ease-out;
+}

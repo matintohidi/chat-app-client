@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { Progress } from "../progress/progress";
 import { NotificationToastProps } from "./notification.types";
 import { NotificationType } from "@/types/notification.interface";
-import { CloseSquare } from "iconsax-react";
 import { dismissNotification } from "@/store/slices/notification.slice";
 import { useAppDispatch } from "@/store/hooks";
+import { CircleX } from "lucide-react";
 
 const notificationTypes: Record<NotificationType, string> = {
   success: "bg-success",
@@ -46,7 +46,7 @@ export const NotificationToast: React.FC<NotificationToastProps> = ({
         className="mr-auto hover:text-white mt-2"
         onClick={() => dispatch(dismissNotification(id))}
       >
-        <CloseSquare width={20} height={20} />
+        <CircleX width={20} height={20} />
       </button>
       <Progress
         className="!absolute bottom-1 left-2 right-2 !w-auto"

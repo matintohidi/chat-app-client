@@ -1,15 +1,15 @@
 import React from "react";
 import { ProfileImage, ProfileDefault } from "./profile";
-import {
-  Home2,
-  Chart21,
-  Message,
-  SearchNormal,
-  Calendar2,
-  Setting2,
-} from "iconsax-react";
 import { useAppSelector } from "@/store/hooks";
 import Link from "next/link";
+import {
+  CalendarDays,
+  ChartArea,
+  House,
+  Mail,
+  Search,
+  Settings2,
+} from "lucide-react";
 
 const Navbar: React.FC = () => {
   const { user } = useAppSelector((state) => state.user);
@@ -30,29 +30,29 @@ const Navbar: React.FC = () => {
 
         <div className="flex flex-col items-center gap-7 mt-14">
           <Link className="navbarButton" href="/">
-            <Home2 size={24} color="#000" />
+            <House size={24} color="#000" />
           </Link>
 
           <Link className="navbarButton" href="/chat/">
-            <Message size={24} color="#000" />
+            <Mail size={24} color="#000" />
           </Link>
 
           <button className="navbarButton">
-            <Chart21 size={24} color="#000" />
+            <ChartArea size={24} color="#000" />
           </button>
 
           <button className="navbarButton">
-            <SearchNormal size={24} color="#000" />
+            <Search size={24} color="#000" />
           </button>
 
           <button className="navbarButton">
-            <Calendar2 size={24} color="#000" />
+            <CalendarDays size={24} color="#000" />
           </button>
         </div>
       </div>
 
       <Link className="mb-2 navbarButton" href="/chat/setting">
-        <Setting2 size={24} color="#000" />
+        <Settings2 size={24} color="#000" />
       </Link>
     </div>
   );

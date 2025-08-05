@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { Microphone, Paperclip, Send2 } from "iconsax-react";
 import dynamic from "next/dynamic";
+import { Mic, Paperclip, Send } from "lucide-react";
 
 const VoiceRecorder = dynamic(
   () => import("@/app/(chat)/chat/components/message/voiceRecorder"),
@@ -13,7 +13,7 @@ const VoiceRecorder = dynamic(
         className="rounded-lg w-10 h-10 flex items-center justify-center animate-pulse disabled:bg-gray-200"
         disabled
       >
-        <Microphone size={24} color="#383a47" />
+        <Mic size={24} color="#383a47" />
       </button>
     ),
   }
@@ -38,7 +38,7 @@ const SendMessage: React.FC = () => {
           placeholder="Type a message"
         ></textarea>
         <button className="absolute right-4 top-4 bg-secondary rounded-lg w-10 h-10 flex items-center justify-center transition duration-125 focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-2 hover:bg-primary/15">
-          <Send2 variant="Bold" color="#615EF0" size={24} />
+          <Send color="#615EF0" size={24} />
         </button>
       </div>
     </div>

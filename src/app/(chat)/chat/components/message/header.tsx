@@ -1,12 +1,12 @@
 import React from "react";
-import { Call, ArrowLeft } from "iconsax-react";
 import Image from "next/image";
+import { ChevronLeft, Phone } from "lucide-react";
 
 const Header: React.FC = () => {
   return (
     <header className="flex justify-between px-3 sm:px-6 py-4 border-b border-gray-300">
       <div className="flex gap-2 items-center">
-        <ArrowLeft className="text-gray-400 hover:text-gray-800 transition lg:hidden" />
+        <ChevronLeft className="text-gray-400 hover:text-gray-800 transition lg:hidden" />
 
         <div className="flex gap-2 sm:gap-4">
           <Image
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
       </div>
 
       <button className="flex gap-2 justify-center items-center rounded-lg bg-secondary px-3 py-1.5 lg:px-4 lg:py-2.5">
-        <Call variant="Bold" color="#615ef0" size={24} />
+        <Phone color="#615ef0" size={24} />
 
         <span className="text-primary">Call</span>
       </button>

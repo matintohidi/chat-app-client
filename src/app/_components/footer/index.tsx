@@ -12,7 +12,7 @@ const footerLinks: NavLinkInterface[] = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col items-center px-4 sm:px-14">
+    <footer className="flex flex-col items-center px-4 sm:px-14 mt-10">
       <div className="flex flex-col pb-10 px-4 border-b border-b-[#D4D4D8] lg:flex-row lg:justify-between lg:w-full lg:items-center">
         <div className="flex gap-6">
           {footerLinks.map((link) => {
