@@ -4,7 +4,7 @@ import React from "react";
 import {
   HeaderSetting as Header,
   NavbarSetting as Navbar,
-} from "@/app/(chat)/chat/setting/components";
+} from "@/app/(dashboard)/chat/setting/components";
 
 const SettingLayout = ({ children }: { children: React.ReactNode }) => {
   return (

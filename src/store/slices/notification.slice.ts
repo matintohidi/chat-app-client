@@ -22,9 +22,8 @@ const notificationSlice = createSlice({
       const id = generateID();
       state.notifications.push({ id, ...action.payload });
 
-      setTimeout(() => {
-        state.notifications = state.notifications.filter((n) => n.id !== id);
-      }, 5000);
+      const index = state.notifications.findIndex((n) => n.id === id);
+      if (index !== -1) state.notifications.splice(index, 1);
     },
     dismissNotification: (state, action: PayloadAction<string>) => {
       state.notifications = state.notifications.filter(

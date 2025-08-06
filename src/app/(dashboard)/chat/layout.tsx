@@ -1,6 +1,6 @@
 "use client";
 
-import { Navbar } from "@/app/(chat)/chat/components";
+import { Navbar } from "@/app/(dashboard)/chat/components";
 import React from "react";
 
 const ChatLayout = ({ children }: { children: React.ReactNode }) => {

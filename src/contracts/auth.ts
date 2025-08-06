@@ -14,14 +14,19 @@ export interface UserModel {
   updatedById?: string;
 }
 
-export interface PersonalInfoFormValuesInterface {
+export interface ILoginFormValues {
+  email: string;
+  password: string;
+}
+
+export interface IPersonalInfoFormValues {
   name: string;
   phoneNumber: string;
   city: string;
   profile: string;
 }
 
-export interface SecurityFormValuesInterface {
+export interface ISecurityFormValues {
   oldPassword: string;
   newPassword: string;
   repeatNewPassword: string;

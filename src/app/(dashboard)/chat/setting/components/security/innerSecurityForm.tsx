@@ -1,10 +1,10 @@
 import React from "react";
 import { Form, FormikProps } from "formik";
 import InputSetting from "@/app/_components/inputs/inputSetting";
-import { SecurityFormValuesInterface } from "@/contracts/auth";
+import { ISecurityFormValues } from "@/contracts/auth";
 import { useAppSelector } from "@/store/hooks";
 
-const InnerSecurityForm = (props: FormikProps<SecurityFormValuesInterface>) => {
+const InnerSecurityForm = (props: FormikProps<ISecurityFormValues>) => {
   const { loading } = useAppSelector((state) => state);
 
   return (

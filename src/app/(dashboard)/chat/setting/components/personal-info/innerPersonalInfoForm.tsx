@@ -2,12 +2,10 @@ import React from "react";
 import { Form, FormikProps } from "formik";
 import ChangeProfile from "./changeProfile";
 import InputSetting from "@/app/_components/inputs/inputSetting";
-import { PersonalInfoFormValuesInterface } from "@/contracts/auth";
+import { IPersonalInfoFormValues } from "@/contracts/auth";
 import { useAppSelector } from "@/store/hooks";
 
-const InnerPersonalInfoForm = (
-  props: FormikProps<PersonalInfoFormValuesInterface>
-) => {
+const InnerPersonalInfoForm = (props: FormikProps<IPersonalInfoFormValues>) => {
   const { user, loading } = useAppSelector((state) => state);
 
   return (

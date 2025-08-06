@@ -23,6 +23,7 @@ export interface LoginUserModel {
 export interface MediaModel {
   md5?: string;
   sha256?: string;
+  _id?: string;
   access?: string[];
   bucket?: string;
   createdAt?: string;
@@ -35,7 +36,6 @@ export interface MediaModel {
   entity?: string;
   ext?: string;
   fileName?: string;
-  id?: string;
   mimetype?: string;
   relatedId?: string;
   relativeUrl?: string;
@@ -60,6 +60,7 @@ export interface SaveUserDto {
 }
 
 export interface UserModel {
+  _id?: string;
   accessLevel?: "admin" | "user" | "all";
   city?: string;
   createdAt?: string;
@@ -67,7 +68,6 @@ export interface UserModel {
   deletedAt?: string;
   deletedById?: string;
   email: string;
-  id?: string;
   name: string;
   phoneNumber: string;
   profile?: string;

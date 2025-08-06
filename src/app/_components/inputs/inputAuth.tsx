@@ -1,5 +1,5 @@
 import React from "react";
-import { ErrorMessage, Field } from "formik";
+import { useFormContext, RegisterOptions } from "react-hook-form";
 
 // props
 interface InputProps {
@@ -9,6 +9,7 @@ interface InputProps {
   inputClassName?: string;
   errorClassName?: string;
   labelClassName?: string;
+  rules?: RegisterOptions;
 }
 
 const InputAuth: React.FC<InputProps> = ({
@@ -18,17 +19,23 @@ const InputAuth: React.FC<InputProps> = ({
   inputClassName,
   errorClassName,
   labelClassName,
+  rules,
 }) => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+
   return (
     <div>
       <div className="relative">
-        <Field
+        <input
           id={name}
-          name={name}
           type={type}
           autoComplete={name}
           className={`peer block w-full appearance-none border-0 border-b border-[#AAAAAA] bg-transparent py-2.5 px-0 text-sm text-black focus:border-primary focus:outline-none focus:ring-0 ${inputClassName ?? ""}`}
           placeholder=" "
+          {...register(name, rules)}
         />
         <label
           htmlFor={name}
@@ -37,11 +44,13 @@ const InputAuth: React.FC<InputProps> = ({
           {label}
         </label>
       </div>
-      <ErrorMessage
-        name={name}
-        className={`text-sm lg:text-base mt-2 text-red-500 ${errorClassName ?? ""} font-light`}
-        component="div"
-      />
+      {errors[name] && (
+        <div
+          className={`text-sm lg:text-base mt-2 text-red-500 ${errorClassName ?? ""} font-light`}
+        >
+          {errors[name]?.message as string}
+        </div>
+      )}
     </div>
   );
 };

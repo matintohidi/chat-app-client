@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import RegisterForm from "@/app/_components/forms/registerForm";
 import { ChevronLeft } from "lucide-react";
+import RegisterForm from "@/app/(auth)/register/components/form";
 
 const RegisterPage: React.FC = () => {
   return (

@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { Mic, Paperclip, Send } from "lucide-react";
 
 const VoiceRecorder = dynamic(
-  () => import("@/app/(chat)/chat/components/message/voiceRecorder"),
+  () => import("@/app/(dashboard)/chat/components/message/voiceRecorder"),
   {
     ssr: false,
     loading: () => (
