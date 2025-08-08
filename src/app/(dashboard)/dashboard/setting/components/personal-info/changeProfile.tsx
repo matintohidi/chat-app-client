@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ErrorMessage, useFormikContext } from "formik";
 import * as yup from "yup";
 import { SUPPORTED_FORMATS } from "@/utils/supported-formats";
 import { useAppSelector } from "@/store/hooks";
@@ -16,7 +15,6 @@ interface Props {
 const ChangeProfile: React.FC<Props> = ({ profile, name, city }) => {
   const { loading } = useAppSelector((state) => state.loading);
   const [errors, setErrors]: any[] = useState([]);
-  const { setFieldValue } = useFormikContext();
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     const profileValidation = yup.object().shape({
@@ -43,7 +41,6 @@ const ChangeProfile: React.FC<Props> = ({ profile, name, city }) => {
     try {
       profileValidation.validateSync({ profile });
       setErrors([]);
-      setFieldValue("profile", profile);
     } catch (err: any) {
       setErrors((prev: any[]) => {
         if (!prev.includes(err.message)) {
@@ -55,9 +52,7 @@ const ChangeProfile: React.FC<Props> = ({ profile, name, city }) => {
     }
   };
 
-  const deleteProfile = () => {
-    setFieldValue("profile", null);
-  };
+  const deleteProfile = () => {};
 
   return (
     <section>

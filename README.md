@@ -8,14 +8,13 @@ Chat Life is a chatting app that allows you to communicate with people around th
 
 ## Technology
 
-- React
+- Next
 - TypeScript
-- React Router Dom
 - Redux Toolkit
 - Tailwind CSS
 - Docker
 - Axios
-- Formik
+- React Hook Form
 - Yup
 
 ## How to Install?
