@@ -1,8 +1,7 @@
 interface Problem {
-  title: string;
-  status: number;
-  detail?: string;
-  errors?: Record<string, string[]>;
+  error: string;
+  statusCode: number;
+  message?: string;
 }
 
 interface BadRequestError extends Problem {}

@@ -1,5 +1,6 @@
 "use client";
 
+import { Notifications } from "@/app/_components/notification/notifications";
 import QueryProvider from "@/providers/react-query-provider";
 import StoreProvider from "@/providers/storeProvider";
 import { CookiesProvider } from "react-cookie";
@@ -15,7 +16,10 @@ const Providers = (props: Props) => {
     <>
       <QueryProvider>
         <CookiesProvider>
-          <StoreProvider>{children}</StoreProvider>
+          <StoreProvider>
+            <Notifications />
+            {children}
+          </StoreProvider>
         </CookiesProvider>
       </QueryProvider>
     </>

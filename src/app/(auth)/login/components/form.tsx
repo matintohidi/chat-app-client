@@ -10,9 +10,9 @@ import { LoginFormSchema } from "@/app/(auth)/login/types/login.schema";
 import { useLogin } from "@/app/(auth)/login/_api/login";
 import { useAppDispatch } from "@/store/hooks";
 import { setUser } from "@/store/slices/user.slice";
-import { Notification } from "@/types/notification.interface";
-import { showNotification } from "@/store/slices/notification.slice";
+import { showNotificationWithDuration } from "@/store/slices/notification.slice";
 import { useRouter } from "next/navigation";
+import { ArrowRight, Loader2, Lock, Mail } from "lucide-react";
 
 const LoginForm = () => {
   const dispatch = useAppDispatch();
@@ -36,12 +36,12 @@ const LoginForm = () => {
 
       dispatch(setUser(user));
 
-      const notification: Omit<Notification, "id"> = {
-        message: `Welcome back, ${user?.name}!`,
-        type: "success",
-      };
-
-      dispatch(showNotification(notification));
+      dispatch(
+        showNotificationWithDuration({
+          message: `Welcome back, ${user?.name}!`,
+          type: "success",
+        })
+      );
 
       router.push("/dashboard");
     },
@@ -54,7 +54,7 @@ const LoginForm = () => {
     };
 
     dispatch(
-      showNotification({
+      showNotificationWithDuration({
         message: "Logging in...",
         type: "info",
       })
@@ -66,19 +66,50 @@ const LoginForm = () => {
   return (
     <FormProvider {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
-        <InputAuth label="Email" type="email" {...form.register("email")} />
+        <InputAuth
+          label="Email"
+          type="email"
+          icon={
+            <Mail className="w-5 h-5 group-focus-within:text-primary text-secondary-content" />
+          }
+          {...form.register("email")}
+        />
 
         <InputAuth
           label="Password"
           type="password"
+          inputClassName="mt-6"
+          icon={
+            <Lock className="w-5 h-5 group-focus-within:text-primary text-secondary-content" />
+          }
           {...form.register("password")}
         />
 
         <button
           type="submit"
           disabled={login.isPending}
-          className="w-full xl:py-[12px] py-[8px] bg-primary text-white rounded-[36px] mt-14"
-        ></button>
+          className={`
+          w-full flex items-center justify-center gap-2 py-3 px-4 border border-transparent 
+          rounded-xl text-white font-medium transition-all duration-200 mt-10
+          ${
+            login.isPending
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-primary hover:bg-primary hover:shadow-lg hover:shadow-secondary active:scale-[0.98]"
+          }
+        `}
+        >
+          {login.isPending ? (
+            <>
+              <Loader2 className="w-5 h-5 animate-spin" />
+              Signing in...
+            </>
+          ) : (
+            <>
+              Sign in
+              <ArrowRight className="w-5 h-5" />
+            </>
+          )}
+        </button>
       </form>
     </FormProvider>
   );

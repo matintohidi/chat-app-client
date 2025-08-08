@@ -34,7 +34,7 @@ const SendMessage: React.FC = () => {
 
       <div className="relative w-full h-full">
         <textarea
-          className="pl-5 pr-14 py-2.5 outline-0 text-primaryText placeholder:text-sm placeholder-gray-400 border-gray-200 border-2 rounded-xl w-full scroll-smooth resize-none h-full"
+          className="pl-5 pr-14 py-2.5 outline-0 text-primary-content placeholder:text-sm placeholder-gray-400 border-gray-200 border-2 rounded-xl w-full scroll-smooth resize-none h-full"
           placeholder="Type a message"
         ></textarea>
         <button className="absolute right-4 top-4 bg-secondary rounded-lg w-10 h-10 flex items-center justify-center transition duration-125 focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-2 hover:bg-primary/15">

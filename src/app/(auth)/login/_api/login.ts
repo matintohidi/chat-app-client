@@ -1,5 +1,5 @@
 import { Login, LoginUserModel } from "@/app/(auth)/login/types/login.type";
-import { createData } from "@/core/http-service/http-serviec";
+import { createData } from "@/core/http-service/http-service";
 import { useMutation } from "@tanstack/react-query";
 
 const login = (model: Login): Promise<LoginUserModel> =>

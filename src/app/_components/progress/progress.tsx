@@ -10,7 +10,7 @@ const sizeClasses: Record<Size, string> = {
 };
 
 export const Progress: React.FC<ProgressProps> = ({
-  variant = "neutral",
+  variant,
   className,
   size = "small",
   value,

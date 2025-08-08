@@ -1,4 +1,5 @@
 // redux dependencies
+import { AppDispatch } from "@/store";
 import { Notification } from "@/types/notification.interface";
 import { generateID } from "@/utils/string";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
@@ -15,15 +16,8 @@ const notificationSlice = createSlice({
   name: "notification",
   initialState,
   reducers: {
-    showNotification: (
-      state,
-      action: PayloadAction<Omit<Notification, "id">>
-    ) => {
-      const id = generateID();
-      state.notifications.push({ id, ...action.payload });
-
-      const index = state.notifications.findIndex((n) => n.id === id);
-      if (index !== -1) state.notifications.splice(index, 1);
+    showNotification: (state, action: PayloadAction<Notification>) => {
+      state.notifications.push({ ...action.payload });
     },
     dismissNotification: (state, action: PayloadAction<string>) => {
       state.notifications = state.notifications.filter(
@@ -37,3 +31,16 @@ export default notificationSlice.reducer;
 
 export const { showNotification, dismissNotification } =
   notificationSlice.actions;
+
+export const showNotificationWithDuration =
+  (notification: Omit<Notification, "id">) => (dispatch: AppDispatch) => {
+    const duration = notification.duration ?? 5000;
+    const id = generateID();
+
+    const action = showNotification({ id, ...notification });
+    dispatch(action);
+
+    setTimeout(() => {
+      dispatch(dismissNotification(id));
+    }, duration);
+  };

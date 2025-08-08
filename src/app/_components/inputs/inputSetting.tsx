@@ -47,7 +47,7 @@ const InputSetting: React.FC<InputProps> = ({
                 name={name}
                 type={type}
                 autoComplete={name}
-                className={`${inputClassName ?? ""} w-full px-5 py-4 placeholder:text-gray-400 text-primaryText rounded-lg text-sm outline-none border border-gray-200 focus:border-primary transition duration-100`}
+                className={`${inputClassName ?? ""} w-full px-5 py-4 placeholder:text-gray-400 text-primary-content rounded-lg text-sm outline-none border border-gray-200 focus:border-primary transition duration-100`}
                 placeholder={placeHolder}
                 disabled
               />
@@ -57,7 +57,7 @@ const InputSetting: React.FC<InputProps> = ({
                 name={name}
                 type={type}
                 autoComplete={name}
-                className={`${inputClassName ?? ""} w-full px-5 py-4 placeholder:text-gray-400 text-primaryText rounded-lg text-sm outline-none border border-gray-200 focus:border-primary transition duration-100`}
+                className={`${inputClassName ?? ""} w-full px-5 py-4 placeholder:text-gray-400 text-primary-content rounded-lg text-sm outline-none border border-gray-200 focus:border-primary transition duration-100`}
                 placeholder={placeHolder}
               />
             )}
@@ -66,7 +66,7 @@ const InputSetting: React.FC<InputProps> = ({
       </div>
       <ErrorMessage
         name={name}
-        className={`text-sm lg:text-base mt-2 text-red-500 ${errorClassName ?? ""}`}
+        className={`text-sm lg:text-secondary-content mt-2 text-error ${errorClassName ?? ""}`}
         component="div"
       />
     </div>

@@ -7,12 +7,13 @@ import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useAppDispatch } from "@/store/hooks";
 import { setUser } from "@/store/slices/user.slice";
-import { Notification } from "@/types/notification.interface";
-import { showNotification } from "@/store/slices/notification.slice";
+import { showNotificationWithDuration } from "@/store/slices/notification.slice";
 import { useRouter } from "next/navigation";
 import { Register } from "@/app/(auth)/register/types/register.type";
 import { RegisterFormSchema } from "@/app/(auth)/register/types/register.schema";
 import { useRegister } from "@/app/(auth)/register/_api/register";
+import { ArrowRight, Loader2, Lock, Mail, User } from "lucide-react";
+import { showProblemNotifications } from "@/lib/react-query";
 
 const RegisterForm = () => {
   const dispatch = useAppDispatch();
@@ -38,13 +39,17 @@ const RegisterForm = () => {
       dispatch(setUser(user));
 
       dispatch(
-        showNotification({
-          message: `Welcome, ${user?.name}! Your account has been created successfully.`,
+        showNotificationWithDuration({
+          message: `Welcome, ${user?.name}! Please set up your profile.`,
           type: "success",
         })
       );
 
       router.push("/set-profile");
+    },
+    onError: (error) => {
+      console.log(error);
+      dispatch(showProblemNotifications(error));
     },
   });
 
@@ -56,13 +61,11 @@ const RegisterForm = () => {
     };
 
     dispatch(
-      showNotification({
+      showNotificationWithDuration({
         message: "Creating your account...",
         type: "info",
       })
     );
-
-    console.log(model);
 
     register.submit(model);
   };
@@ -70,22 +73,59 @@ const RegisterForm = () => {
   return (
     <FormProvider {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
-        <InputAuth label="Name" type="text" {...form.register("name")} />
+        <InputAuth
+          label="Full Name"
+          type="text"
+          {...form.register("name")}
+          icon={
+            <User className="w-5 h-5 group-focus-within:text-primary text-secondary-content" />
+          }
+        />
 
-        <InputAuth label="Email" type="email" {...form.register("email")} />
+        <InputAuth
+          label="Email"
+          type="email"
+          icon={
+            <Mail className="w-5 h-5 group-focus-within:text-primary text-secondary-content" />
+          }
+          inputClassName="mt-6"
+          {...form.register("email")}
+        />
 
         <InputAuth
           label="Password"
           type="password"
+          icon={
+            <Lock className="w-5 h-5 group-focus-within:text-primary text-secondary-content" />
+          }
+          inputClassName="mt-6"
           {...form.register("password")}
         />
 
         <button
           type="submit"
           disabled={register.isPending}
-          className="w-full xl:py-[12px] py-[8px] bg-primary text-white rounded-[36px] mt-14"
+          className={`
+          w-full flex items-center justify-center gap-2 py-3 px-4 border border-transparent 
+          rounded-xl text-white font-medium transition-all duration-200 mt-10
+          ${
+            register.isPending
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-primary hover:bg-primary hover:shadow-lg hover:shadow-secondary active:scale-[0.98]"
+          }
+        `}
         >
-          Submit
+          {register.isPending ? (
+            <>
+              <Loader2 className="w-5 h-5 animate-spin" />
+              Creating Account...
+            </>
+          ) : (
+            <>
+              Creating Account
+              <ArrowRight className="w-5 h-5" />
+            </>
+          )}
         </button>
       </form>
     </FormProvider>

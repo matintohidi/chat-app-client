@@ -9,7 +9,7 @@ const Contacts: React.FC = () => {
     >
       <div className="flex justify-between items-center border-b border-gray-300 p-5 xl:p-6 w-full">
         <div className="flex items-center gap-3">
-          <h2 className="text-lg md:text-xl select-none font-semibold text-primaryText">
+          <h2 className="text-lg md:text-xl select-none font-semibold text-primary-content">
             Messages
           </h2>
           <ChevronDown size="18" color="#383a47" />

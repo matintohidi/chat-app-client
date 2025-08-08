@@ -1,11 +1,29 @@
 @import "tailwindcss";
+@import "../tailwind/components.css";
 
 @theme {
   --color-primary: #615ef0;
   --color-secondary: #efeffd;
   --color-customGray: #f1f1f1;
-  --color-primaryText: #1e2531;
-  --color-customGrayText: #383a47;
+  --color-primary-content: #1e2531;
+  --color-secondary-content: #383a47;
+
+  --color-error: #ef4444;
+  --color-error-bg: #fef2f2;
+
+  --color-success: #10b981;
+  --color-success-bg: #ecfdf5;
+
+  --color-info: #3b82f6;
+  --color-info-bg: #eff6ff;
+
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fffbeb;
+
+  --color-base: #ffffff;
+  --color-base-100: #f9fafb;
+  --color-base-200: #f3f4f6;
+  --color-base-300: #e5e7eb;
 
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);
@@ -60,22 +78,6 @@ button {
   border-right: 0.75rem solid transparent;
   border-left: 0.75rem solid transparent;
   border-top: 0.75rem solid #fff;
-}
-
-.show-notification {
-  animation: showNotification 0.2s ease forwards;
-}
-
-@keyframes showNotification {
-  0% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .header {

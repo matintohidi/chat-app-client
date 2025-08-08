@@ -33,33 +33,33 @@ const Index: React.FC = () => {
       </div>
 
       <div className="flex flex-col gap-4 mt-16 z-10 xl:w-[500px] xl:mt-0 xl:justify-center">
-        <h1 className="font-poppins font-bold text-primaryText text-[26px] lg:text-5xl">
+        <h1 className="font-poppins font-bold text-primary-content text-[26px] lg:text-5xl">
           Get direct message from your friends
         </h1>
 
-        <p className="  text-primaryText text-xs lg:text-base">
+        <p className="  text-primary-content text-xs lg:text-secondary-content">
           Great software that allows you to chat from any place at any time
           without any interruption.
         </p>
 
         <div className="flex gap-x-5">
           <div className="flex items-center gap-x-2">
-            <span className=" font-extrabold text-[32px] text-primaryText">
+            <span className=" font-extrabold text-[32px] text-primary-content">
               4.3K+
             </span>
 
-            <h2 className="flex flex-col   text-primaryText text-sm">
+            <h2 className="flex flex-col   text-primary-content text-sm">
               <span>Registered</span>
               <span>user</span>
             </h2>
           </div>
 
           <div className="flex items-center gap-x-2">
-            <span className=" font-extrabold text-[32px] text-primaryText">
+            <span className=" font-extrabold text-[32px] text-primary-content">
               7M+
             </span>
 
-            <h2 className="flex flex-col   text-primaryText text-sm">
+            <h2 className="flex flex-col   text-primary-content text-sm">
               <span>Chats in</span>
               <span>last 2023</span>
             </h2>

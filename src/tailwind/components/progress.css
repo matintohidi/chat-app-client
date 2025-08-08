@@ -1,0 +1,66 @@
+.progress {
+  @apply relative w-full appearance-none overflow-hidden h-2 rounded-lg bg-gray-800;
+
+  &::-moz-progress-bar {
+    @apply bg-base;
+  }
+  &-primary::-moz-progress-bar {
+    @apply bg-primary;
+  }
+  &-secondary::-moz-progress-bar {
+    @apply bg-secondary;
+  }
+  &-info::-moz-progress-bar {
+    @apply bg-info;
+  }
+  &-success::-moz-progress-bar {
+    @apply bg-success;
+  }
+  &-warning::-moz-progress-bar {
+    @apply bg-warning;
+  }
+  &-error::-moz-progress-bar {
+    @apply bg-error;
+  }
+
+  &::-webkit-progress-bar {
+    @apply bg-transparent rounded-lg;
+  }
+  &::-webkit-progress-value {
+    @apply bg-base rounded-lg;
+  }
+  &-primary::-webkit-progress-value {
+    @apply bg-primary;
+  }
+  &-secondary::-webkit-progress-value {
+    @apply bg-secondary;
+  }
+  &-info::-webkit-progress-value {
+    @apply bg-info;
+  }
+  &-success::-webkit-progress-value {
+    @apply bg-success;
+  }
+  &-warning::-webkit-progress-value {
+    @apply bg-warning;
+  }
+  &-error::-webkit-progress-value {
+    @apply bg-error;
+  }
+
+  &-xs {
+    @apply h-1;
+  }
+
+  &-sm {
+    @apply h-2;
+  }
+
+  &-md {
+    @apply h-3;
+  }
+
+  &-lg {
+    @apply h-4;
+  }
+}

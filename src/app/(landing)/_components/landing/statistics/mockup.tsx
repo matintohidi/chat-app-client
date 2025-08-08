@@ -16,7 +16,7 @@ const Mockup: React.FC = () => {
             <Inbox color="#fff" size="20" />
           </span>
 
-          <h3 className="text-primaryText text-xs ml-1.5">Inbox</h3>
+          <h3 className="text-primary-content text-xs ml-1.5">Inbox</h3>
         </div>
 
         <div className="flex gap-[10px]">
@@ -34,7 +34,7 @@ const Mockup: React.FC = () => {
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
-            <h3 className="text-primaryText text-[8.5px]  font-extrabold lg:text-xs">
+            <h3 className="text-primary-content text-[8.5px]  font-extrabold lg:text-xs">
               New Message
             </h3>
 
@@ -49,7 +49,7 @@ const Mockup: React.FC = () => {
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
-            <h3 className="text-primaryText text-[8.5px]  font-extrabold lg:text-xs">
+            <h3 className="text-primary-content text-[8.5px]  font-extrabold lg:text-xs">
               New Email
             </h3>
 
@@ -64,7 +64,7 @@ const Mockup: React.FC = () => {
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
-            <h3 className="text-primaryText text-[8.5px] font-extrabold lg:text-xs">
+            <h3 className="text-primary-content text-[8.5px] font-extrabold lg:text-xs">
               Facebook Messenger
             </h3>
 
@@ -79,7 +79,7 @@ const Mockup: React.FC = () => {
           </span>
 
           <div className="flex flex-col justify-around ml-3 lg:ml-[17px]">
-            <h3 className="text-primaryText text-[8.5px]  font-extrabold lg:text-xs">
+            <h3 className="text-primary-content text-[8.5px]  font-extrabold lg:text-xs">
               New Message
             </h3>
 

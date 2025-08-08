@@ -127,7 +127,7 @@ const ChangeProfile: React.FC<Props> = ({ profile, name, city }) => {
           )}
         </div>
         {errors.map((err: string) => (
-          <span key={err} className="text-red-600 text-sm   w-40 text-start">
+          <span key={err} className="text-error text-sm   w-40 text-start">
             {err}
           </span>
         ))}

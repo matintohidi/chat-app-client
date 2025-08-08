@@ -1,8 +1,7 @@
 import { Problem } from "@/types/http-errors.interface";
 import { MutationCache, QueryCache, QueryClient } from "@tanstack/react-query";
-import { showNotification } from "@/store/slices/notification.slice";
-import { useAppDispatch } from "@/store/hooks";
-import { Notification } from "@/types/notification.interface";
+import { AppDispatch } from "@/store";
+import { showNotificationWithDuration } from "@/store/slices/notification.slice";
 
 export const queryClient = new QueryClient({
   queryCache: new QueryCache({
@@ -10,10 +9,9 @@ export const queryClient = new QueryClient({
   }),
   mutationCache: new MutationCache({
     onError: (error: unknown) => {
-      showNotifications(error as Problem);
+      return error as Problem;
     },
   }),
-
   defaultOptions: {
     queries: {
       retry: false,
@@ -24,26 +22,14 @@ export const queryClient = new QueryClient({
   },
 });
 
-const showNotifications = (problem: Problem) => {
-  const dispatch = useAppDispatch();
-
-  if (problem?.errors) {
-    Object.entries(problem.errors).forEach(([_, values]) =>
-      values.forEach((errorMessage) => {
-        const notification: Omit<Notification, "id"> = {
-          message: errorMessage,
+export const showProblemNotifications =
+  (problem: Problem) => (dispatch: AppDispatch) => {
+    if (problem?.message) {
+      dispatch(
+        showNotificationWithDuration({
+          message: problem.message,
           type: "error",
-        };
-
-        dispatch(showNotification(notification));
-      })
-    );
-  } else if (problem?.detail) {
-    const notification: Omit<Notification, "id"> = {
-      message: problem.detail,
-      type: "error",
-    };
-
-    dispatch(showNotification(notification));
-  }
-};
+        })
+      );
+    }
+  };

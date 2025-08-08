@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useCookies } from "react-cookie";
 import { useSetProfile } from "@/app/(auth)/set-profile/_api/set-profile";
 import { useAppDispatch } from "@/store/hooks";
-import { showNotification } from "@/store/slices/notification.slice";
+import { showNotificationWithDuration } from "@/store/slices/notification.slice";
 import { SetProfile } from "@/app/(auth)/set-profile/types/set-profile.type";
 import { setUser } from "@/store/slices/user.slice";
 
@@ -71,7 +71,7 @@ const SetProfilePage: React.FC = () => {
       dispatch(setUser(user));
 
       dispatch(
-        showNotification({
+        showNotificationWithDuration({
           message: `Welcome, ${user?.name}! Your profile has been set successfully.`,
           type: "success",
         })

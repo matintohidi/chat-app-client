@@ -10,7 +10,7 @@ const userComment: React.FC = () => {
             “Incredible Experience”
           </h2>
 
-          <p className="text-center mt-2.5 text-customGrayText lg:text-lg font-light">
+          <p className="text-center mt-2.5 text-secondary-content lg:text-lg font-light">
             We had an incredible experience working with Mixland and were
             impressed they made such a big difference in only three weeks. Our
             team is so grateful for the wonderful improvements they made and

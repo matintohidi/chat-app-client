@@ -2,7 +2,7 @@ import {
   SetProfile,
   SetProfileModel,
 } from "@/app/(auth)/set-profile/types/set-profile.type";
-import { createData } from "@/core/http-service/http-serviec";
+import { createData } from "@/core/http-service/http-service";
 import { useMutation } from "@tanstack/react-query";
 import { AxiosHeaders } from "axios";
 
@@ -11,8 +11,6 @@ const setProfile = (model: SetProfile): Promise<SetProfileModel> => {
 
   const form = new FormData();
   form.append("file", file);
-
-  console.log(form, file);
 
   const headers = new AxiosHeaders();
   headers.set("Authorization", `Bearer ${token}`);

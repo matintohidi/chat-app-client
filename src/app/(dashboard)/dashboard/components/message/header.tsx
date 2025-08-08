@@ -18,7 +18,7 @@ const Header: React.FC = () => {
           />
 
           <div className="flex flex-col justify-between">
-            <h1 className="text-md lg:text-xl capitalize font-semibold text-primaryText">
+            <h1 className="text-md lg:text-xl capitalize font-semibold text-primary-content">
               lavern laboy
             </h1>
 
