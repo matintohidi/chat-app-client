@@ -9,9 +9,6 @@ import { API_URL } from "@/configs/app.config";
 
 const httpService = axios.create({
   baseURL: API_URL,
-  headers: {
-    "Content-Type": "application/json",
-  },
 });
 
 httpService.interceptors.response.use(
@@ -37,6 +34,7 @@ async function apiBase<T>(
   options?: AxiosRequestConfig
 ): Promise<T> {
   const response: AxiosResponse = await httpService(url, options);
+
   return response.data as T;
 }
 
@@ -56,11 +54,20 @@ async function createData<TModel, TResult>(
   data: TModel,
   headers?: AxiosRequestHeaders
 ): Promise<TResult> {
-  const options: AxiosRequestConfig = {
+  let options: AxiosRequestConfig = {
     method: "POST",
     headers: headers,
-    data: JSON.stringify(data),
   };
+
+  if (data instanceof FormData) {
+    options.data = data;
+  } else {
+    options.data = JSON.stringify(data);
+    options.headers = {
+      ...headers,
+      "Content-Type": "application/json",
+    };
+  }
 
   return await apiBase<TResult>(url, options);
 }
@@ -70,11 +77,20 @@ async function updateData<TModel, TResult>(
   data: TModel,
   headers?: AxiosRequestHeaders
 ): Promise<TResult> {
-  const options: AxiosRequestConfig = {
+  let options: AxiosRequestConfig = {
     method: "PUT",
     headers: headers,
-    data: JSON.stringify(data),
   };
+
+  if (data instanceof FormData) {
+    options.data = data;
+  } else {
+    options.data = JSON.stringify(data);
+    options.headers = {
+      ...headers,
+      "Content-Type": "application/json",
+    };
+  }
 
   return await apiBase<TResult>(url, options);
 }

@@ -10,6 +10,12 @@
  * ---------------------------------------------------------------
  */
 
+export interface CreateUserDto {
+  email: string;
+  name: string;
+  password: string;
+}
+
 export interface LoginUserDto {
   email: string;
   password: string;
@@ -17,62 +23,58 @@ export interface LoginUserDto {
 
 export interface LoginUserModel {
   token: string;
-  user?: UserModel;
+  user: UserModel;
 }
 
 export interface MediaModel {
-  md5?: string;
-  sha256?: string;
-  _id?: string;
-  access?: string[];
-  bucket?: string;
-  createdAt?: string;
-  createdById?: string;
-  deletedAt?: string;
-  deletedById?: string;
-  description?: string;
-  downloadLink?: string;
+  md5: string;
+  sha256: string;
+  _id: string;
+  access: string[];
+  bucket: string;
+  createdAt: string;
+  createdById: string;
+  deletedAt: string;
+  deletedById: string;
+  description: string;
+  downloadLink: string;
   downloadSize?: number;
-  entity?: string;
-  ext?: string;
-  fileName?: string;
-  mimetype?: string;
-  relatedId?: string;
-  relativeUrl?: string;
+  entity: string;
+  ext: string;
+  fileName: string;
+  mimetype: string;
+  relatedId?: number;
+  relativeUrl: string;
   size?: number;
-  updatedAt?: string;
-  updatedById?: string;
-  url?: string;
+  updatedAt: string;
+  updatedById: string;
+  url: string;
 }
 
 export interface RegisterUserModel {
   token: string;
-  user?: UserModel;
+  user: UserModel;
 }
 
-export interface SaveUserDto {
-  city?: string;
-  email: string;
-  name: string;
-  password: string;
-  phoneNumber: string;
-  profile?: string;
+export interface SetProfileModel {
+  token: string;
+  user: UserModel;
 }
 
 export interface UserModel {
-  _id?: string;
-  accessLevel?: "admin" | "user" | "all";
+  _id: string;
+  accessLevel: "admin" | "user" | "all";
   city?: string;
-  createdAt?: string;
-  createdById?: string;
-  deletedAt?: string;
-  deletedById?: string;
+  createdAt: string;
+  createdById: string;
+  deletedAt: string;
+  deletedById: string;
   email: string;
   name: string;
   phoneNumber: string;
   profile?: string;
-  updatedAt?: string;
-  updatedById?: string;
+  updatedAt: string;
+  updatedById: string;
 }
 
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, HeadersDefaults, ResponseType } from "axios";
@@ -222,8 +224,34 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags user
-     * @name UploadProfile
+     * @name SetProfile
      * @summary Upload a profile picture
+     * @request POST:/user/set-profile
+     * @secure
+     */
+    setProfile: (
+      data: {
+        /** @format binary */
+        file?: File;
+      },
+      params: RequestParams = {},
+    ) =>
+      this.request<SetProfileModel, any>({
+        path: `/user/set-profile`,
+        method: "POST",
+        body: data,
+        secure: true,
+        type: ContentType.FormData,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags user
+     * @name UploadProfile
+     * @summary Update profile picture
      * @request POST:/user/upload-profile
      * @secure
      */
@@ -255,13 +283,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     upload: (
+      query: {
+        bucket: "public" | "private";
+        filename: string;
+      },
       data: {
         /** @format binary */
         file?: File;
-      },
-      query?: {
-        bucket?: "public" | "private";
-        filename?: string;
       },
       params: RequestParams = {},
     ) =>
@@ -276,19 +304,19 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  auth = {
+  authUser = {
     /**
      * No description
      *
-     * @tags auth
+     * @tags /auth/user
      * @name Login
      * @summary User login to access their account
-     * @request POST:/auth/login
+     * @request POST:/auth/user/login
      * @secure
      */
     login: (data: LoginUserDto, params: RequestParams = {}) =>
       this.request<LoginUserModel, any>({
-        path: `/auth/login`,
+        path: `/auth/user/login`,
         method: "POST",
         body: data,
         secure: true,
@@ -300,15 +328,15 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @tags auth
+     * @tags /auth/user
      * @name Me
      * @summary Retrieve detailed user profile information
-     * @request GET:/auth/me
+     * @request GET:/auth/user/me
      * @secure
      */
     me: (params: RequestParams = {}) =>
       this.request<UserModel, any>({
-        path: `/auth/me`,
+        path: `/auth/user/me`,
         method: "GET",
         secure: true,
         format: "json",
@@ -318,15 +346,15 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @tags auth
+     * @tags /auth/user
      * @name Register
      * @summary Create a new user account
-     * @request POST:/auth/register
+     * @request POST:/auth/user/register
      * @secure
      */
-    register: (data: SaveUserDto, params: RequestParams = {}) =>
+    register: (data: CreateUserDto, params: RequestParams = {}) =>
       this.request<RegisterUserModel, any>({
-        path: `/auth/register`,
+        path: `/auth/user/register`,
         method: "POST",
         body: data,
         secure: true,

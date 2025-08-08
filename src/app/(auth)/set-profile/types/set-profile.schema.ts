@@ -1,7 +1,7 @@
 import { SUPPORTED_FORMATS } from "@/utils/supported-formats";
 import * as yup from "yup";
 
-export const SetProfileValidationSchema = yup.object().shape({
+export const SetProfileSchema = yup.object().shape({
   profile: yup
     .mixed()
     .test(

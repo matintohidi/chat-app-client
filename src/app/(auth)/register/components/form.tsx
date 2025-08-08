@@ -11,7 +11,7 @@ import { Notification } from "@/types/notification.interface";
 import { showNotification } from "@/store/slices/notification.slice";
 import { useRouter } from "next/navigation";
 import { Register } from "@/app/(auth)/register/types/register.type";
-import { RegisterFormValidationSchema } from "@/app/(auth)/register/types/register.schema";
+import { RegisterFormSchema } from "@/app/(auth)/register/types/register.schema";
 import { useRegister } from "@/app/(auth)/register/_api/register";
 
 const RegisterForm = () => {
@@ -21,7 +21,7 @@ const RegisterForm = () => {
   const router = useRouter();
 
   const form = useForm<Register>({
-    resolver: yupResolver(RegisterFormValidationSchema),
+    resolver: yupResolver(RegisterFormSchema),
     defaultValues: {
       email: "",
       password: "",
@@ -33,18 +33,18 @@ const RegisterForm = () => {
     onSuccess: (data) => {
       const { token, user } = data;
 
-      setCookie("token", token);
+      setCookie("set-profile-token", token);
 
       dispatch(setUser(user));
 
-      // const notification: Omit<Notification, "id"> = {
-      //   message: `Welcome, ${user?.name}! Your account has been created successfully.`,
-      //   type: "success",
-      // };
+      dispatch(
+        showNotification({
+          message: `Welcome, ${user?.name}! Your account has been created successfully.`,
+          type: "success",
+        })
+      );
 
-      // dispatch(showNotification(notification));
-
-      router.push("/dashboard");
+      router.push("/set-profile");
     },
   });
 
@@ -55,14 +55,14 @@ const RegisterForm = () => {
       name: values.name,
     };
 
-    console.log(model);
+    dispatch(
+      showNotification({
+        message: "Creating your account...",
+        type: "info",
+      })
+    );
 
-    // dispatch(
-    //   showNotification({
-    //     message: "Creating your account...",
-    //     type: "info",
-    //   })
-    // );
+    console.log(model);
 
     register.submit(model);
   };

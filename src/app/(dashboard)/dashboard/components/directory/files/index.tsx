@@ -1,4 +1,4 @@
-import File from "@/app/(dashboard)/chat/components/directory/files/file";
+import File from "@/app/(dashboard)/dashboard/components/directory/files/file";
 import React from "react";
 
 const Files: React.FC = () => {

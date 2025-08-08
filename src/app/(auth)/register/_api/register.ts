@@ -6,7 +6,7 @@ import { createData } from "@/core/http-service/http-serviec";
 import { useMutation } from "@tanstack/react-query";
 
 const register = (model: Register): Promise<RegisterUserModel> =>
-  createData<Register, RegisterUserModel>("/auth/register", model);
+  createData<Register, RegisterUserModel>("/auth/user/register", model);
 
 type UserRegisterOptions = {
   onSuccess?: (data: RegisterUserModel) => void;
@@ -17,8 +17,6 @@ export const useRegister = ({ onSuccess }: UserRegisterOptions) => {
     mutationFn: register,
     onSuccess: onSuccess,
   });
-
-  console.log("Registering user:", isPending);
 
   return {
     submit,

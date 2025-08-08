@@ -3,7 +3,7 @@ import { createData } from "@/core/http-service/http-serviec";
 import { useMutation } from "@tanstack/react-query";
 
 const login = (model: Login): Promise<LoginUserModel> =>
-  createData<Login, LoginUserModel>("/auth/login", model);
+  createData<Login, LoginUserModel>("/auth/user/login", model);
 
 type UserLoginOptions = {
   onSuccess?: (data: LoginUserModel) => void;

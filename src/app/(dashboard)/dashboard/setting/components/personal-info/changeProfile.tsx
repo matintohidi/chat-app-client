@@ -7,13 +7,13 @@ import Image from "next/image";
 // import ValidationError from "../../../../../exceptions/validationError";
 
 // props interface
-interface PropsImage {
+interface Props {
   name?: string;
   city?: string;
   profile?: string | null;
 }
 
-const ChangeProfile: React.FC<PropsImage> = ({ profile, name, city }) => {
+const ChangeProfile: React.FC<Props> = ({ profile, name, city }) => {
   const { loading } = useAppSelector((state) => state.loading);
   const [errors, setErrors]: any[] = useState([]);
   const { setFieldValue } = useFormikContext();
