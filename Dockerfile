@@ -15,6 +15,7 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 3000
 
+# Build application
 RUN npm run build
 
 # Command to run the application
