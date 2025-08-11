@@ -21,7 +21,7 @@ const Banner: React.FC = () => {
 
         <Link
           href="/register"
-          className="mt-[22px] mb-4 px-3 py-2 rounded-lg bg-primary text-xs text-white   border border-primary hover:bg-white hover:text-primary transition lg:text-secondary-content lg:px-6 lg:py-3"
+          className="mt-[22px] mb-4 px-3 py-2 rounded-lg bg-primary text-xs text-white  border border-primary hover:bg-white hover:text-primary transition lg:text-secondary lg:px-6 lg:py-3"
         >
           Start chatting now
         </Link>
