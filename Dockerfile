@@ -15,6 +15,9 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 3000
 
+# Set environment variables
+ENV NEXT_PUBLIC_API_URL=https://chat-app-server-k3ih.onrender.com
+
 # Build application
 RUN npm run build
 

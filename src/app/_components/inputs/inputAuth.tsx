@@ -32,8 +32,6 @@ const InputAuth: React.FC<InputProps> = ({
     formState: { errors },
   } = useFormContext();
 
-  console.log(errors);
-
   return (
     <div className="relative group ">
       {icon && (

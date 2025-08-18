@@ -48,7 +48,6 @@ const RegisterForm = () => {
       router.push("/set-profile");
     },
     onError: (error) => {
-      console.log(error);
       dispatch(showProblemNotifications(error));
     },
   });
