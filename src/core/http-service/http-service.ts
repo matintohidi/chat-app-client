@@ -9,6 +9,7 @@ import { API_URL } from "@/configs/app.config";
 
 const httpService = axios.create({
   baseURL: API_URL,
+  withCredentials: true,
 });
 
 httpService.interceptors.response.use(
