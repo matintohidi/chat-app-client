@@ -1,7 +1,7 @@
 import { UserModel } from "@/contracts/auth";
 
 export type SetProfile = {
-  file: File;
+  file: File | null;
   token: string;
 };
 
