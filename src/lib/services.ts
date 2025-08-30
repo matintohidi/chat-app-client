@@ -34,8 +34,6 @@ export interface MediaModel {
   bucket: string;
   createdAt: string;
   createdById: string;
-  deletedAt: string;
-  deletedById: string;
   description: string;
   downloadLink: string;
   downloadSize?: number;
@@ -67,8 +65,6 @@ export interface UserModel {
   city?: string;
   createdAt: string;
   createdById: string;
-  deletedAt: string;
-  deletedById: string;
   email: string;
   name: string;
   phoneNumber: string;

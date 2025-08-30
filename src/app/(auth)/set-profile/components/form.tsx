@@ -34,10 +34,6 @@ const SetProfileForm: React.FC<SetProfileFormProps> = ({ children }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [dragActive, setDragActive] = useState(false);
 
-  if (!token) {
-    router.push("/");
-  }
-
   const handleImageSelect = (file: File) => {
     if (file && file.type.startsWith("image/")) {
       setSelectedFile(file);

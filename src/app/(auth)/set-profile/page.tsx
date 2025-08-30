@@ -1,9 +1,12 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Camera, Check, ChevronLeft, Upload, User } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import SetProfileForm from "./components/form";
+const SetProfileForm = dynamic(() => import("./components/form"), {
+  ssr: false,
+});
 
 const SetProfilePage: React.FC = () => {
   return (
@@ -45,7 +48,7 @@ const SetProfilePage: React.FC = () => {
                     Set your profile photo
                   </h1>
                   <p className="text-gray-600 text-lg">
-                    Add a photo to help others recognize you
+                    Add a photo to help others recognize you (Optional)
                   </p>
                 </div>
 
@@ -126,19 +129,23 @@ const SetProfilePage: React.FC = () => {
                     </Link>
                     <button
                       onClick={handleSave}
-                      disabled={!selectedImage || isSubmitting}
+                      disabled={isSubmitting}
                       className={`
                         flex-1 flex items-center justify-center gap-2 py-3 px-4 border border-transparent 
                         rounded-xl text-white font-medium transition-all duration-200
                         ${
-                          !selectedImage || isSubmitting
+                          isSubmitting
                             ? "bg-gray-400 cursor-not-allowed"
                             : "bg-indigo-600 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/25 active:scale-[0.98]"
                         }
                       `}
                     >
                       <Check className="w-5 h-5" />
-                      {isSubmitting ? "Saving..." : "Save & Continue"}
+                      {isSubmitting
+                        ? "Saving..."
+                        : selectedImage
+                          ? "Save & Continue"
+                          : "Continue without photo"}
                     </button>
                   </div>
                 </div>

@@ -6,7 +6,9 @@ import {
   Register,
   RegisterUserModel,
 } from "@/app/(auth)/register/types/register.type";
+import { signIn, signOut } from "@/auth";
 import { createData } from "@/core/http-service/http-service";
+import { Problem } from "@/types/http-errors.interface";
 import { OperationResult } from "@/types/operation-result.type";
 import { redirect } from "next/navigation";
 
@@ -35,4 +37,23 @@ export async function registerAction(
   }
 
   redirect("/set-profile");
+}
+
+export async function login(state: Problem | undefined, formData: FormData) {
+  try {
+    await signIn("credentials", formData);
+  } catch (error: unknown) {
+    return {
+      error: "",
+      statusCode: 0,
+    } satisfies Problem;
+  }
+}
+
+export async function logout() {
+  try {
+    await signOut();
+  } catch (error: unknown) {
+    console.error("Logout failed:", error);
+  }
 }

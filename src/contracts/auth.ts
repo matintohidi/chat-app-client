@@ -1,18 +1,6 @@
-export interface UserModel {
-  accessLevel?: "admin" | "user" | "all";
-  city?: string;
-  createdAt?: string;
-  createdById?: string;
-  deletedAt?: string;
-  deletedById?: string;
-  email: string;
-  id?: string;
-  name: string;
-  phoneNumber: string;
-  profile?: string;
-  updatedAt?: string;
-  updatedById?: string;
-}
+import { UserModel } from "@/lib/services";
+
+export interface User extends UserModel {}
 
 export interface ILoginFormValues {
   email: string;

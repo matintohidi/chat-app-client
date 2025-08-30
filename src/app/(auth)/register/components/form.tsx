@@ -59,14 +59,14 @@ const RegisterForm = () => {
     formData.append("password", values.password);
     formData.append("name", values.name);
 
-    startTransition(() => {
-      dispatch(
-        showNotificationWithDuration({
-          message: "Creating your account...",
-          type: "info",
-        })
-      );
+    dispatch(
+      showNotificationWithDuration({
+        message: "Creating your account...",
+        type: "info",
+      })
+    );
 
+    startTransition(() => {
       action(formData);
     });
   };

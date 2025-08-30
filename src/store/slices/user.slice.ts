@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { UserModel } from "@/contracts/auth";
+import { User } from "@/contracts/auth";
 
 type UserInitialState = {
-  user: UserModel | undefined;
+  user: User | undefined;
 };
 
 const initialState: UserInitialState = {
@@ -13,7 +13,7 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setUser: (state, action: PayloadAction<UserModel | undefined>) => {
+    setUser: (state, action: PayloadAction<User | undefined>) => {
       state.user = action.payload;
     },
   },

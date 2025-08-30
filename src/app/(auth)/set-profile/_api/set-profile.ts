@@ -10,7 +10,12 @@ const setProfile = (model: SetProfile): Promise<SetProfileModel> => {
   const { file, token } = model;
 
   const form = new FormData();
-  form.append("file", file);
+  // Append empty file if no file is selected, matching the curl command behavior
+  if (file) {
+    form.append("file", file);
+  } else {
+    form.append("file", "");
+  }
 
   const headers = new AxiosHeaders();
   headers.set("Authorization", `Bearer ${token}`);
