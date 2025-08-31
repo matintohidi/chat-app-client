@@ -1,66 +1,83 @@
+/* Base progress element */
 .progress {
   @apply relative w-full appearance-none overflow-hidden h-2 rounded-lg bg-gray-800;
+}
 
-  &::-moz-progress-bar {
-    @apply bg-base;
-  }
-  &-primary::-moz-progress-bar {
-    @apply bg-primary;
-  }
-  &-secondary::-moz-progress-bar {
-    @apply bg-secondary;
-  }
-  &-info::-moz-progress-bar {
-    @apply bg-info;
-  }
-  &-success::-moz-progress-bar {
-    @apply bg-success;
-  }
-  &-warning::-moz-progress-bar {
-    @apply bg-warning;
-  }
-  &-error::-moz-progress-bar {
-    @apply bg-error;
-  }
+/* Firefox progress bar styling */
+.progress::-moz-progress-bar {
+  @apply bg-primary;
+}
 
-  &::-webkit-progress-bar {
-    @apply bg-transparent rounded-lg;
-  }
-  &::-webkit-progress-value {
-    @apply bg-base rounded-lg;
-  }
-  &-primary::-webkit-progress-value {
-    @apply bg-primary;
-  }
-  &-secondary::-webkit-progress-value {
-    @apply bg-secondary;
-  }
-  &-info::-webkit-progress-value {
-    @apply bg-info;
-  }
-  &-success::-webkit-progress-value {
-    @apply bg-success;
-  }
-  &-warning::-webkit-progress-value {
-    @apply bg-warning;
-  }
-  &-error::-webkit-progress-value {
-    @apply bg-error;
-  }
+.progress-primary::-moz-progress-bar {
+  @apply bg-primary;
+}
 
-  &-xs {
-    @apply h-1;
-  }
+.progress-secondary::-moz-progress-bar {
+  @apply bg-secondary;
+}
 
-  &-sm {
-    @apply h-2;
-  }
+.progress-info::-moz-progress-bar {
+  @apply bg-info;
+}
 
-  &-md {
-    @apply h-3;
-  }
+.progress-success::-moz-progress-bar {
+  @apply bg-success;
+}
 
-  &-lg {
-    @apply h-4;
-  }
+.progress-warning::-moz-progress-bar {
+  @apply bg-warning;
+}
+
+.progress-error::-moz-progress-bar {
+  @apply bg-error;
+}
+
+/* WebKit progress bar styling */
+.progress::-webkit-progress-bar {
+  @apply bg-transparent rounded-lg;
+}
+
+.progress::-webkit-progress-value {
+  @apply bg-primary rounded-lg;
+}
+
+.progress-primary::-webkit-progress-value {
+  @apply bg-primary;
+}
+
+.progress-secondary::-webkit-progress-value {
+  @apply bg-secondary;
+}
+
+.progress-info::-webkit-progress-value {
+  @apply bg-info;
+}
+
+.progress-success::-webkit-progress-value {
+  @apply bg-success;
+}
+
+.progress-warning::-webkit-progress-value {
+  @apply bg-warning;
+}
+
+.progress-error::-webkit-progress-value {
+  @apply bg-error;
+}
+
+/* Size variants */
+.progress-xs {
+  @apply h-1;
+}
+
+.progress-sm {
+  @apply h-2;
+}
+
+.progress-md {
+  @apply h-3;
+}
+
+.progress-lg {
+  @apply h-4;
 }
