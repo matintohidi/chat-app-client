@@ -4,6 +4,7 @@ import {
   NetworkError,
   NotFoundError,
   UnauthorizedError,
+  ForbiddenError,
   UnhandledException,
   ValidationError,
 } from "@/types/http-errors.interface";
@@ -31,6 +32,13 @@ export const unauthorizedErrorStrategy: ApiErrorHandler = (errorData) => {
   } as UnauthorizedError;
 };
 
+export const forbiddenErrorStrategy: ApiErrorHandler = (errorData) => {
+  throw {
+    ...errorData,
+    message: "Access to the requested resource is forbidden",
+  } as ForbiddenError;
+};
+
 export const unhandledExceptionStrategy: ApiErrorHandler = (errorData) => {
   throw { ...errorData, message: "Server error" } as UnhandledException;
 };
@@ -44,7 +52,8 @@ export const errorHandler: Record<number, ApiErrorHandler> = {
     (errorData.error ? validationErrorStrategy : badRequestErrorStrategy)(
       errorData
     ),
-  403: unauthorizedErrorStrategy,
+  401: unauthorizedErrorStrategy,
+  403: forbiddenErrorStrategy,
   404: notFoundErrorStrategy,
   500: unhandledExceptionStrategy,
 };

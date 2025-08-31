@@ -1,12 +1,17 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import {
+  useActionState,
+  useEffect,
+  useRef,
+  useState,
+  useTransition,
+} from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useSetProfile } from "@/app/(auth)/set-profile/_api/set-profile";
 import { useAppDispatch } from "@/store/hooks";
 import { showNotificationWithDuration } from "@/store/slices/notification.slice";
-import { SetProfile } from "@/app/(auth)/set-profile/types/set-profile.type";
-import { setUser } from "@/store/slices/user.slice";
+import { setProfile } from "@/actions/auth";
+import { SetProfileSchema } from "@/app/(auth)/set-profile/types/set-profile.schema";
 
 interface SetProfileFormProps {
   children: (formProps: {
@@ -27,6 +32,9 @@ const SetProfileForm: React.FC<SetProfileFormProps> = ({ children }) => {
   const params = useSearchParams();
   const token = params.get("token");
 
+  const [setProfileState, setProfileAction] = useActionState(setProfile, null);
+  const [isPending, startTransition] = useTransition();
+
   const router = useRouter();
   const dispatch = useAppDispatch();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -34,8 +42,33 @@ const SetProfileForm: React.FC<SetProfileFormProps> = ({ children }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [dragActive, setDragActive] = useState(false);
 
-  const handleImageSelect = (file: File) => {
+  useEffect(() => {
+    if (setProfileState && setProfileState.isSuccess) {
+      dispatch(
+        showNotificationWithDuration({
+          message: `Profile updated successfully!`,
+          type: "success",
+        })
+      );
+
+      router.push("/dashboard");
+    } else if (setProfileState && setProfileState.error) {
+      dispatch(
+        showNotificationWithDuration({
+          message:
+            setProfileState.error.message ||
+            setProfileState.error.error ||
+            "An error occurred",
+          type: "error",
+        })
+      );
+    }
+  }, [setProfileState]);
+
+  const handleImageSelect = async (file: File) => {
     if (file && file.type.startsWith("image/")) {
+      await SetProfileSchema.validate({ profile: file });
+
       setSelectedFile(file);
 
       const reader = new FileReader();
@@ -74,33 +107,14 @@ const SetProfileForm: React.FC<SetProfileFormProps> = ({ children }) => {
     }
   };
 
-  const setProfile = useSetProfile({
-    onSuccess: (data) => {
-      const { token, user } = data;
+  const onSubmit = () => {
+    const formData = new FormData();
+    formData.append("file", selectedFile!);
+    formData.append("token", token!);
 
-      // task: write with next auth
-      console.log(token);
-
-      dispatch(setUser(user));
-
-      dispatch(
-        showNotificationWithDuration({
-          message: `Welcome, ${user?.name}! Your profile has been set successfully.`,
-          type: "success",
-        })
-      );
-
-      router.push("/dashboard");
-    },
-  });
-
-  const handleSave = () => {
-    const model: SetProfile = {
-      file: selectedFile,
-      token: token!,
-    };
-
-    setProfile.submit(model);
+    startTransition(() => {
+      setProfileAction(formData);
+    });
   };
 
   return (
@@ -114,8 +128,8 @@ const SetProfileForm: React.FC<SetProfileFormProps> = ({ children }) => {
         handleFileInput,
         handleDrag,
         handleDrop,
-        handleSave,
-        isSubmitting: setProfile.isPending,
+        handleSave: onSubmit,
+        isSubmitting: isPending,
       })}
     </>
   );

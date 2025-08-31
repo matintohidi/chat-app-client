@@ -22,6 +22,8 @@ httpService.interceptors.response.use(
       if (statusCode >= 400) {
         const errorData: ApiError = error.response?.data;
 
+        console.log(statusCode, errorData);
+
         errorHandler[statusCode](errorData);
       }
     } else {

@@ -17,7 +17,6 @@ const LoginForm = () => {
 
   const [loginState, loginAction] = useActionState(login, undefined);
   const [isPending, startTransition] = useTransition();
-  const router = useRouter();
 
   const form = useForm<Login>({
     resolver: yupResolver(LoginFormSchema),
@@ -26,15 +25,6 @@ const LoginForm = () => {
       password: "",
     },
   });
-
-  // dispatch(
-  //   showNotificationWithDuration({
-  //     message: `Welcome back, ${user?.name}!`,
-  //     type: "success",
-  //   })
-  // );
-
-  // router.push("/dashboard");
 
   const onSubmit = async (values: Login) => {
     const formData = new FormData();

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { MessageCircle, Menu, X } from "lucide-react";
 import { useSession } from "next-auth/react";
 import DropdownMenu from "@/app/_components/header/dropdown-menu";
-import Session from "@/app/_components/header/session";
+import User from "@/app/_components/header/user";
 
 // navbar links
 const navLinks: NavLinkInterface[] = [
@@ -41,14 +41,10 @@ const Header: React.FC = () => {
 
     if (isMenuOpen) {
       document.addEventListener("click", handleClickOutside);
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
     }
 
     return () => {
       document.removeEventListener("click", handleClickOutside);
-      document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
 
@@ -91,7 +87,11 @@ const Header: React.FC = () => {
               ))}
             </nav>
 
-            <Session setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+            <User
+              setIsMenuOpen={setIsMenuOpen}
+              isMenuOpen={isMenuOpen}
+              user={session?.user}
+            />
 
             <div className="md:hidden mobile-menu-container">
               <button
@@ -106,6 +106,7 @@ const Header: React.FC = () => {
                 )}
               </button>
             </div>
+
             <DropdownMenu
               isOpen={isMenuOpen}
               onClose={closeMenu}

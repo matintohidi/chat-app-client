@@ -6,6 +6,7 @@ interface Problem {
 
 interface BadRequestError extends Problem {}
 interface UnauthorizedError extends Problem {}
+interface ForbiddenError extends Problem {}
 interface ValidationError extends Problem {}
 interface NotFoundError extends Problem {}
 interface UnhandledException extends Problem {}
@@ -23,6 +24,7 @@ export type {
   Problem,
   BadRequestError,
   UnauthorizedError,
+  ForbiddenError,
   ValidationError,
   NotFoundError,
   UnhandledException,

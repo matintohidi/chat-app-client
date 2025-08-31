@@ -1,37 +1,31 @@
 import { UserSession } from "@/types/user.interface";
-import { useSession } from "next-auth/react";
 import Link from "next/link";
 
-interface SessionProps {
+interface UserProps {
   setIsMenuOpen: (isOpen: boolean) => void;
   isMenuOpen: boolean;
+  user?: UserSession;
 }
 
-const Session = ({ setIsMenuOpen, isMenuOpen }: SessionProps) => {
-  const session = useSession();
-
-  return session?.data?.user ? (
-    <SessionExist
-      user={session.data.user}
+const User = ({ setIsMenuOpen, isMenuOpen, user }: UserProps) => {
+  return user ? (
+    <UserExist
+      user={user}
       setIsMenuOpen={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
     />
   ) : (
-    <SessionNotExist />
+    <UserNotExist />
   );
 };
 
-interface SessionExistProps {
+interface UserExistProps {
   user: UserSession;
   setIsMenuOpen: (isOpen: boolean) => void;
   isMenuOpen: boolean;
 }
 
-const SessionExist = ({
-  user,
-  setIsMenuOpen,
-  isMenuOpen,
-}: SessionExistProps) => {
+const UserExist = ({ user, setIsMenuOpen, isMenuOpen }: UserExistProps) => {
   return (
     <div className="hidden md:flex items-center space-x-4">
       <div className="relative">
@@ -82,7 +76,7 @@ const SessionExist = ({
   );
 };
 
-const SessionNotExist = () => {
+const UserNotExist = () => {
   return (
     <div className="hidden md:flex items-center space-x-4">
       <Link
@@ -101,4 +95,4 @@ const SessionNotExist = () => {
   );
 };
 
-export default Session;
+export default User;

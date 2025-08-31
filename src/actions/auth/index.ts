@@ -6,16 +6,18 @@ import {
   Register,
   RegisterUserModel,
 } from "@/app/(auth)/register/types/register.type";
+import { SetProfileSchema } from "@/app/(auth)/set-profile/types/set-profile.schema";
+import { SetProfileModel } from "@/app/(auth)/set-profile/types/set-profile.type";
 import { signIn, signOut } from "@/auth";
 import { createData } from "@/core/http-service/http-service";
 import { Problem } from "@/types/http-errors.interface";
 import { OperationResult } from "@/types/operation-result.type";
-import { redirect } from "next/navigation";
+import { AxiosHeaders } from "axios";
 
 export async function registerAction(
   formState: OperationResult<RegisterUserModel> | null,
   formData: FormData
-) {
+): Promise<OperationResult<RegisterUserModel>> {
   try {
     const data = {
       email: formData.get("email"),
@@ -33,10 +35,11 @@ export async function registerAction(
         )
     );
   } catch (error) {
-    console.error("Validation failed:", error);
+    return {
+      isSuccess: false,
+      error: error as Problem,
+    };
   }
-
-  redirect("/set-profile");
 }
 
 export async function login(state: Problem | undefined, formData: FormData) {
@@ -47,6 +50,39 @@ export async function login(state: Problem | undefined, formData: FormData) {
       error: "",
       statusCode: 0,
     } satisfies Problem;
+  }
+}
+
+export async function setProfile(
+  formState: OperationResult<SetProfileModel> | null,
+  formData: FormData
+): Promise<OperationResult<SetProfileModel>> {
+  try {
+    const token = formData.get("token");
+
+    await SetProfileSchema.validate({ profile: formData.get("file") });
+
+    const headers = new AxiosHeaders();
+    headers.set("Authorization", `Bearer ${token}`);
+
+    const res = await createData<FormData, SetProfileModel>(
+      "/user/set-profile",
+      formData,
+      headers
+    );
+
+    await signIn("credentials", { token: res.token, redirect: false });
+
+    return {
+      isSuccess: true,
+    };
+  } catch (error: unknown) {
+    console.log(error);
+
+    return {
+      isSuccess: false,
+      error: error as Problem,
+    };
   }
 }
 

@@ -1,10 +1,12 @@
 import { Login, LoginUserModel } from "@/app/(auth)/login/types/login.type";
-import { authConfig } from "@/auth.config";
-import { createData } from "@/core/http-service/http-service";
+import { authConfig } from "@/configs/auth.config";
+import { createData, readData } from "@/core/http-service/http-service";
 import NextAuth from "next-auth";
 import CredentialsProviders from "next-auth/providers/credentials";
-import { JWT } from "next-auth/jwt";
 import { UserSession, UserToken } from "@/types/user.interface";
+import { JWT } from "next-auth/jwt";
+import { User } from "@/contracts/auth";
+import { AxiosHeaders } from "axios";
 
 declare module "next-auth" {
   interface User extends UserToken {}
@@ -33,9 +35,26 @@ export const {
       credentials: {
         email: { label: "email", type: "email" },
         password: { label: "password", type: "password" },
+        token: { label: "token", type: "text" },
       },
       async authorize(credentials) {
         try {
+          console.log(credentials.token);
+          if (credentials?.token) {
+            const headers = new AxiosHeaders();
+            headers.set(
+              "Authorization",
+              `Bearer ${credentials.token as string}`
+            );
+
+            const user = await readData<User>("/auth/user/me", headers);
+
+            return {
+              accessToken: credentials.token as string,
+              ...user,
+            };
+          }
+
           const res = await createData<Login, LoginUserModel>(
             "/auth/user/login",
             {
