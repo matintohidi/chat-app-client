@@ -12,6 +12,7 @@ import { useAppDispatch } from "@/store/hooks";
 import { showNotificationWithDuration } from "@/store/slices/notification.slice";
 import { setProfile } from "@/actions/auth";
 import { SetProfileSchema } from "@/app/(auth)/set-profile/types/set-profile.schema";
+import { signIn, useSession } from "next-auth/react";
 
 interface SetProfileFormProps {
   children: (formProps: {
@@ -44,6 +45,15 @@ const SetProfileForm: React.FC<SetProfileFormProps> = ({ children }) => {
 
   useEffect(() => {
     if (setProfileState && setProfileState.isSuccess) {
+      const saveSession = async () => {
+        await signIn("credentials", {
+          token: setProfileState.response?.token,
+          redirect: false,
+        });
+      };
+
+      saveSession();
+
       dispatch(
         showNotificationWithDuration({
           message: `Profile updated successfully!`,
@@ -109,7 +119,9 @@ const SetProfileForm: React.FC<SetProfileFormProps> = ({ children }) => {
 
   const onSubmit = () => {
     const formData = new FormData();
-    formData.append("file", selectedFile!);
+    if (selectedFile) {
+      formData.append("file", selectedFile);
+    }
     formData.append("token", token!);
 
     startTransition(() => {

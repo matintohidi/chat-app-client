@@ -1,4 +1,5 @@
 import { UserSession } from "@/types/user.interface";
+import { User2 } from "lucide-react";
 import Link from "next/link";
 
 interface UserProps {
@@ -42,7 +43,7 @@ const UserExist = ({ user, setIsMenuOpen, isMenuOpen }: UserExistProps) => {
               />
             ) : (
               <div className="w-8 h-8 bg-gradient-to-br from-[#615EF0] to-[#5048e6] rounded-full flex items-center justify-center text-white text-sm font-semibold">
-                {user.name}
+                <User2 className="w-8 h-8" />
               </div>
             )}
             <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 border-2 border-white rounded-full"></div>

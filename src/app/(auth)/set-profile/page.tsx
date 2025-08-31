@@ -22,21 +22,6 @@ const SetProfilePage: React.FC = () => {
         isSubmitting,
       }) => (
         <div className="lg:flex h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-[#EFEFFD] to-indigo-50">
-          <div className="flex items-center justify-between p-6 lg:hidden bg-white/80 backdrop-blur-sm border-b border-gray-100">
-            <Link
-              href="/register"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#EFEFFD] hover:bg-indigo-100 transition-colors duration-200"
-            >
-              <ChevronLeft className="w-5 h-5 text-indigo-600" />
-            </Link>
-            <Link
-              href="/dashboard"
-              className="px-6 py-2.5 text-indigo-600 hover:text-indigo-700 text-sm font-medium transition-colors duration-200"
-            >
-              Skip
-            </Link>
-          </div>
-
           <div className="flex-1 flex h-full">
             <div className="flex-1 lg:w-2/5 flex items-center justify-center p-6 lg:p-8">
               <div className="w-full max-w-md space-y-8">
@@ -121,12 +106,6 @@ const SetProfilePage: React.FC = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Link
-                      href="/dashboard"
-                      className="text-center flex-1 py-3 px-4 border border-gray-200 rounded-xl text-gray-700 font-medium hover:bg-[#EFEFFD] hover:border-gray-300 transition-all duration-200"
-                    >
-                      Skip for now
-                    </Link>
                     <button
                       onClick={handleSave}
                       disabled={isSubmitting}
@@ -155,16 +134,6 @@ const SetProfilePage: React.FC = () => {
 
           <div className="hidden lg:flex lg:flex-row lg:w-3/5 relative overflow-hidden bg-[url('/images/set-profile.jpg')] bg-cover bg-center">
             <div className="absolute inset-0 bg-black/50"></div>
-
-            <div className="absolute top-8 right-8 flex items-center justify-between z-10">
-              <Link
-                href="/dashboard"
-                className="text-center px-6 py-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium rounded-full border border-white/20 transition-all duration-200"
-              >
-                Skip
-              </Link>
-            </div>
-
             <div className="relative z-10 flex items-center justify-center p-16">
               <div className="text-center text-white max-w-lg">
                 <h2 className="text-4xl font-bold mb-6">

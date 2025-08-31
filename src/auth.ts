@@ -39,7 +39,6 @@ export const {
       },
       async authorize(credentials) {
         try {
-          console.log(credentials.token);
           if (credentials?.token) {
             const headers = new AxiosHeaders();
             headers.set(

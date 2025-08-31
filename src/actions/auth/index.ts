@@ -60,25 +60,22 @@ export async function setProfile(
   try {
     const token = formData.get("token");
 
-    await SetProfileSchema.validate({ profile: formData.get("file") });
+    if (formData.get("file")) {
+      await SetProfileSchema.validate({ profile: formData.get("file") });
+    }
 
     const headers = new AxiosHeaders();
     headers.set("Authorization", `Bearer ${token}`);
 
-    const res = await createData<FormData, SetProfileModel>(
-      "/user/set-profile",
-      formData,
-      headers
+    return serverActionWrapper(
+      async () =>
+        await createData<FormData, SetProfileModel>(
+          "/user/set-profile",
+          formData,
+          headers
+        )
     );
-
-    await signIn("credentials", { token: res.token, redirect: false });
-
-    return {
-      isSuccess: true,
-    };
   } catch (error: unknown) {
-    console.log(error);
-
     return {
       isSuccess: false,
       error: error as Problem,
